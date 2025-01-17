@@ -45,3 +45,4 @@ web/sites/simpletest
 # simpletest
 
 # Ignore ddev and project-level stuff
+.idea/
