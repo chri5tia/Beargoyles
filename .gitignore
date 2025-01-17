@@ -18,6 +18,7 @@ web/core
 /vendor/
 web/modules/contrib
 web/themes/contrib
+web/libraries
 
 # Ignore configuration files that may contain sensitive information.
 web/sites/*/settings*.php
