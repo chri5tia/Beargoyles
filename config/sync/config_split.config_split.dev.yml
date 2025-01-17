@@ -11,6 +11,7 @@ no_patching: false
 storage: folder
 folder: config/dev
 module:
+  dblog: 0
   devel: 0
 theme: {  }
 complete_list: {  }
