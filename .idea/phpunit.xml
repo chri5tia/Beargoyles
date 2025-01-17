@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PHPUnit">
+    <option name="directories">
+      <list>
+        <option value="$PROJECT_DIR$/web/core/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/standard/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/article_tags/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/comment_base/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/user_picture/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/tags_taxonomy/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/content_search/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/article_comment/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/basic_shortcuts/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/audio_media_type/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/basic_block_type/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/image_media_type/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/page_content_type/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/administrator_role/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/editorial_workflow/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/content_editor_role/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/document_media_type/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/article_content_type/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/feedback_contact_form/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/local_video_media_type/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/restricted_html_format/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/full_html_format_editor/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/remote_video_media_type/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/basic_html_format_editor/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/standard_responsive_images/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/core_recommended_admin_theme/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/core_recommended_maintenance/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/core_recommended_performance/tests" />
+        <option value="$PROJECT_DIR$/web/core/recipes/core_recommended_front_end_theme/tests" />
+      </list>
+    </option>
+  </component>
+</project>
