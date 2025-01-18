@@ -4,12 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.media.document.field_media_document
-    - field.field.media.document.field_media_image
-    - image.style.medium
     - media.type.document
   module:
     - file
-    - image
 _core:
   default_config_hash: aewrRkePgJzdD5kPOq8JeMcKHs6yat49nE7ZeCQzQZg
 id: media.document.default
@@ -23,14 +20,6 @@ content:
     region: content
     settings:
       progress_indicator: throbber
-    third_party_settings: {  }
-  field_media_image:
-    type: image_image
-    weight: 1
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: medium
     third_party_settings: {  }
 hidden:
   created: true
