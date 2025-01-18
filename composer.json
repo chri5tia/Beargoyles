@@ -27,6 +27,7 @@
         "drupal/core-project-message": "^11.1",
         "drupal/core-recommended": "^11.1",
         "drupal/media_gallery": "^3.0",
+        "drupal/media_pdf_thumbnail": "^6.1",
         "drupal/pathauto": "^1.13",
         "drupal/redirect": "^1.10",
         "drush/drush": "^13.3",
