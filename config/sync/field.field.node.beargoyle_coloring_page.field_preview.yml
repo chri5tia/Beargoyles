@@ -1,0 +1,29 @@
+uuid: 814d68de-dfa1-4e87-a7ca-0d0cc1a514b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_preview
+    - media.type.image
+    - node.type.beargoyle_coloring_page
+id: node.beargoyle_coloring_page.field_preview
+field_name: field_preview
+entity_type: node
+bundle: beargoyle_coloring_page
+label: Preview
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

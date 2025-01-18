@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.media.document.field_media_document
+    - field.field.media.document.field_media_image
+    - image.style.medium
     - media.type.document
   module:
     - file
-    - path
+    - image
 _core:
   default_config_hash: aewrRkePgJzdD5kPOq8JeMcKHs6yat49nE7ZeCQzQZg
 id: media.document.default
@@ -15,12 +17,6 @@ targetEntityType: media
 bundle: document
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_media_document:
     type: file_generic
     weight: 0
@@ -28,28 +24,17 @@ content:
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 100
+  field_media_image:
+    type: image_image
+    weight: 1
     region: content
     settings:
-      display_label: true
-    third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
+      preview_image_style: medium
     third_party_settings: {  }
 hidden:
+  created: true
   name: true
+  path: true
+  status: true
+  uid: true

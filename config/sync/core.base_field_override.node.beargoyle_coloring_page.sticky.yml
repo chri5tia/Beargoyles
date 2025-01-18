@@ -1,13 +1,13 @@
-uuid: 96134ff2-b9b3-4b4d-9686-fa28514cb9d5
+uuid: 991ebc4c-77e4-4421-9e9f-9ac3579946fd
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.downloadable_content
-id: node.downloadable_content.sticky
+    - node.type.beargoyle_coloring_page
+id: node.beargoyle_coloring_page.sticky
 field_name: sticky
 entity_type: node
-bundle: downloadable_content
+bundle: beargoyle_coloring_page
 label: 'Sticky at top of lists'
 description: ''
 required: false

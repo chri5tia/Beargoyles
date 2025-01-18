@@ -1,0 +1,18 @@
+uuid: ac96bd1c-7ba0-4663-9aa5-d92af542f2ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.beargoyle_coloring_page
+id: node.beargoyle_coloring_page.title
+field_name: title
+entity_type: node
+bundle: beargoyle_coloring_page
+label: Page
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

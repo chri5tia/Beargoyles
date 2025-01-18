@@ -1,18 +1,18 @@
-uuid: 1135c933-bfbd-4d6a-9edf-4befc4195f86
+uuid: b76e25ce-b86c-4f09-9af7-1c0fd279b99f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_pdf
+    - field.storage.node.field_coloring_page_file
     - media.type.document
-    - node.type.downloadable_content
-id: node.downloadable_content.field_pdf
-field_name: field_pdf
+    - node.type.beargoyle_coloring_page
+id: node.beargoyle_coloring_page.field_coloring_page_file
+field_name: field_coloring_page_file
 entity_type: node
-bundle: downloadable_content
-label: 'PDF (media)'
+bundle: beargoyle_coloring_page
+label: 'Coloring Page File'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

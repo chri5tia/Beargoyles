@@ -1,19 +1,19 @@
-uuid: 6bd6a007-deea-40d0-91ec-74c094b53dc9
+uuid: e45b74b0-5921-4cc5-8a83-075b117a190b
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - node
-id: node.field_pdf
-field_name: field_pdf
+    - taxonomy
+id: node.field_beargoyle_tags
+field_name: field_beargoyle_tags
 entity_type: node
 type: entity_reference
 settings:
-  target_type: media
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

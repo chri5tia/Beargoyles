@@ -1,0 +1,29 @@
+uuid: 6e7172f3-3dfb-454f-b9f5-dc6887535256
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beargoyle_tags
+    - node.type.beargoyle_coloring_page
+    - taxonomy.vocabulary.tags
+id: node.beargoyle_coloring_page.field_beargoyle_tags
+field_name: field_beargoyle_tags
+entity_type: node
+bundle: beargoyle_coloring_page
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

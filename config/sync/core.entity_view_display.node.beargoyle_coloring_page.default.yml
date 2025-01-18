@@ -1,0 +1,56 @@
+uuid: e259e324-09db-4a30-a0ff-a014f8853cbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.beargoyle_coloring_page.body
+    - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
+    - field.field.node.beargoyle_coloring_page.field_coloring_page_file
+    - field.field.node.beargoyle_coloring_page.field_preview
+    - node.type.beargoyle_coloring_page
+  module:
+    - text
+    - user
+id: node.beargoyle_coloring_page.default
+targetEntityType: node
+bundle: beargoyle_coloring_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_beargoyle_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_coloring_page_file:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_preview:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
