@@ -1,0 +1,22 @@
+uuid: 96134ff2-b9b3-4b4d-9686-fa28514cb9d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.downloadable_content
+id: node.downloadable_content.sticky
+field_name: sticky
+entity_type: node
+bundle: downloadable_content
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

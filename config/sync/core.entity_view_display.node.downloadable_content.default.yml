@@ -1,0 +1,33 @@
+uuid: b5302703-468b-423b-a4cc-be7119efa6b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.downloadable_content.field_pdf
+    - image.style.large
+    - node.type.downloadable_content
+  module:
+    - media
+    - user
+id: node.downloadable_content.default
+targetEntityType: node
+bundle: downloadable_content
+mode: default
+content:
+  field_pdf:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: media
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

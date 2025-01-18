@@ -6,6 +6,9 @@ dependencies:
     - filter.format.basic_html
   module:
     - comment
+    - commerce_checkout
+    - commerce_order
+    - commerce_product
     - contact
     - file
     - filter
@@ -20,6 +23,7 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access checkout'
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
@@ -29,4 +33,6 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view commerce_product'
   - 'view media'
+  - 'view own commerce_order'
