@@ -1,0 +1,18 @@
+uuid: 00f43506-4218-4ed4-967b-7590b811be3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Beargoyle Art Page'
+type: beargoyle_art_page
+description: 'Images that are colored in or finished.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,46 @@
+uuid: 7d6b564f-c4ae-4f55-be5c-d56f5f3249fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.beargoyle_art_page.body
+    - field.field.node.beargoyle_art_page.field_beargoyle_tags
+    - field.field.node.beargoyle_art_page.field_image
+    - image.style.medium
+    - node.type.beargoyle_art_page
+  module:
+    - image
+    - text
+    - user
+id: node.beargoyle_art_page.teaser
+targetEntityType: node
+bundle: beargoyle_art_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_beargoyle_tags: true

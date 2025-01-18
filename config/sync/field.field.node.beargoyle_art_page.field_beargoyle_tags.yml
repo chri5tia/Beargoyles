@@ -1,24 +1,24 @@
-uuid: 6e7172f3-3dfb-454f-b9f5-dc6887535256
+uuid: 8dc7c4b1-565b-442e-bda6-7ccc9bdbbc52
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_beargoyle_tags
-    - node.type.beargoyle_coloring_page
+    - node.type.beargoyle_art_page
     - taxonomy.vocabulary.tags
   content:
-    - 'taxonomy_term:tags:5c8cbc80-079c-4347-80ca-02f7b4a6debf'
-id: node.beargoyle_coloring_page.field_beargoyle_tags
+    - 'taxonomy_term:tags:e339cc3e-bbd5-4a48-8638-0635dc7685a9'
+id: node.beargoyle_art_page.field_beargoyle_tags
 field_name: field_beargoyle_tags
 entity_type: node
-bundle: beargoyle_coloring_page
+bundle: beargoyle_art_page
 label: Tags
 description: ''
 required: false
 translatable: false
 default_value:
   -
-    target_uuid: 5c8cbc80-079c-4347-80ca-02f7b4a6debf
+    target_uuid: e339cc3e-bbd5-4a48-8638-0635dc7685a9
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

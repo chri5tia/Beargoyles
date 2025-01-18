@@ -1,0 +1,22 @@
+uuid: 20d07dcf-ea99-44da-bb9f-d5f1f85cbd7d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: coloring_page
+label: 'Coloring Page'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  fdd8c388-bb92-4b94-8663-49618b332f30:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: fdd8c388-bb92-4b94-8663-49618b332f30
+    context_mapping:
+      node: node
+    bundles:
+      beargoyle_coloring_page: beargoyle_coloring_page
+selection_logic: and
+weight: -5
+relationships: {  }

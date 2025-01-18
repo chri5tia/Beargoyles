@@ -1,0 +1,22 @@
+uuid: d6b05f4a-1d13-4d31-b89f-4896fbc0305c
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: beargoyle_tags
+label: 'Beargoyle Tags'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:name]'
+selection_criteria:
+  d62c9412-d8b0-49ea-883c-242f5386beda:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: d62c9412-d8b0-49ea-883c-242f5386beda
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      tags: tags
+selection_logic: and
+weight: -5
+relationships: {  }

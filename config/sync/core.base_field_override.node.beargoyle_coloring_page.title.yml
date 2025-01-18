@@ -8,7 +8,7 @@ id: node.beargoyle_coloring_page.title
 field_name: title
 entity_type: node
 bundle: beargoyle_coloring_page
-label: Page
+label: Title
 description: ''
 required: true
 translatable: true
