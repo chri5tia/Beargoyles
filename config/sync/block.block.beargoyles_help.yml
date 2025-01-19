@@ -1,17 +1,17 @@
-uuid: 4dd367f9-998b-4b86-84e6-cec92165ff14
+uuid: ddbb3226-882f-422d-bd00-09234a941c57
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - olivero
+    - beargoyles
 _core:
-  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
-id: olivero_help
-theme: olivero
-region: content_above
-weight: 0
+  default_config_hash: J0mu4I9vKBvBEsx1fY5zmoxN0tSVDlGOftdzwrn092k
+id: beargoyles_help
+theme: beargoyles
+region: content
+weight: -2
 provider: null
 plugin: help_block
 settings:

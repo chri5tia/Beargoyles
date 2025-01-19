@@ -1,15 +1,15 @@
-uuid: cd0e6fde-2d19-477c-bc58-d6e57b5f338c
+uuid: 7568ef4e-0162-43a3-8f95-959d7aa1537d
 langcode: en
 status: true
 dependencies:
   theme:
-    - olivero
+    - beargoyles
 _core:
-  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
-id: olivero_page_title
-theme: olivero
-region: content_above
-weight: -5
+  default_config_hash: a_ewKQxu8obIPnNMIOBV6iFGLMm334WARDJJb3Hlv6w
+id: beargoyles_page_title
+theme: beargoyles
+region: content
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

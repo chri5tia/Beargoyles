@@ -1,0 +1,22 @@
+uuid: dcc4e1bf-6364-44b1-8528-3e02cbe1f1a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - beargoyles
+_core:
+  default_config_hash: VNXt_FUOrgtRAcsXGFJLNkGtGVxnh_MUYBT5j4Vi7Vc
+id: beargoyles_breadcrumbs
+theme: beargoyles
+region: promoted
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

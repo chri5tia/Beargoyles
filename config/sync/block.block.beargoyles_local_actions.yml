@@ -1,14 +1,14 @@
-uuid: c0e8b4d3-69d3-42d5-8f86-35def4b8a370
+uuid: 71e099d2-7e22-4130-902a-47363417c97f
 langcode: en
 status: true
 dependencies:
   theme:
-    - olivero
+    - beargoyles
 _core:
-  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
-id: olivero_primary_admin_actions
-theme: olivero
-region: highlighted
+  default_config_hash: ng-kM_yCPtkiKiKv3JlE2F2fzheJj1LWMEEMf4VfQ7k
+id: beargoyles_local_actions
+theme: beargoyles
+region: content
 weight: -5
 provider: null
 plugin: local_actions_block

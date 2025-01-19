@@ -1,0 +1,22 @@
+uuid: cf36dd4e-de14-4737-b0e5-4b0f7a33f7ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - beargoyles
+_core:
+  default_config_hash: CybDyQJYsoDmybEofydWzBFuy_w-SZ2YjEE-Llw2jMo
+id: beargoyles_messages
+theme: beargoyles
+region: content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

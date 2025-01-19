@@ -1,4 +1,4 @@
-uuid: a8f593d7-b8f5-4096-a1d9-ebb55eda75e6
+uuid: c3729b30-d612-4543-841d-896e64a5a9ec
 langcode: en
 status: true
 dependencies:
@@ -7,19 +7,19 @@ dependencies:
   module:
     - system
   theme:
-    - olivero
+    - bootstrap_business
 _core:
-  default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
-id: olivero_account_menu
-theme: olivero
-region: secondary_menu
+  default_config_hash: Rt7Mt_h_9Sno49WSTqAK14DerNpqYBu14SCs4tAtuwE
+id: bootstrap_business_account_menu
+theme: bootstrap_business
+region: sidebar_second
 weight: -4
 provider: null
 plugin: 'system_menu_block:account'
 settings:
   id: 'system_menu_block:account'
   label: 'User account menu'
-  label_display: '0'
+  label_display: visible
   provider: system
   level: 1
   depth: 1

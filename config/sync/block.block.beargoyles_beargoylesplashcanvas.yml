@@ -1,0 +1,25 @@
+uuid: 6b412219-6258-4e95-a34e-a4d1389b6ff0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a9aa3ccc-f315-4068-bcc3-a27c11a670d6'
+  module:
+    - block_content
+  theme:
+    - beargoyles
+id: beargoyles_beargoylesplashcanvas
+theme: beargoyles
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:a9aa3ccc-f315-4068-bcc3-a27c11a670d6'
+settings:
+  id: 'block_content:a9aa3ccc-f315-4068-bcc3-a27c11a670d6'
+  label: 'BeargoyleSplash Canvas'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

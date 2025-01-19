@@ -59,7 +59,7 @@ function OilPainting() {
     var distance = Math.sqrt(Math.pow(prevPos.x - startPos.x, 2) +
       Math.pow(prevPos.y - startPos.y, 2));
 
-    var size = (Math.random() * (15 * 1)) / distance; // Keep size multiplier
+    var size = (Math.random() * (15 * 2)) / distance; // Keep size multiplier
 
     dist.x = (prevPos.x - startPos.x) * Math.sin(0.5) + startPos.x;
     dist.y = (prevPos.y - startPos.y) * Math.cos(0.5) + startPos.y;
