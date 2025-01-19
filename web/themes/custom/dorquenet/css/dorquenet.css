@@ -1,0 +1,353 @@
+/* STYLE GUIDE AND NOTES
+Style guide:
+Purple: #51387e
+Silver: #666666
+Charcoal: #333333;
+Dark Grey: #180527;
+White: #FFFFFF
+Off-White/super light grey: #f4f7fb
+
+And now we're the colorad rockies I guess.
+*/
+
+/* FONTS AND MARKUP */
+
+/* Google font import */
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Gwendolyn&family=Montserrat:wght@300&family=Nunito:wght@300;400&family=Playfair+Display&display=swap');
+
+/* Fonts, weight and style */
+body {
+  line-height: 200%;
+  font-family: nunito, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: thick #333333 dotted;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Playfair Display, serif;
+}
+
+ul li {
+  list-style: disk;
+}
+
+div.meta.submitted {
+  font-size: 16px;
+}
+
+.node__links {
+  float:right;
+  font-size: 85%;
+}
+
+.block-page-title-block {
+  text-transform: capitalize;
+}
+
+/* text colors */
+
+/* purple text */
+a, .label,
+input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
+div.meta.submitted {
+  color: #51387e;
+}
+
+/* charcoal text */
+
+h1, h2, h3, h4, h5 {
+  color:#333333;
+}
+
+/* silver text */
+h6 {
+  color: #666666;
+}
+
+/* Spacing and Alignment */
+
+input.form-text, input.form-email, input.form-search, textarea.form-textarea, select {
+  padding:10px;
+}
+
+.block {
+    padding: 0 0 5px 0;
+}
+
+.node--view-mode-teaser,
+.path-node #content-wrapper {
+  padding: 15px;
+}
+
+.node__content {
+  padding: 0px 40px;
+}
+
+.field--type-image {
+  float:left;
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
+
+.field--type-text-with-summary {
+  text-align: justify;
+}
+
+ul.links.field__items li {
+  list-style: none;
+  float:right;
+  padding: 0 10px;
+  text-transform: uppercase;
+  background-color: #f4f7fb;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px;
+  margin: 5px 0 0 5px;
+
+}
+
+.field--name-field-tags {
+  direction:rtl;
+  text-align:right;
+}
+
+article nav {
+float:right;
+}
+
+/* Borders */
+
+/* Thin charcoal solid border */
+img, .comment,
+.node--view-mode-teaser,
+.path-node #content-wrapper {
+    border: thin #666666 solid;
+}
+
+/* Regular corners with no borders */
+.image-style-gallery-thumb, .image-style-gallery-photo {
+  border-radius: 0;
+  border-width: 0px;
+  padding:5px;
+}
+
+/* Background colors */
+/* white */
+
+#subfooter ul.menu li,
+ul.menu li, ul.tabs li a:hover,
+.node--view-mode-teaser,
+.path-node #content-wrapper {
+  background-color: #FFFFFF;
+}
+
+/* Menus */
+.region-sidebar-second ul.menu li {
+  border: 0px;
+  border-bottom: 3px #51387e solid;
+  text-align:center;
+  padding: 10px;
+  margin-right:25px;
+  margin-bottom:15px;
+  list-style: none;
+  width: 150px;
+  float:right;
+}
+
+#main-navigation ul.menu li a {
+  padding: 5px;
+  margin: 20px;
+}
+
+/* Leaf shape for content containers */
+
+.node--view-mode-teaser, .path-node #content-wrapper,
+.region-content, .node__content,
+div.messages.messages--status,
+.item-list ul li,
+.field--type-text-with-summary,
+.comment, .block{
+  border-radius: 15px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+/* Reverse leaf shape for smaller objects */
+
+img, button, .button, .field--type-image,
+.menu-item, ul.tabs li, ul.menu li,
+ul.links.field__items li,
+#main-navigation ul.menu li,
+input.button {
+  border-radius: 15px;
+  border-top-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+}
+
+/* Containers that aren't a leaf */
+
+figure.caption-img img {
+  border-radius: 15px;
+}
+
+div.messages.messages--status {
+  margin-right:0px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 150px;
+}
+
+/* MOUSEOVER AFFECTS */
+
+.image-style-gallery-thumb {
+  filter: grayscale(95%);
+  opacity: 90%;
+}
+
+.image-style-gallery-thumb:hover {
+  filter: grayscale(0%);
+  opacity: 100%;
+}
+
+/* No border */
+ul.tabs li a:hover {
+  border: 0px;
+}
+
+/* MIGRATE */
+
+div.view-header {
+  margin-bottom: 25px;
+  line-height: 1.2;
+  font-family: Gwendolyn;
+  font-size: 38px;
+  color: #51387e;
+}
+
+/* TEMPLATE DEBUGGING: to debug uncomment out all of the following
+
+.node__content .clearfix,
+.block-system-main-block,
+div#content-wrapper,
+.region-content,
+#main.clearfix,
+h2.title,
+.node header,
+.node--view-mode-teaser,
+.path-node #content-wrapper,
+.comment, ul.menu li,
+.col-md-8 {
+  border: thick solid black;
+}
+
+.block {
+  border: 2px dashed black;
+}
+
+
+.node__content .clearfix {
+  background-color: orange;
+}
+
+.block-system-main-block {
+  background-color: yellow;
+}
+
+div#content-wrapper {
+  background-color: lightblue;
+}
+
+.region-content {
+  background-color: pink;
+}
+
+#main.clearfix {
+  background-color: green;
+}
+
+h2.title {
+  background-color:red;
+}
+
+.node header {
+  background-color: blue;
+}
+
+.content .node--type-page header {
+  background-color: darkseagreen;
+}
+
+.col-md-8 {
+  background-color: purple;
+}
+
+.node--view-mode-teaser {
+  background-color: cyan;
+}
+
+.path-node #content-wrapper {
+  background-color: blueviolet;
+}
+
+.comment {
+  background-color: darkblue;
+}
+
+.block {
+  background-color: lightgrey;
+}
+
+ul.menu li {
+  background-color: deeppink;
+}
+
+.field--type-text-with-summary {
+  background-color: lightyellow;
+}
+
+.node__content {
+  background-color:darkkhaki;
+}
+
+.block-block-content {
+  background-color:darkslateblue;
+}
+
+*/
+
+.item-list ul li {
+  background-color: #FFFFFF;
+  opacity: 80%;
+  border: 1px grey solid;
+  padding: 15px;
+  padding-bottom: 50px;
+  margin-bottom: 25px;
+}
+
+.breadcrumb {
+    /* background-color: #fcfcfc; */
+    border: 1px solid #eaeaea;
+    /* padding: 14px 20px!important; */
+    /* margin-bottom: 30px; */
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin: 0px;
+    /* padding: 0px; */
+}
+
+#banner-inside {
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+
+#main-content {
+    padding: 20px 0 30px 0;
+}
