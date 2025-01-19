@@ -1,0 +1,8 @@
+global-scripts:
+  js:
+    js/beargoylesplash.js: {}
+global-styles:
+  css:
+    theme:
+      css/beargoyles.css: {}
+      css/beargoylesplash.css: {}
