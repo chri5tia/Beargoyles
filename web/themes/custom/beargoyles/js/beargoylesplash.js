@@ -1,5 +1,4 @@
 function OilPainting() {
-
   var canvas;
   var context;
 
@@ -9,11 +8,13 @@ function OilPainting() {
   var startPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
   var prevPos = { x: window.innerWidth / 2, y: 0 };
   var dist = { x: 0, y: 0 };
-  var colour = getGothicWhimsicalColor(0.15); // Generate initial color with 15% opacity
+  var colour = getGothicWhimsicalColor(0.15); // Initial color with 15% opacity
+
+  var mouseTimeout; // To track when the mouse stops moving
 
   this.initialize = function () {
     canvas = document.getElementById("canvas");
-    context = canvas.getContext('2d');
+    context = canvas.getContext("2d");
 
     width = window.innerWidth;
     height = window.innerHeight;
@@ -21,9 +22,9 @@ function OilPainting() {
     canvas.width = width;
     canvas.height = height;
 
-    canvas.addEventListener('mousemove', MouseMove, false);
-    canvas.addEventListener('click', MouseDown, false);
-    canvas.addEventListener('dblclick', MouseDbl, false);
+    canvas.addEventListener("mousemove", MouseMove, false);
+    canvas.addEventListener("click", MouseDown, false);
+    canvas.addEventListener("dblclick", MouseDbl, false);
   };
 
   // Function to generate a random gothic whimsical color
@@ -56,10 +57,20 @@ function OilPainting() {
   }
 
   var MouseMove = function (e) {
-    var distance = Math.sqrt(Math.pow(prevPos.x - startPos.x, 2) +
-      Math.pow(prevPos.y - startPos.y, 2));
+    clearTimeout(mouseTimeout); // Reset the timeout each time the mouse moves
 
-    var size = (Math.random() * (15 * 2)) / distance; // Keep size multiplier
+    mouseTimeout = setTimeout(() => {
+      // Change the color if the mouse stops moving for half a second
+      colour = getGothicWhimsicalColor(0.15);
+      console.log("Color changed to:", colour);
+    }, 500); // 0.5 -second delay
+
+    var distance = Math.sqrt(
+      Math.pow(prevPos.x - startPos.x, 2) +
+      Math.pow(prevPos.y - startPos.y, 2)
+    );
+
+    var size = Math.random() * 15 / distance; // Adjust size based on distance
 
     dist.x = (prevPos.x - startPos.x) * Math.sin(0.5) + startPos.x;
     dist.y = (prevPos.y - startPos.y) * Math.cos(0.5) + startPos.y;
@@ -67,8 +78,8 @@ function OilPainting() {
     startPos.x = prevPos.x;
     startPos.y = prevPos.y;
 
-    prevPos.x = (e.layerX);
-    prevPos.y = (e.layerY);
+    prevPos.x = e.layerX;
+    prevPos.y = e.layerY;
 
     // ------- Draw -------
     context.lineWidth = Math.random() * size;
@@ -93,9 +104,13 @@ function OilPainting() {
       var radiusX = size * 10 * Math.random();
       var radiusY = size * 10 * Math.random();
       context.ellipse(
-        prevPos.x, prevPos.y,
-        radiusX, radiusY,
-        Math.random() * Math.PI, 0, Math.PI * 2
+        prevPos.x,
+        prevPos.y,
+        radiusX,
+        radiusY,
+        Math.random() * Math.PI,
+        0,
+        Math.PI * 2
       );
     } else {
       // Draw a small polygon
@@ -118,7 +133,7 @@ function OilPainting() {
 
   var MouseDown = function (e) {
     e.preventDefault();
-    colour = getGothicWhimsicalColor(0.5); // Generate a new random color with 50% opacity
+    colour = getGothicWhimsicalColor(0.5); // Change color on click
     context.fillStyle = colour;
     context.strokeStyle = colour;
   };

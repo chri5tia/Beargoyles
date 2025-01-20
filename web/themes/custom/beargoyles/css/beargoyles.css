@@ -7,7 +7,6 @@ Dark Grey: #180527;
 White: #FFFFFF
 Off-White/super light grey: #f4f7fb
 
-And now we're the colorad rockies I guess.
 */
 
 /* FONTS AND MARKUP */
@@ -27,8 +26,8 @@ a {
 }
 
 a:hover {
-  text-decoration: none;
-  border-bottom: thick #333333 dotted;
+  color:#51387e;
+  text-decoration:underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,7 +78,7 @@ input.form-text, input.form-email, input.form-search, textarea.form-textarea, se
 }
 
 .block {
-    padding: 0 0 5px 0;
+  padding: 0 0 5px 0;
 }
 
 .node--view-mode-teaser,
@@ -88,7 +87,7 @@ input.form-text, input.form-email, input.form-search, textarea.form-textarea, se
 }
 
 .node__content {
-  padding: 0px 40px;
+  padding: 0 40px;
 }
 
 .field--type-image {
@@ -101,41 +100,28 @@ input.form-text, input.form-email, input.form-search, textarea.form-textarea, se
   text-align: justify;
 }
 
-ul.links.field__items li {
-  list-style: none;
-  float:right;
-  padding: 0 10px;
-  text-transform: uppercase;
-  background-color: #f4f7fb;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 2px;
-  margin: 5px 0 0 5px;
-
-}
-
 .field--name-field-tags {
   direction:rtl;
   text-align:right;
 }
 
 article nav {
-float:right;
+  float:right;
 }
 
 /* Borders */
 
-/* Thin charcoal solid border */
-img, .comment,
+/* Thick charcoal dashed border */
+.comment,
 .node--view-mode-teaser,
 .path-node #content-wrapper {
-    border: thin #666666 solid;
+  border: 4px #666666 dashed;
 }
 
 /* Regular corners with no borders */
 .image-style-gallery-thumb, .image-style-gallery-photo {
   border-radius: 0;
-  border-width: 0px;
+  border-width: 0;
   padding:5px;
 }
 
@@ -151,7 +137,7 @@ ul.menu li, ul.tabs li a:hover,
 
 /* Menus */
 .region-sidebar-second ul.menu li {
-  border: 0px;
+  border: 0;
   border-bottom: 3px #51387e solid;
   text-align:center;
   padding: 10px;
@@ -168,7 +154,6 @@ ul.menu li, ul.tabs li a:hover,
 }
 
 /* Leaf shape for content containers */
-
 .node--view-mode-teaser, .path-node #content-wrapper,
 .region-content, .node__content,
 div.messages.messages--status,
@@ -180,26 +165,17 @@ div.messages.messages--status,
   border-bottom-left-radius: 100px;
 }
 
-/* Reverse leaf shape for smaller objects */
-
-img, button, .button, .field--type-image,
+/* Rounded rectangles for smaller objects */
+button, .button, .field--type-image,
 .menu-item, ul.tabs li, ul.menu li,
 ul.links.field__items li,
 #main-navigation ul.menu li,
-input.button {
-  border-radius: 15px;
-  border-top-left-radius: 300px;
-  border-bottom-right-radius: 300px;
-}
-
-/* Containers that aren't a leaf */
-
-figure.caption-img img {
+input.button, figure.caption-img img {
   border-radius: 15px;
 }
 
-div.messages.messages--status {
-  margin-right:0px;
+div.messages.messages {
+  margin-right:0;
   border-bottom-left-radius: 15px;
   border-top-right-radius: 150px;
 }
@@ -218,7 +194,7 @@ div.messages.messages--status {
 
 /* No border */
 ul.tabs li a:hover {
-  border: 0px;
+  border: 0;
 }
 
 /* MIGRATE */
@@ -226,7 +202,7 @@ ul.tabs li a:hover {
 div.view-header {
   margin-bottom: 25px;
   line-height: 1.2;
-  font-family: Gwendolyn;
+  font-family: Gwendolyn, serif;
   font-size: 38px;
   color: #51387e;
 }
@@ -332,22 +308,42 @@ ul.menu li {
 }
 
 .breadcrumb {
-    /* background-color: #fcfcfc; */
-    border: 1px solid #eaeaea;
-    /* padding: 14px 20px!important; */
-    /* margin-bottom: 30px; */
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    margin: 0px;
-    /* padding: 0px; */
+  /* background-color: #fcfcfc; */
+  border: 1px solid #eaeaea;
+  /* padding: 14px 20px!important; */
+  /* margin-bottom: 30px; */
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  margin: 0px;
+  /* padding: 0px; */
 }
 
 #banner-inside {
-    padding-top: 20px;
-    margin-bottom: 0px;
+  padding-top: 20px;
+  margin-bottom: 0px;
 }
 
 #main-content {
-    padding: 20px 0 30px 0;
+  padding: 20px 0 30px 0;
+}
+
+/* Tags */
+.field--name-field-beargoyle-tags .field__item {
+  float:right;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0 0 5px;
+  border-radius: 15px;
+}
+
+.field--name-field-beargoyle-tags .field__item:hover {
+  background-color: #c1c4c9;
+}
+
+.field--name-field-beargoyle-tags .field__item a:hover {
+  text-decoration:none;
+  color: #30054a;
 }
