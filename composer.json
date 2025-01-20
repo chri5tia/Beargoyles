@@ -23,6 +23,7 @@
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
         "drupal/adminimal_admin_toolbar": "^2.0",
+        "drupal/adminimal_theme": "^1.7",
         "drupal/bootstrap_business": "^1.0@beta",
         "drupal/classy": "^1.0",
         "drupal/commerce": "^2.40",

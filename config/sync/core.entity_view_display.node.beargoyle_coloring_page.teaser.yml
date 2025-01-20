@@ -18,9 +18,17 @@ targetEntityType: node
 bundle: beargoyle_coloring_page
 mode: teaser
 content:
+  field_beargoyle_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_preview:
     type: media_thumbnail
-    label: above
+    label: hidden
     settings:
       image_link: content
       image_style: large
@@ -36,5 +44,4 @@ content:
     region: content
 hidden:
   body: true
-  field_beargoyle_tags: true
   field_coloring_page_file: true

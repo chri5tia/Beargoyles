@@ -61,7 +61,7 @@ function OilPainting() {
 
     mouseTimeout = setTimeout(() => {
       // Change the color if the mouse stops moving for half a second
-      colour = getGothicWhimsicalColor(0.15);
+      colour = getGothicWhimsicalColor(0.5);
       console.log("Color changed to:", colour);
     }, 500); // 0.5 -second delay
 
