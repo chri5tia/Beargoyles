@@ -22,6 +22,9 @@ function OilPainting() {
     canvas.width = width;
     canvas.height = height;
 
+    // Pre-populate the canvas with random shapes
+    prepopulateCanvas(25); // Adjust the number of shapes to pre-populate
+
     canvas.addEventListener("mousemove", MouseMove, false);
     canvas.addEventListener("click", MouseDown, false);
     canvas.addEventListener("dblclick", MouseDbl, false);
@@ -56,6 +59,67 @@ function OilPainting() {
     return `rgba(${r}, ${g}, ${b}, ${opacity})`;
   }
 
+  // Function to pre-populate the canvas with random shapes
+  function prepopulateCanvas(count) {
+    for (let i = 0; i < count; i++) {
+      const x = Math.random() * width;
+      const y = Math.random() * height;
+      colour = getGothicWhimsicalColor(0.5);
+      drawRandomShape(x, y, colour);
+    }
+  }
+
+  // Function to draw a random shape at a given position
+  function drawRandomShape(x, y, colour) {
+    const size = Math.random() * 15 +2; // Random size for shapes
+    context.lineWidth = Math.random() * size;
+    context.strokeWidth = Math.random() * size;
+    context.fillStyle = colour;
+    context.strokeStyle = colour;
+
+    const shapeType = Math.random();
+    context.beginPath();
+
+    if (shapeType < 0.4) {
+      // Draw a jagged line
+      for (let i = 0; i < 5; i++) {
+        context.lineTo(
+          x + Math.random() * size * 20 - size * 10,
+          y + Math.random() * size * 20 - size * 10
+        );
+      }
+    } else if (shapeType < 0.7) {
+      // Draw a distorted circle (ellipse)
+      const radiusX = size * 10 * Math.random();
+      const radiusY = size * 10 * Math.random();
+      context.ellipse(
+        x,
+        y,
+        radiusX,
+        radiusY,
+        Math.random() * Math.PI,
+        0,
+        Math.PI * 2
+      );
+    } else {
+      // Draw a small polygon
+      const sides = Math.floor(Math.random() * 5) + 3; // Random number of sides (3-7)
+      const angleStep = (Math.PI * 2) / sides;
+      const radius = size * 10;
+      for (let i = 0; i < sides; i++) {
+        const angle = i * angleStep;
+        context.lineTo(
+          x + radius * Math.cos(angle) + Math.random() * size * 2,
+          y + radius * Math.sin(angle) + Math.random() * size * 2
+        );
+      }
+    }
+
+    context.closePath();
+    context.stroke();
+    context.fill();
+  }
+
   var MouseMove = function (e) {
     clearTimeout(mouseTimeout); // Reset the timeout each time the mouse moves
 
@@ -65,12 +129,12 @@ function OilPainting() {
       console.log("Color changed to:", colour);
     }, 500); // 0.5 -second delay
 
-    var distance = Math.sqrt(
+    const distance = Math.sqrt(
       Math.pow(prevPos.x - startPos.x, 2) +
       Math.pow(prevPos.y - startPos.y, 2)
     );
 
-    var size = Math.random() * 15 / distance; // Adjust size based on distance
+    const size = Math.random() * 15 / distance; // Adjust size based on distance
 
     dist.x = (prevPos.x - startPos.x) * Math.sin(0.5) + startPos.x;
     dist.y = (prevPos.y - startPos.y) * Math.cos(0.5) + startPos.y;
@@ -81,54 +145,7 @@ function OilPainting() {
     prevPos.x = e.layerX;
     prevPos.y = e.layerY;
 
-    // ------- Draw -------
-    context.lineWidth = Math.random() * size;
-    context.strokeWidth = Math.random() * size;
-    context.fillStyle = colour;
-    context.strokeStyle = colour;
-
-    // Randomly choose a shape
-    var shapeType = Math.random();
-    context.beginPath();
-
-    if (shapeType < 0.4) {
-      // Draw a jagged line
-      for (let i = 0; i < 5; i++) {
-        context.lineTo(
-          prevPos.x + Math.random() * size * 20 - size * 10,
-          prevPos.y + Math.random() * size * 20 - size * 10
-        );
-      }
-    } else if (shapeType < 0.7) {
-      // Draw a distorted circle (ellipse)
-      var radiusX = size * 10 * Math.random();
-      var radiusY = size * 10 * Math.random();
-      context.ellipse(
-        prevPos.x,
-        prevPos.y,
-        radiusX,
-        radiusY,
-        Math.random() * Math.PI,
-        0,
-        Math.PI * 2
-      );
-    } else {
-      // Draw a small polygon
-      var sides = Math.floor(Math.random() * 5) + 3; // Random number of sides (3-7)
-      var angleStep = (Math.PI * 2) / sides;
-      var radius = size * 10;
-      for (let i = 0; i < sides; i++) {
-        var angle = i * angleStep;
-        context.lineTo(
-          prevPos.x + radius * Math.cos(angle) + Math.random() * size * 2,
-          prevPos.y + radius * Math.sin(angle) + Math.random() * size * 2
-        );
-      }
-    }
-
-    context.closePath();
-    context.stroke();
-    context.fill();
+    drawRandomShape(prevPos.x, prevPos.y, colour);
   };
 
   var MouseDown = function (e) {
