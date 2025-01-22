@@ -1,4 +1,4 @@
-uuid: fc34050f-e60b-4335-9ca3-0467c029b4f2
+uuid: ff350ec6-d47d-410f-87d6-ffb4ddd15022
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - block_content
   theme:
-    - beargoyles
-id: beargoyles_beargoylesplashcanvas
-theme: beargoyles
+    - seven
+id: seven_beargoylesplashcanvas
+theme: seven
 region: header
-weight: 0
+weight: -7
 provider: null
 plugin: 'block_content:a9aa3ccc-f315-4068-bcc3-a27c11a670d6'
 settings:

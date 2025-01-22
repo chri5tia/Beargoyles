@@ -1,4 +1,4 @@
-uuid: 9704ad74-e7a1-4687-8ba0-de7797ef2399
+uuid: 50f3239b-55a2-4d35-802a-e3bd93a45353
 langcode: en
 status: true
 dependencies:
@@ -6,18 +6,16 @@ dependencies:
     - search
   theme:
     - beargoyles
-_core:
-  default_config_hash: sw1KFUdHDaPrUxsqDFmjVbmuEFZEXUd8aSDLbPrbHQM
-id: beargoyles_search
+id: beargoyles_searchform
 theme: beargoyles
 region: sidebar_second
-weight: -6
+weight: 0
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: Search
-  label_display: visible
+  label: 'Search form'
+  label_display: '0'
   provider: search
   page_id: ''
 visibility: {  }

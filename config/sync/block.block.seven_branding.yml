@@ -1,15 +1,15 @@
-uuid: d44b43b8-1275-42c7-a8b5-e89c7811ae87
+uuid: 74a294b4-268c-4f32-9c15-07f38f129b62
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - beargoyles
+    - seven
 _core:
   default_config_hash: 7EA9OiBOT_LIAvYf-qtAv77KjubLFa3LIcQzcYXbGrk
-id: beargoyles_branding
-theme: beargoyles
+id: seven_branding
+theme: seven
 region: header
 weight: -6
 provider: null

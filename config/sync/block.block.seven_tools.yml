@@ -1,4 +1,4 @@
-uuid: e347ce5e-3cf0-4519-b433-f4500b238f5f
+uuid: 7e151f37-da0b-421d-91cd-1d29c52181f3
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - beargoyles
+    - seven
 _core:
   default_config_hash: pniBX-qx0km_xEJ-zQdo_jUjI3whmWIxhdyKVH4_qqc
-id: beargoyles_tools
-theme: beargoyles
-region: sidebar_second
+id: seven_tools
+theme: seven
+region: header
 weight: -5
 provider: null
 plugin: 'system_menu_block:tools'

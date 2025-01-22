@@ -1,16 +1,16 @@
-uuid: dcc4e1bf-6364-44b1-8528-3e02cbe1f1a4
+uuid: 21083972-714d-43f4-b8e9-3f8db3eafe88
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - beargoyles
+    - seven
 _core:
   default_config_hash: VNXt_FUOrgtRAcsXGFJLNkGtGVxnh_MUYBT5j4Vi7Vc
-id: beargoyles_breadcrumbs
-theme: beargoyles
-region: promoted
+id: seven_breadcrumbs
+theme: seven
+region: header
 weight: -6
 provider: null
 plugin: system_breadcrumb_block

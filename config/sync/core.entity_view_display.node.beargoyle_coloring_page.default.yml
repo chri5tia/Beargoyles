@@ -21,7 +21,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_beargoyle_tags:
     type: entity_reference_label
@@ -29,11 +29,11 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_coloring_page_file:
     type: entity_reference_entity_view
-    label: hidden
+    label: inline
     settings:
       view_mode: default
       link: false

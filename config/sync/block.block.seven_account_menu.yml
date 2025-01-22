@@ -1,4 +1,4 @@
-uuid: c5851348-91f6-4520-b3af-cfcf5c4818be
+uuid: 4f097678-faf1-426a-8c03-179f3b7e4dba
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - beargoyles
+    - seven
 _core:
   default_config_hash: Rt7Mt_h_9Sno49WSTqAK14DerNpqYBu14SCs4tAtuwE
-id: beargoyles_account_menu
-theme: beargoyles
-region: sidebar_second
+id: seven_account_menu
+theme: seven
+region: header
 weight: -4
 provider: null
 plugin: 'system_menu_block:account'
