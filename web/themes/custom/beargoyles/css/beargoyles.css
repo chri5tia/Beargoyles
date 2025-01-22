@@ -58,7 +58,7 @@ div.meta.submitted {
 /* text colors */
 
 /* purple text */
-a, a:hover, .label,
+a, a:hover, .label, h2,
 input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
 div.meta.submitted,a:focus,ul.menu li a.active,ul.menu li a:hover,ul.links li a.active,
 ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input {
@@ -67,7 +67,7 @@ ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input {
 
 /* charcoal text */
 
-h1, h2, h3, h4, h5 {
+h1, h3, h4, h5 {
   color:#333333;
 }
 
@@ -121,7 +121,12 @@ article nav {
 .comment,
 .node--view-mode-teaser, div.view-header,
 .path-node #content-wrapper, input, input#edit-keys {
-  border: 4px #666666 dashed;
+  border: 3px #666666 dashed;
+}
+
+/* thin light purple border */
+div#block-beargoyles-donate {
+  border: 1px #846baf solid;
 }
 
 /* Regular corners with no borders */
@@ -391,4 +396,24 @@ input.form-text:focus,input.search-text:focus,textarea.form-textarea:focus {
 input#edit-keys {
   font-size: 40px;
   opacity: 90%;
+}
+
+div#block-beargoyles-donate {
+  background-color: white;
+  opacity: 90%;
+  padding: 15px;
+}
+
+#desc-label {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.title-sep:after, #pre-header h2:after, #promoted h2:after, .sidebar h2:after, #footer h2:after {
+  display: none;
 }
