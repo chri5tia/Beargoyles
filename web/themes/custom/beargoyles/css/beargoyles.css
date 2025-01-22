@@ -115,13 +115,13 @@ article nav {
 
 /* Thick charcoal dashed border */
 .comment,
-.node--view-mode-teaser, div.view-header,
+.node--view-mode-teaser,
 .path-node #content-wrapper, input, input#edit-keys {
   border: 3px #666666 dashed;
 }
 
 /* thin light purple border */
-div#block-beargoyles-donate {
+div#block-beargoyles-donate, div.view-header {
   border: 1px #846baf solid;
 }
 
