@@ -22,6 +22,9 @@ function OilPainting() {
     canvas.width = width;
     canvas.height = height;
 
+    // Pre-populate the background
+    prepopulateBackground();
+
     canvas.addEventListener("mousemove", MouseMove, false);
     canvas.addEventListener("click", MouseDown, false);
     canvas.addEventListener("dblclick", MouseDbl, false);
@@ -55,6 +58,88 @@ function OilPainting() {
 
     return `rgba(${r}, ${g}, ${b}, ${opacity})`;
   }
+
+  var prepopulateBackground = function () {
+    const totalClusters = 50; // Total number of clusters
+    const blackClusters = 10; // Number of black clusters
+
+    // Helper function to draw a cluster
+    function drawCluster(clusterX, clusterY, clusterSize, clusterColor) {
+      context.fillStyle = clusterColor;
+      context.strokeStyle = clusterColor;
+
+      const shapesInCluster = Math.floor(Math.random() * 10) + 1; // 1-10 shapes per cluster
+
+      for (let j = 0; j < shapesInCluster; j++) {
+        const offsetX = (Math.random() - 0.5) * clusterSize * 10; // Tight grouping
+        const offsetY = (Math.random() - 0.5) * clusterSize * 10;
+        const x = clusterX + offsetX;
+        const y = clusterY + offsetY;
+        const size = Math.random() * clusterSize;
+
+        context.lineWidth = Math.random() * size;
+
+        const shapeType = Math.random();
+        context.beginPath();
+
+        if (shapeType < 0.4) {
+          // Jagged line
+          for (let k = 0; k < 5; k++) {
+            context.lineTo(
+              x + Math.random() * size * 20 - size * 10,
+              y + Math.random() * size * 20 - size * 10
+            );
+          }
+        } else if (shapeType < 0.7) {
+          // Distorted circle
+          const radiusX = size * 10 * Math.random();
+          const radiusY = size * 10 * Math.random();
+          context.ellipse(
+            x,
+            y,
+            radiusX,
+            radiusY,
+            Math.random() * Math.PI,
+            0,
+            Math.PI * 2
+          );
+        } else {
+          // Small polygon
+          const sides = Math.floor(Math.random() * 5) + 3;
+          const angleStep = (Math.PI * 2) / sides;
+          const radius = size * 10;
+          for (let k = 0; k < sides; k++) {
+            const angle = k * angleStep;
+            context.lineTo(
+              x + radius * Math.cos(angle) + Math.random() * size * 2,
+              y + radius * Math.sin(angle) + Math.random() * size * 2
+            );
+          }
+        }
+
+        context.closePath();
+        context.stroke();
+        context.fill();
+      }
+    }
+
+    // Draw black clusters
+    for (let i = 0; i < blackClusters; i++) {
+      const clusterX = Math.random() * width;
+      const clusterY = Math.random() * height;
+      const clusterSize = Math.random() * 15;
+      drawCluster(clusterX, clusterY, clusterSize, "rgba(0, 0, 0, 0.5)"); // Semi-transparent black
+    }
+
+    // Draw random color clusters
+    for (let i = 0; i < totalClusters - blackClusters; i++) {
+      const clusterX = Math.random() * width;
+      const clusterY = Math.random() * height;
+      const clusterSize = Math.random() * 15;
+      const clusterColor = getGothicWhimsicalColor(0.3); // Slightly transparent colors
+      drawCluster(clusterX, clusterY, clusterSize, clusterColor);
+    }
+  };
 
   var MouseMove = function (e) {
     clearTimeout(mouseTimeout); // Reset the timeout each time the mouse moves
@@ -146,3 +231,40 @@ function OilPainting() {
 
 var app = new OilPainting();
 app.initialize();
+
+/* New
+function OilPainting() {
+  var canvas;
+  var context;
+
+  var width;
+  var height;
+
+  var startPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+  var prevPos = { x: window.innerWidth / 2, y: 0 };
+  var dist = { x: 0, y: 0 };
+  var colour = getGothicWhimsicalColor(0.15); // Initial color with 15% opacity
+
+  var mouseTimeout; // To track when the mouse stops moving
+
+  this.initialize = function () {
+    canvas = document.getElementById("canvas");
+    context = canvas.getContext("2d");
+
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    canvas.width = width;
+    canvas.height = height;
+
+    // Prepopulate the background
+    prepopulateBackground();
+
+    canvas.addEventListener("mousemove", MouseMove, false);
+    canvas.addEventListener("click", MouseDown, false);
+    canvas.addEventListener("dblclick", MouseDbl, false);
+  };
+
+
+
+ */

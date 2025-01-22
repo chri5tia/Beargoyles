@@ -1,6 +1,7 @@
 /* STYLE GUIDE AND NOTES
 Style guide:
 Purple: #51387e
+Light purple: #846baf
 Silver: #666666
 Charcoal: #333333;
 Dark Grey: #180527;
@@ -13,6 +14,7 @@ Off-White/super light grey: #f4f7fb
 
 /* Google font import */
 @import url('https://fonts.googleapis.com/css2?family=Comforter&family=Gwendolyn&family=Montserrat:wght@300&family=Nunito:wght@300;400&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 
 /* Fonts, weight and style */
 body {
@@ -30,8 +32,10 @@ a:hover {
   text-decoration:underline;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Playfair Display, serif;
+h1 {
+  font-family: "Londrina Outline", serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 ul li {
@@ -54,9 +58,10 @@ div.meta.submitted {
 /* text colors */
 
 /* purple text */
-a, .label,
+a, a:hover, .label,
 input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
-div.meta.submitted {
+div.meta.submitted,a:focus,ul.menu li a.active,ul.menu li a:hover,ul.links li a.active,
+ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input {
   color: #51387e;
 }
 
@@ -73,7 +78,8 @@ h6 {
 
 /* Spacing and Alignment */
 
-input.form-text, input.form-email, input.form-search, textarea.form-textarea, select {
+input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
+div.view-header {
   padding:10px;
 }
 
@@ -113,8 +119,8 @@ article nav {
 
 /* Thick charcoal dashed border */
 .comment,
-.node--view-mode-teaser,
-.path-node #content-wrapper {
+.node--view-mode-teaser, div.view-header,
+.path-node #content-wrapper, input, input#edit-keys {
   border: 4px #666666 dashed;
 }
 
@@ -126,13 +132,20 @@ article nav {
 }
 
 /* Background colors */
-/* white */
+/* White */
 
 #subfooter ul.menu li,
 ul.menu li, ul.tabs li a:hover,
 .node--view-mode-teaser,
-.path-node #content-wrapper {
+.path-node #content-wrapper, .block-beargoyles-page-title,
+.block-beargoyles-local-tasks, div.view-header,
+h1.page-title, ul.tabs.primary {
   background-color: #FFFFFF;
+}
+
+/* Light purple */
+input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover,.dark input[type="submit"],.highlighted-block .btn:hover,.highlighted-block .btn:focus,.call-to-action .btn,.tag a:hover, ::-moz-selection, ::selection, input.form-text:focus,input.search-text:focus,textarea.form-textarea:focus {
+  border-color: #846baf;
 }
 
 /* Menus */
@@ -157,9 +170,12 @@ ul.menu li, ul.tabs li a:hover,
 .node--view-mode-teaser, .path-node #content-wrapper,
 .region-content, .node__content,
 div.messages.messages--status,
-.item-list ul li,
+.item-list ul li, h1.page-title,
 .field--type-text-with-summary,
-.comment, .block{
+ul.tabs.primary, div.view-header,
+.clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
+.comment, .block, .block-beargoyles-page-title,
+.block-beargoyles-local-tasks, input#edit-keys, input#edit-submit, .field-item:hover, input#edit-keys {
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
@@ -202,7 +218,6 @@ ul.tabs li a:hover {
 div.view-header {
   margin-bottom: 25px;
   line-height: 1.2;
-  font-family: Gwendolyn, serif;
   font-size: 38px;
   color: #51387e;
 }
@@ -346,4 +361,34 @@ ul.menu li {
 .field--name-field-beargoyle-tags .field__item a:hover {
   text-decoration:none;
   color: #30054a;
+}
+
+h1.page-title {
+  font-size: 72px;
+}
+
+/* Get rid of all the red */
+a,a:hover,a:focus,ul.menu li a.active,ul.menu li a:hover,ul.links li a.active,ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title a:hover {
+  color: #846baf;
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover,.dark input[type="submit"],.highlighted-block .btn:hover,.highlighted-block .btn:focus,.call-to-action .btn,.tag a:hover {
+  background-color: #846baf;
+}
+
+::-moz-selection {
+  background-color: #846baf;
+}
+
+::selection {
+  background-color: #846baf;
+}
+
+input.form-text:focus,input.search-text:focus,textarea.form-textarea:focus {
+  border-color: #846baf;
+}
+
+input#edit-keys {
+  font-size: 40px;
+  opacity: 90%;
 }

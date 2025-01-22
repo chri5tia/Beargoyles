@@ -2,10 +2,10 @@
 
 canvas {
   position: fixed;
-  margin: 0px;
-  padding: 0px;
-  top: 0px;
-  left: 0px;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index:-100;
@@ -14,10 +14,18 @@ canvas {
 button, .node, input,
 .block-local-tasks-block,
 .node--view-mode-teaser,
-/*.path-node #content-wrapper,*/
-.block-system-breadcrumb-block .content,
-ul.tabs li {
+.path-node #content-wrapper,
+.block-system-breadcrumb-block .content, div.view-header,
+ul.tabs li, h1.page-title {
   opacity: 90%;
+}
+
+.clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item {
+  opacity: 85%;
+}
+
+ul.tabs.primary {
+  opacity:100%;
 }
 
 #main-navigation,
