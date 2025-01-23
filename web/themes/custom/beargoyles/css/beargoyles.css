@@ -84,7 +84,7 @@ div.view-header {
 }
 
 .node--view-mode-teaser,
-.path-node #content-wrapper {
+.path-node #content-wrapper, ol.search-results.node_search-results {
   padding: 15px;
 }
 
@@ -116,12 +116,13 @@ article nav {
 /* Thick charcoal dashed border */
 .comment,
 .node--view-mode-teaser,
-.path-node #content-wrapper, input, input#edit-keys {
+.path-node #content-wrapper, input {
   border: 3px #666666 dashed;
 }
 
 /* thin light purple border */
-div#block-beargoyles-donate, div.view-header {
+div#block-beargoyles-donate, div.view-header,
+ol.search-results.node_search-results {
   border: 1px #846baf solid;
 }
 
@@ -140,7 +141,7 @@ ul.menu li, ul.tabs li a:hover,
 .node--view-mode-teaser,
 .path-node #content-wrapper, .block-beargoyles-page-title,
 .block-beargoyles-local-tasks, div.view-header,
-h1.page-title, ul.tabs.primary {
+h1.page-title, ul.tabs.primary, ol.search-results.node_search-results {
   background-color: #FFFFFF;
 }
 
@@ -176,7 +177,8 @@ div.messages.messages--status,
 ul.tabs.primary, div.view-header,
 .clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
 .comment, .block, .block-beargoyles-page-title,
-.block-beargoyles-local-tasks, input#edit-keys, input#edit-submit, .field-item:hover, input#edit-keys {
+.block-beargoyles-local-tasks, input#edit-submit, .field-item:hover, input#edit-keys,
+ol.search-results.node_search-results {
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
