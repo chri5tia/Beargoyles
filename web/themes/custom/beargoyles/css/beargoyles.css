@@ -412,6 +412,6 @@ div#block-beargoyles-donate {
   font-size: 18px;
 }
 
-.title-sep:after, #pre-header h2:after, #promoted h2:after, .sidebar h2:after, #footer h2:after {
+.title-sep:after, #pre-header h2:after, #promoted h2:after, .sidebar h2:after, #footer h2:after, .view-header {
   display: none;
 }
