@@ -1,4 +1,4 @@
-uuid: 52ae57ed-51fd-41f9-8327-72dbb3b978ab
+uuid: c0de27b1-3279-4c8d-bd5c-2e7f990db578
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - beargoyles
 _core:
-  default_config_hash: Fuvo_V2eVvIP87aTfCPvxZp6d5ggdIwcWaPSVVRKsa8
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
 id: beargoyles_content
 theme: beargoyles
 region: content
-weight: -1
+weight: -6
 provider: null
 plugin: system_main_block
 settings:

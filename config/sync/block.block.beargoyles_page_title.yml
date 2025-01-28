@@ -1,15 +1,17 @@
-uuid: 7568ef4e-0162-43a3-8f95-959d7aa1537d
+uuid: db0f6012-e55f-471b-8a4f-69a67262961c
 langcode: en
 status: true
 dependencies:
+  module:
+    - taxonomy
   theme:
     - beargoyles
 _core:
-  default_config_hash: a_ewKQxu8obIPnNMIOBV6iFGLMm334WARDJJb3Hlv6w
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
 id: beargoyles_page_title
 theme: beargoyles
 region: content
-weight: -4
+weight: -7
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,11 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      tags: tags

@@ -1,14 +1,14 @@
-uuid: 71e099d2-7e22-4130-902a-47363417c97f
+uuid: e46b89cf-8068-4d4f-bd47-feaa3c6baf90
 langcode: en
 status: true
 dependencies:
   theme:
     - beargoyles
 _core:
-  default_config_hash: ng-kM_yCPtkiKiKv3JlE2F2fzheJj1LWMEEMf4VfQ7k
-id: beargoyles_local_actions
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: beargoyles_primary_admin_actions
 theme: beargoyles
-region: content
+region: highlighted
 weight: -5
 provider: null
 plugin: local_actions_block

@@ -1,15 +1,16 @@
-uuid: 50f3239b-55a2-4d35-802a-e3bd93a45353
+uuid: 4b57cd6f-5167-4a4b-bbd8-244cf7fdd5a9
 langcode: en
 status: true
 dependencies:
   module:
     - search
+    - taxonomy
   theme:
     - beargoyles
 id: beargoyles_searchform
 theme: beargoyles
 region: sidebar_second
-weight: 0
+weight: -7
 provider: null
 plugin: search_form_block
 settings:
@@ -18,4 +19,11 @@ settings:
   label_display: '0'
   provider: search
   page_id: ''
-visibility: {  }
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      tags: tags

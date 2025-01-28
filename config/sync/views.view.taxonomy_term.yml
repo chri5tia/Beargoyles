@@ -243,7 +243,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: entity
-          empty: true
+          empty: false
           target: '{{ raw_arguments.tid }}'
           view_mode: full
           tokenize: true
@@ -306,6 +306,22 @@ display:
       query:
         type: views_query
         options: {  }
+      defaults:
+        header: false
+      header:
+        entity_taxonomy_term:
+          id: entity_taxonomy_term
+          table: views
+          field: entity_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: false
+          target: '{{ raw_arguments.tid }}'
+          view_mode: full
+          tokenize: true
+          bypass_access: false
       display_extenders: {  }
       path: taxonomy/term/%
     cache_metadata:
