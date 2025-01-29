@@ -1,16 +1,16 @@
-uuid: 4b57cd6f-5167-4a4b-bbd8-244cf7fdd5a9
+uuid: 328f5d05-6742-4aed-bb80-c21c8e2787d5
 langcode: en
 status: true
 dependencies:
   module:
     - search
-    - taxonomy
+    - system
   theme:
     - beargoyles
 id: beargoyles_searchform
 theme: beargoyles
 region: sidebar_second
-weight: -7
+weight: 0
 provider: null
 plugin: search_form_block
 settings:
@@ -20,10 +20,7 @@ settings:
   provider: search
   page_id: ''
 visibility:
-  'entity_bundle:taxonomy_term':
-    id: 'entity_bundle:taxonomy_term'
-    negate: false
-    context_mapping:
-      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
-    bundles:
-      tags: tags
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/search\r\n/search/*"

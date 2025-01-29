@@ -1,0 +1,25 @@
+uuid: 6b8da410-4f5d-471d-bc50-7caece4e73a3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:70c72549-722d-42db-9981-4e492ea78630'
+  module:
+    - block_content
+  theme:
+    - beargoyles
+id: beargoyles_footer_2
+theme: beargoyles
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:70c72549-722d-42db-9981-4e492ea78630'
+settings:
+  id: 'block_content:70c72549-722d-42db-9981-4e492ea78630'
+  label: Footer
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

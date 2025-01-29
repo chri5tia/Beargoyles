@@ -1,17 +1,15 @@
-uuid: db0f6012-e55f-471b-8a4f-69a67262961c
+uuid: 7568ef4e-0162-43a3-8f95-959d7aa1537d
 langcode: en
 status: true
 dependencies:
-  module:
-    - taxonomy
   theme:
     - beargoyles
 _core:
-  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+  default_config_hash: a_ewKQxu8obIPnNMIOBV6iFGLMm334WARDJJb3Hlv6w
 id: beargoyles_page_title
 theme: beargoyles
 region: content
-weight: -7
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

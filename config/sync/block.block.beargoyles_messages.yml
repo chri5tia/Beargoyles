@@ -1,4 +1,4 @@
-uuid: 1daffbf5-a75c-4f8e-9d9e-f25a42e2a6a1
+uuid: cf36dd4e-de14-4737-b0e5-4b0f7a33f7ac
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - beargoyles
 _core:
-  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+  default_config_hash: CybDyQJYsoDmybEofydWzBFuy_w-SZ2YjEE-Llw2jMo
 id: beargoyles_messages
 theme: beargoyles
-region: highlighted
-weight: -5
+region: content
+weight: -6
 provider: null
 plugin: system_messages_block
 settings:

@@ -1,22 +1,22 @@
-uuid: 0555191d-ece1-49b6-ba1b-6369f0748f8a
+uuid: a06aa872-528b-40b7-88cd-96c8df023148
 langcode: en
 status: true
 dependencies:
   theme:
     - beargoyles
 _core:
-  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
-id: beargoyles_secondary_local_tasks
+  default_config_hash: nn1Lk6mCvPylf1Me1COvig7AfIgavwQ101ON6ojvfkA
+id: beargoyles_local_tasks
 theme: beargoyles
-region: highlighted
-weight: -2
+region: content
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Secondary tabs'
+  label: Tabs
   label_display: '0'
   provider: core
-  primary: false
+  primary: true
   secondary: true
 visibility: {  }

@@ -1,4 +1,4 @@
-uuid: 50f83142-2b36-46bf-803c-8e2b48ec3681
+uuid: ddbb3226-882f-422d-bd00-09234a941c57
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - beargoyles
 _core:
-  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+  default_config_hash: J0mu4I9vKBvBEsx1fY5zmoxN0tSVDlGOftdzwrn092k
 id: beargoyles_help
 theme: beargoyles
-region: pre_header_first
-weight: -4
+region: content
+weight: -2
 provider: null
 plugin: help_block
 settings:

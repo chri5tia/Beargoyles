@@ -1,4 +1,4 @@
-uuid: 5624b28b-395b-4eee-8d29-0908ef7f1792
+uuid: e5ec29a2-c27d-4d07-b190-75d22a793aea
 langcode: en
 status: true
 dependencies:
@@ -9,11 +9,11 @@ dependencies:
   theme:
     - beargoyles
 _core:
-  default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
+  default_config_hash: lHV5hXq2bIlb2FOZyNnc5F-c103EDJkMOPXP1uy8FNs
 id: beargoyles_main_menu
 theme: beargoyles
 region: navigation
-weight: -7
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 2
-  expand_all_items: true
+  depth: 1
+  expand_all_items: false
 visibility: {  }
