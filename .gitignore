@@ -46,3 +46,6 @@ web/sites/simpletest
 
 # Ignore ddev and project-level stuff
 .idea/
+
+# Ignore notes directory for local dev stuff
+/notes
