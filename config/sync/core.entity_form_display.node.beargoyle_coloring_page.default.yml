@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
+    - inline_entity_form
     - media_library
     - path
     - text
@@ -44,11 +45,17 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_coloring_page_file:
-    type: media_library_widget
+    type: inline_entity_form_simple
     weight: 1
     region: content
     settings:
-      media_types: {  }
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      revision: true
     third_party_settings: {  }
   field_preview:
     type: media_library_widget
