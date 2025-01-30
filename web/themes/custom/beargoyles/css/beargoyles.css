@@ -17,9 +17,13 @@ Off-White/super light grey: #f4f7fb
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 
 /* Fonts, weight and style */
-body {
+body, h2, h3, h4, h5, h6, p {
   line-height: 200%;
   font-family: nunito, sans-serif;
+}
+
+p {
+  font-size: large;
 }
 
 a {
@@ -36,6 +40,11 @@ h1 {
   font-family: "Londrina Outline", serif;
   font-weight: 800;
   font-style: normal;
+}
+
+blockquote p {
+  font-size: x-large;
+  font-style: italic;
 }
 
 ul li {
@@ -57,7 +66,7 @@ div.meta.submitted {
 a, a:hover, .label, h2,
 input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
 div.meta.submitted,a:focus,ul.menu li a.active,ul.menu li a:hover,ul.links li a.active,
-ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input {
+ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input, input#edit-keys {
   color: #51387e;
 }
 
@@ -116,13 +125,14 @@ article nav {
 /* Thick charcoal dashed border */
 .comment,
 .node--view-mode-teaser,
-.path-node #content-wrapper {
+.path-node #content-wrapper,
+ol.search-results.node_search-results {
   border: 3px #666666 dashed;
 }
 
 /* thin light purple border */
 div#block-beargoyles-donate, div.view-header,
-ol.search-results.node_search-results {
+input#edit-keys {
   border: 1px #846baf solid;
 }
 
@@ -392,14 +402,16 @@ input.form-text:focus,input.search-text:focus,textarea.form-textarea:focus {
 }
 
 input#edit-keys {
-  font-size: 40px;
+  font-size: 30px;
+  font-weight:800px;
   opacity: 90%;
+  padding-left: 15px;
 }
 
 div#block-beargoyles-donate {
   background-color: white;
   opacity: 90%;
-  padding: 15px;
+  padding: 30px;
 }
 
 #desc-label {
