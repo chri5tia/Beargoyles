@@ -37,6 +37,7 @@ permissions:
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'delete terms in tags'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
@@ -44,4 +45,5 @@ permissions:
   - 'revert all revisions'
   - 'view all revisions'
   - 'view own unpublished content'
+  - 'view term revisions in tags'
   - 'view the administration theme'

@@ -16,7 +16,7 @@ button, .node, input,
 .node--view-mode-teaser,
 .path-node #content-wrapper,
 .block-system-breadcrumb-block .content, div.view-header,
-ul.tabs li, h1.page-title {
+ul.tabs li, h1.page-title, #subfooter {
   opacity: 90%;
 }
 
@@ -57,9 +57,8 @@ position:relative;
 button, img, input, label,
 .node, ul.tabs, ul.menu, .button,
 .menu-item, ul.tabs li,
-.col-md-8, .block,
-.block-system-breadcrumb-block,
-.node--view-mode-teaser, .path-node #content-wrapper {
+.col-md-8, .block-system-breadcrumb-block,
+.node--view-mode-teaser, .path-node #content-wrapper, #subfooter {
 z-index: 100;
 position:relative;
 }

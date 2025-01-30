@@ -68,7 +68,7 @@ h1, h3, h4, h5 {
 }
 
 /* silver text */
-h6 {
+h6, #subfooter {
   color: #666666;
 }
 
@@ -116,7 +116,7 @@ article nav {
 /* Thick charcoal dashed border */
 .comment,
 .node--view-mode-teaser,
-.path-node #content-wrapper, input {
+.path-node #content-wrapper {
   border: 3px #666666 dashed;
 }
 
@@ -141,7 +141,7 @@ ul.menu li, ul.tabs li a:hover,
 .node--view-mode-teaser,
 .path-node #content-wrapper, .block-beargoyles-page-title,
 .block-beargoyles-local-tasks, div.view-header,
-h1.page-title, ul.tabs.primary, ol.search-results.node_search-results {
+h1.page-title, ul.tabs.primary, ol.search-results.node_search-results, #subfooter {
   background-color: #FFFFFF;
 }
 
@@ -414,4 +414,10 @@ div#block-beargoyles-donate {
 
 .title-sep:after, #pre-header h2:after, #promoted h2:after, .sidebar h2:after, #footer h2:after, .view-header {
   display: none;
+}
+
+#subfooter {
+  border-top: 1px solid #eaeaea;
+  padding: 10px;
+  margin-bottom: 0px;
 }

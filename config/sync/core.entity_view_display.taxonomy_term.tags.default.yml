@@ -1,0 +1,13 @@
+uuid: ef315863-2124-472d-8d17-673ea0344b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+id: taxonomy_term.tags.default
+targetEntityType: taxonomy_term
+bundle: tags
+mode: default
+content: {  }
+hidden:
+  description: true
