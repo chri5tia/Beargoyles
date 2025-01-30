@@ -29,7 +29,6 @@ ul.tabs.primary {
 }
 
 #main-navigation,
-/*#block-dorquenet-page-title, */
 .menu-item, ul.menu, #main-content .col-md-8 {
   opacity: 95%;
 }
@@ -56,7 +55,7 @@ position:relative;
 
 button, img, input, label,
 .node, ul.tabs, ul.menu, .button,
-.menu-item, ul.tabs li,
+.menu-item, ul.tabs li, h1.page-title,
 .col-md-8, .block-system-breadcrumb-block,
 .node--view-mode-teaser, .path-node #content-wrapper, #subfooter {
 z-index: 100;
