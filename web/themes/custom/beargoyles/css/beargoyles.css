@@ -432,3 +432,10 @@ div#block-beargoyles-donate {
   padding: 10px;
   margin-bottom: 0px;
 }
+
+.field.field--name-name.field--type-string.field--label-hidden.field__item {
+  z-index: 100;
+  position: relative;
+  padding-left: 2px;
+  font-weight:800;
+}
