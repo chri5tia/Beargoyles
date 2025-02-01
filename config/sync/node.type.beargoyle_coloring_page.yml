@@ -13,6 +13,6 @@ name: 'Beargoyle Coloring Page'
 type: beargoyle_coloring_page
 description: 'Downloadable coloring pages.'
 help: null
-new_revision: false
+new_revision: true
 preview_mode: 0
 display_submitted: false
