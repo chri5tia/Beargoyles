@@ -1,22 +1,20 @@
-uuid: dc0dad93-2857-4f36-a08b-e51c8920e53c
+uuid: e5b9c87b-55c6-4006-88fa-05627738c2dc
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.comment
-    - node.type.article
+    - node.type.beargoyle_coloring_page
   module:
     - comment
-_core:
-  default_config_hash: UqXlkKC4v2-bDfWx4zcXQrD5YIi3d5byENEmWv-G_Uc
-id: node.article.comment
+id: node.beargoyle_coloring_page.comment
 field_name: comment
 entity_type: node
-bundle: article
+bundle: beargoyle_coloring_page
 label: Comments
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     status: 2

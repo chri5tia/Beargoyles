@@ -132,7 +132,7 @@ ol.search-results.node_search-results {
 
 /* thin light purple border */
 div#block-beargoyles-donate, div.view-header,
-input#edit-keys {
+input#edit-keys, .sideleaf  {
   border: 1px #846baf solid;
 }
 
@@ -156,7 +156,8 @@ ul.menu li, ul.tabs li a:hover,
 .node--view-mode-teaser,
 .path-node #content-wrapper, .block-beargoyles-page-title,
 .block-beargoyles-local-tasks, div.view-header,
-h1.page-title, ul.tabs.primary, ol.search-results.node_search-results, #subfooter {
+h1.page-title, ul.tabs.primary, ol.search-results.node_search-results, #subfooter,
+.sideleaf {
   background-color: #FFFFFF;
 }
 
@@ -188,7 +189,7 @@ ul.tabs.primary, div.view-header,
 .clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
 .comment, .block, .block-beargoyles-page-title,
 .block-beargoyles-local-tasks, input#edit-submit, .field-item:hover, input#edit-keys,
-ol.search-results.node_search-results, .field--name-field-beargoyle-tags .field__item {
+ol.search-results.node_search-results, .field--name-field-beargoyle-tags .field__item, .sideleaf {
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
@@ -438,4 +439,8 @@ div#block-beargoyles-donate {
   position: relative;
   padding-left: 2px;
   font-weight:800;
+}
+
+.sideleaf {
+  padding: 35px;
 }

@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.beargoyle_coloring_page.body
+    - field.field.node.beargoyle_coloring_page.comment
     - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
+    - comment
     - inline_entity_form
     - media_library
     - path
@@ -27,6 +29,12 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  comment:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

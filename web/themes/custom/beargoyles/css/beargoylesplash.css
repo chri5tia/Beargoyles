@@ -16,7 +16,8 @@ button, .node, input,
 .node--view-mode-teaser,
 .path-node #content-wrapper,
 .block-system-breadcrumb-block .content, div.view-header,
-ul.tabs li, h1.page-title, ol.search-results.node_search-results {
+ul.tabs li, h1.page-title, ol.search-results.node_search-results,
+.sideleaf {
   opacity: 90%;
 }
 
@@ -58,7 +59,8 @@ button, img, input, label,
 .node, ul.tabs, ul.menu, .button,
 .menu-item, ul.tabs li, h1.page-title,
 .col-md-8, .block-system-breadcrumb-block,
-.node--view-mode-teaser, .path-node #content-wrapper, #subfooter, ol.search-results.node_search-results {
+.node--view-mode-teaser, .path-node #content-wrapper, #subfooter, ol.search-results.node_search-results,
+.sideleaf {
 z-index: 100;
 position:relative;
 }

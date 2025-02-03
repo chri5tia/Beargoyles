@@ -1,0 +1,33 @@
+uuid: 1b6b0f33-6472-4a62-9d16-71a4435ecef1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fb2d0cd5-6f99-412e-b629-f7eeb2823c24'
+  module:
+    - block_content
+    - node
+  theme:
+    - beargoyles
+id: beargoyles_license
+theme: beargoyles
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:fb2d0cd5-6f99-412e-b629-f7eeb2823c24'
+settings:
+  id: 'block_content:fb2d0cd5-6f99-412e-b629-f7eeb2823c24'
+  label: 'PDF Download Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      beargoyle_coloring_page: beargoyle_coloring_page
