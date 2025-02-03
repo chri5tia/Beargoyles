@@ -1,0 +1,33 @@
+uuid: 2c678662-bdb8-4b12-b609-2093f5beec38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_admin_tags
+    - node.type.beargoyle_coloring_page
+    - taxonomy.vocabulary.administrative
+  content:
+    - 'taxonomy_term:administrative:52e010b7-6eed-4f58-baa8-516a11513290'
+id: node.beargoyle_coloring_page.field_admin_tags
+field_name: field_admin_tags
+entity_type: node
+bundle: beargoyle_coloring_page
+label: 'Admin Tags'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 52e010b7-6eed-4f58-baa8-516a11513290
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      administrative: administrative
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

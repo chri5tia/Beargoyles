@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.beargoyle_coloring_page.body
     - field.field.node.beargoyle_coloring_page.comment
+    - field.field.node.beargoyle_coloring_page.field_admin_tags
     - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
     - field.field.node.beargoyle_coloring_page.field_preview
@@ -41,5 +42,6 @@ content:
 hidden:
   body: true
   comment: true
+  field_admin_tags: true
   field_coloring_page_file: true
   links: true

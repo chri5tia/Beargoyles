@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.beargoyle_coloring_page.body
     - field.field.node.beargoyle_coloring_page.comment
+    - field.field.node.beargoyle_coloring_page.field_admin_tags
     - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
     - field.field.node.beargoyle_coloring_page.field_preview
@@ -41,6 +42,16 @@ content:
     weight: 5
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_admin_tags:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_beargoyle_tags:
     type: entity_reference_autocomplete
