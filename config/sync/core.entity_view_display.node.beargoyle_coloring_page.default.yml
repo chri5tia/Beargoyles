@@ -34,15 +34,7 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 110
-    region: content
-  field_admin_tags:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 111
+    weight: 5
     region: content
   field_beargoyle_tags:
     type: entity_reference_label
@@ -75,4 +67,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_admin_tags: true
