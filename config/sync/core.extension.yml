@@ -20,10 +20,11 @@ module:
   commerce_product: 0
   commerce_store: 0
   config: 0
-  config_split: 0
   contact: 0
   contextual: 0
   datetime: 0
+  dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -54,6 +55,7 @@ module:
   redirect: 0
   search: 0
   shortcut: 0
+  stage_file_proxy: 0
   state_machine: 0
   system: 0
   taxonomy: 0
@@ -62,6 +64,7 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  views_ui: 0
   pathauto: 1
   views: 10
   standard: 1000
