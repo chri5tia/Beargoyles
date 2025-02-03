@@ -23,8 +23,6 @@ module:
   contact: 0
   contextual: 0
   datetime: 0
-  dblog: 0
-  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -41,7 +39,6 @@ module:
   media: 0
   media_gallery: 0
   media_library: 0
-  media_pdf_thumbnail: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0
@@ -55,7 +52,6 @@ module:
   redirect: 0
   search: 0
   shortcut: 0
-  stage_file_proxy: 0
   state_machine: 0
   system: 0
   taxonomy: 0
