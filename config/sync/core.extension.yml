@@ -20,9 +20,11 @@ module:
   commerce_product: 0
   commerce_store: 0
   config: 0
+  config_split: 0
   contact: 0
   contextual: 0
   datetime: 0
+  dblog: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -39,6 +41,7 @@ module:
   media: 0
   media_gallery: 0
   media_library: 0
+  media_pdf_thumbnail: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0

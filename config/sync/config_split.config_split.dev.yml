@@ -1,0 +1,18 @@
+uuid: bc55a55a-cff0-4df9-abb1-76b792e510a2
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: Dev
+description: 'For local dev sites'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/dev
+module:
+  devel: 0
+  stage_file_proxy: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }
