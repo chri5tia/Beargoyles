@@ -131,7 +131,7 @@ ol.search-results.node_search-results {
 }
 
 /* thin light purple border */
-div#block-beargoyles-donate, div.view-header,
+div.view-header,
 input#edit-keys, .sideleaf  {
   border: 1px #846baf solid;
 }
@@ -406,12 +406,6 @@ input#edit-keys {
   font-weight:800px;
   opacity: 90%;
   padding-left: 15px;
-}
-
-div#block-beargoyles-donate {
-  background-color: white;
-  opacity: 90%;
-  padding: 30px;
 }
 
 #desc-label {
