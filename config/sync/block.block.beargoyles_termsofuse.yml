@@ -1,24 +1,24 @@
-uuid: 1b6b0f33-6472-4a62-9d16-71a4435ecef1
+uuid: f6ef41ff-4635-4e4e-a7f1-e91073d2b553
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:fb2d0cd5-6f99-412e-b629-f7eeb2823c24'
+    - 'block_content:basic:9612a325-6445-49d2-b5dc-2749819ed71b'
   module:
     - block_content
     - node
   theme:
     - beargoyles
-id: beargoyles_license
+id: beargoyles_termsofuse
 theme: beargoyles
 region: sidebar_second
-weight: 0
+weight: -5
 provider: null
-plugin: 'block_content:fb2d0cd5-6f99-412e-b629-f7eeb2823c24'
+plugin: 'block_content:9612a325-6445-49d2-b5dc-2749819ed71b'
 settings:
-  id: 'block_content:fb2d0cd5-6f99-412e-b629-f7eeb2823c24'
-  label: 'PDF Download Block'
-  label_display: '0'
+  id: 'block_content:9612a325-6445-49d2-b5dc-2749819ed71b'
+  label: 'Terms of Use'
+  label_display: visible
   provider: block_content
   status: true
   info: ''
