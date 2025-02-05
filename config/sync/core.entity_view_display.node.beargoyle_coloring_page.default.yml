@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.beargoyle_coloring_page.body
     - field.field.node.beargoyle_coloring_page.comment
     - field.field.node.beargoyle_coloring_page.field_admin_tags
@@ -12,7 +11,6 @@ dependencies:
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
-    - comment
     - text
     - user
 id: node.beargoyle_coloring_page.default
@@ -26,15 +24,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
-    region: content
-  comment:
-    type: comment_default
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_beargoyle_tags:
     type: entity_reference_label
@@ -68,4 +57,5 @@ content:
     weight: 0
     region: content
 hidden:
+  comment: true
   field_admin_tags: true

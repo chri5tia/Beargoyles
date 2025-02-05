@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
-    - comment
     - inline_entity_form
     - media_library
     - path
@@ -30,12 +29,6 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 13
-    region: content
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -129,4 +122,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  comment: true

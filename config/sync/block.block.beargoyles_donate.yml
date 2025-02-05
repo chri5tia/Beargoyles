@@ -19,7 +19,7 @@ plugin: 'block_content:daa19d22-0d63-4721-928c-f17e6b217957'
 settings:
   id: 'block_content:daa19d22-0d63-4721-928c-f17e6b217957'
   label: Donate
-  label_display: visible
+  label_display: '0'
   provider: block_content
   status: true
   info: ''
