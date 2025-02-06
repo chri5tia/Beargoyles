@@ -66,7 +66,7 @@ div.meta.submitted {
 a, a:hover, .label, h2,
 input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
 div.meta.submitted,a:focus,ul.menu li a.active,ul.menu li a:hover,ul.links li a.active,
-ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input, input#edit-keys {
+ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input, input#edit-keys, .search-result__title a:hover  {
   color: #51387e;
 }
 
@@ -188,7 +188,7 @@ div.messages.messages--status,
 ul.tabs.primary, div.view-header,
 .clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
 .comment, .block, .block-beargoyles-page-title,
-.block-beargoyles-local-tasks, input#edit-submit, .field-item:hover, input#edit-keys,
+.block-beargoyles-local-tasks, .field-item:hover,
 ol.search-results.node_search-results, .field--name-field-beargoyle-tags .field__item, .sideleaf {
   border-radius: 15px;
   border-top-right-radius: 100px;
@@ -441,4 +441,13 @@ input#edit-keys {
 
 .sideleaf {
   padding: 35px;
+}
+
+input#edit-submit {
+  margin: 20px 0 0 0;
+}
+
+.search-result__title {
+  font-size:4rem;
+  line-height:2;
 }
