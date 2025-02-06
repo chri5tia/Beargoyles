@@ -66,7 +66,7 @@ div.meta.submitted {
 a, a:hover, .label, h2,
 input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
 div.meta.submitted,a:focus,ul.menu li a.active,ul.menu li a:hover,ul.links li a.active,
-ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input, input#edit-keys, .search-result__title a:hover  {
+ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input, .search-result__title a:hover  {
   color: #51387e;
 }
 
@@ -80,6 +80,12 @@ h1, h3, h4, h5 {
 h6, #subfooter {
   color: #666666;
 }
+
+/* White text */
+input#edit-keys {
+  color:#FFFFFF;
+}
+
 
 /* Spacing and Alignment */
 
@@ -161,6 +167,11 @@ h1.page-title, ul.tabs.primary, ol.search-results.node_search-results, #subfoote
   background-color: #FFFFFF;
 }
 
+/* Charcoal background */
+input#edit-keys {
+  background-color: #333333;
+}
+
 /* Menus */
 .region-sidebar-second ul.menu li {
   border: 0;
@@ -204,7 +215,7 @@ button, .button, .field--type-image,
 .menu-item, ul.tabs li, ul.menu li,
 ul.links.field__items li,
 #main-navigation ul.menu li,
-input.button, figure.caption-img img {
+input.button, figure.caption-img img, input#edit-keys, input.pp-WAQZYM62ZJPS4 {
   border-radius: 15px;
 }
 
@@ -450,4 +461,8 @@ input#edit-submit {
 .search-result__title {
   font-size:4rem;
   line-height:2;
+}
+
+input#edit-keys {
+  opacity: 85%;
 }
