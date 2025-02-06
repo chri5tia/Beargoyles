@@ -193,6 +193,7 @@ ol.search-results.node_search-results, .field--name-field-beargoyle-tags .field_
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
+  margin-bottom:20px;
 }
 
 /* Rounded rectangles for smaller objects */
