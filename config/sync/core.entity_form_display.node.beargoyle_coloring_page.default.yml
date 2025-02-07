@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.beargoyle_coloring_page.body
-    - field.field.node.beargoyle_coloring_page.comment
     - field.field.node.beargoyle_coloring_page.field_admin_tags
     - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
@@ -122,5 +121,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  comment: true
+hidden: {  }
