@@ -1,0 +1,30 @@
+uuid: c3e08caa-a799-4f79-9c1e-ba4715bc036e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:04bb2f60-1f85-4b1c-8227-e845cf82dfb8'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_backgroundeffectinstructions
+theme: beargoyles
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:04bb2f60-1f85-4b1c-8227-e845cf82dfb8'
+settings:
+  id: 'block_content:04bb2f60-1f85-4b1c-8227-e845cf82dfb8'
+  label: 'Background Effect Instructions'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/donate\r\n/free-coloring-pages\r\n/what-is-a-beargoyle"
