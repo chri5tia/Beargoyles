@@ -454,8 +454,10 @@ input#edit-keys {
   padding: 35px;
 }
 
-.sideleaf2 {
-  background-color: #666666;
+.bottomleaf {
+  padding: 20px;
+  color: #666666;
+  font-size: small;
 }
 
 input#edit-submit {
