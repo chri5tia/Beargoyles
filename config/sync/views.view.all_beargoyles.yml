@@ -1089,6 +1089,9 @@ display:
         options:
           offset: 0
           items_per_page: 7
+      cache:
+        type: none
+        options: {  }
       sorts:
         random:
           id: random
@@ -1122,6 +1125,7 @@ display:
           separator: ''
           hide_empty: false
       defaults:
+        cache: false
         pager: false
         style: false
         row: false

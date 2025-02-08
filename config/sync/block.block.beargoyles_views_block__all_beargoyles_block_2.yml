@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.all_beargoyles
   module:
-    - node
     - views
   theme:
     - beargoyles
@@ -22,12 +21,4 @@ settings:
   provider: views
   views_label: ''
   items_per_page: none
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      article: article
-      page: page
+visibility: {  }
