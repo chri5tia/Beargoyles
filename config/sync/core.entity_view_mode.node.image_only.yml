@@ -1,0 +1,11 @@
+uuid: 336ba768-8aff-41fb-91fe-1cf937d8c9eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.image_only
+label: 'Image only'
+description: 'Just the image'
+targetEntityType: node
+cache: true
