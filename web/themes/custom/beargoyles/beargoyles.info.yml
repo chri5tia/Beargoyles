@@ -1,6 +1,6 @@
 name: Beargoyles Theme
 type: theme
-description: This is a dorquenet sub theme of bootstrap_business
+description: This is a DorqueNet sub theme of bootstrap_business
 core: 8.x
 core_version_requirement: ^8 || ^9 || ^10
 # Defines the base theme

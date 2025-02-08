@@ -225,18 +225,6 @@ div.messages.messages {
   border-top-right-radius: 150px;
 }
 
-/* MOUSEOVER AFFECTS */
-
-.image-style-gallery-thumb {
-  filter: grayscale(95%);
-  opacity: 90%;
-}
-
-.image-style-gallery-thumb:hover {
-  filter: grayscale(0%);
-  opacity: 100%;
-}
-
 /* No border */
 ul.tabs li a:hover {
   border: 0;
@@ -250,97 +238,6 @@ div.view-header {
   font-size: 38px;
   color: #51387e;
 }
-
-/* TEMPLATE DEBUGGING: to debug uncomment out all of the following
-
-.node__content .clearfix,
-.block-system-main-block,
-div#content-wrapper,
-.region-content,
-#main.clearfix,
-h2.title,
-.node header,
-.node--view-mode-teaser,
-.path-node #content-wrapper,
-.comment, ul.menu li,
-.col-md-8 {
-  border: thick solid black;
-}
-
-.block {
-  border: 2px dashed black;
-}
-
-
-.node__content .clearfix {
-  background-color: orange;
-}
-
-.block-system-main-block {
-  background-color: yellow;
-}
-
-div#content-wrapper {
-  background-color: lightblue;
-}
-
-.region-content {
-  background-color: pink;
-}
-
-#main.clearfix {
-  background-color: green;
-}
-
-h2.title {
-  background-color:red;
-}
-
-.node header {
-  background-color: blue;
-}
-
-.content .node--type-page header {
-  background-color: darkseagreen;
-}
-
-.col-md-8 {
-  background-color: purple;
-}
-
-.node--view-mode-teaser {
-  background-color: cyan;
-}
-
-.path-node #content-wrapper {
-  background-color: blueviolet;
-}
-
-.comment {
-  background-color: darkblue;
-}
-
-.block {
-  background-color: lightgrey;
-}
-
-ul.menu li {
-  background-color: deeppink;
-}
-
-.field--type-text-with-summary {
-  background-color: lightyellow;
-}
-
-.node__content {
-  background-color:darkkhaki;
-}
-
-.block-block-content {
-  background-color:darkslateblue;
-}
-
-*/
 
 .item-list ul li {
   background-color: #FFFFFF;
