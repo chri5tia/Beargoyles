@@ -79,19 +79,22 @@ display:
             label: ''
             field_identifier: sticky
           exposed: false
-        random:
-          id: random
-          table: views
-          field: random
+        created:
+          id: created
+          table: node_field_revision
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: random
-          order: ASC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
           expose:
-            label: ''
-            field_identifier: ''
+            label: 'Authored on'
+            field_identifier: created
           exposed: false
+          granularity: second
       arguments:
         tid:
           id: tid
@@ -253,7 +256,7 @@ display:
       footer: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
@@ -292,7 +295,7 @@ display:
         page_1: page_1
         default: '0'
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
@@ -311,7 +314,7 @@ display:
       display_extenders: {  }
       path: taxonomy/term/%
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
