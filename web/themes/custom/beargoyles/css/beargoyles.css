@@ -369,3 +369,14 @@ input#edit-submit {
 input#edit-keys {
   opacity: 85%;
 }
+
+/* Style PDF Link */
+/*.field.field--name-field-media-document.field--type-file.field--label-hidden.field__item {*/
+/*  background-color: #51387e;*/
+/*  font-color: #FFFFFF;*/
+/*  border-radius: 15px;*/
+/*}*/
+
+img.image-style-thumbnail {
+  border-radius: 50px;
+}
