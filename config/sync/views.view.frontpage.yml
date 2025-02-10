@@ -31,7 +31,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 50
+          items_per_page: 16
           total_pages: 0
           id: 0
           tags:
@@ -298,6 +298,30 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      pager:
+        type: full
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 16
+          total_pages: 0
+          id: 0
+          tags:
+            next: ›
+            previous: ‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 3
+      defaults:
+        pager: false
       display_extenders: {  }
       path: node
     cache_metadata:

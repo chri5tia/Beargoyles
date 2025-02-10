@@ -1,4 +1,4 @@
-uuid: b3a87a6a-6baf-4f0b-ac3f-783a8c46308b
+uuid: b310ee80-dbfc-4f4f-9c23-f9bb4d97f606
 langcode: en
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - beargoyles
-id: beargoyles_views_block__beargoyles_randomizer_block_1
+id: beargoyles_views_block__beargoyles_randomizer_block_3_2
 theme: beargoyles
-region: sidebar_second
+region: content
 weight: 0
 provider: null
-plugin: 'views_block:beargoyles_randomizer-block_1'
+plugin: 'views_block:beargoyles_randomizer-block_3'
 settings:
-  id: 'views_block:beargoyles_randomizer-block_1'
+  id: 'views_block:beargoyles_randomizer-block_3'
   label: ''
   label_display: '0'
   provider: views
@@ -25,5 +25,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: "/all-beargoyles\r\n/all-beargoyles-page"
+    negate: false
+    pages: /all-beargoyles

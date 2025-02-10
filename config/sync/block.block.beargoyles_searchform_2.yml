@@ -1,4 +1,4 @@
-uuid: 328f5d05-6742-4aed-bb80-c21c8e2787d5
+uuid: 724ac07f-1f21-480f-b97e-3ab804e10029
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
     - system
   theme:
     - beargoyles
-id: beargoyles_searchform
+id: beargoyles_searchform_2
 theme: beargoyles
-region: sidebar_second
-weight: -7
+region: content
+weight: -3
 provider: null
 plugin: search_form_block
 settings:
@@ -22,5 +22,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: "/search\r\n/search/*\r\n/all-beargoyles\r\n/all-beargoyles-page"
+    negate: false
+    pages: "/all-beargoyles\r\n/all-beargoyles-page"

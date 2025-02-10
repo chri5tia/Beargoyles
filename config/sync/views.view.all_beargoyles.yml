@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_beargoyle_tags
     - field.storage.node.field_coloring_page_file
     - field.storage.node.field_preview
-    - image.style.media_library
     - image.style.thumbnail
     - node.type.beargoyle_coloring_page
     - system.menu.admin
@@ -583,7 +582,7 @@ display:
             content_editor: content_editor
             administrator: administrator
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       sorts:
@@ -738,7 +737,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: all
+      path: admin/all
       menu:
         type: normal
         title: 'All Beargoyles'

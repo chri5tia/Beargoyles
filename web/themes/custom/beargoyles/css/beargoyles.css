@@ -379,4 +379,10 @@ input#edit-keys {
 
 img.image-style-thumbnail {
   border-radius: 50px;
+  padding: 5px;
+}
+
+img.image-style-medium {
+  border-radius:120px;
+  padding: 10px;
 }
