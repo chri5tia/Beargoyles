@@ -2,6 +2,13 @@
 
 ## For Developers
 
+### Config Sync
+Find this line in your settings.php and uncomment it. Then update it to show this:
+
+```
+$settings['config_sync_directory'] = '../config/sync/';
+```
+
 ### Config Split
 Please edit the bottom of your local settings.php with the following:
 
