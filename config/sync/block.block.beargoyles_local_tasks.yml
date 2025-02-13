@@ -1,4 +1,4 @@
-uuid: a06aa872-528b-40b7-88cd-96c8df023148
+uuid: 2b446364-6e01-4ef9-a27b-1ee2b01cd31d
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: beargoyles_local_tasks
 theme: beargoyles
 region: content
-weight: -5
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

@@ -1,4 +1,4 @@
-uuid: 71e099d2-7e22-4130-902a-47363417c97f
+uuid: fedab71c-6a3f-4275-9768-b977f210952f
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: beargoyles_local_actions
 theme: beargoyles
 region: content
-weight: -7
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,0 +1,25 @@
+uuid: 116e739c-b49a-4158-a5dd-74f707a018e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - beargoyles
+_core:
+  default_config_hash: 7EA9OiBOT_LIAvYf-qtAv77KjubLFa3LIcQzcYXbGrk
+id: beargoyles_branding
+theme: beargoyles
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

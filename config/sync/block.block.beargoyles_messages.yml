@@ -1,4 +1,4 @@
-uuid: cf36dd4e-de14-4737-b0e5-4b0f7a33f7ac
+uuid: 98d14c23-aef7-4ec5-85af-68631926e5e8
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: beargoyles_messages
 theme: beargoyles
 region: content
-weight: -8
+weight: -6
 provider: null
 plugin: system_messages_block
 settings:

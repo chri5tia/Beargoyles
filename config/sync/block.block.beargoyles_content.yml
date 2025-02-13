@@ -1,4 +1,4 @@
-uuid: 52ae57ed-51fd-41f9-8327-72dbb3b978ab
+uuid: 07f056d1-3edb-42fb-99cc-090563293f57
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: beargoyles_content
 theme: beargoyles
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: system_main_block
 settings:
