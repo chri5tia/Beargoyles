@@ -10,7 +10,7 @@ dependencies:
 id: beargoyles_searchform
 theme: beargoyles
 region: sidebar_second
-weight: -10
+weight: -9
 provider: null
 plugin: search_form_block
 settings:
@@ -23,4 +23,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/search\r\n/search/*"
+    pages: "/search\r\n/search/*\r\n/all-beargoyles"
