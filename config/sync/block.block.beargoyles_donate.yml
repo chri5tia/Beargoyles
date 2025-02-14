@@ -28,7 +28,7 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "<front>\r\n/donate\r\n/coloring-book\r\n/what-is-a-beargoyle\r\n/all-beargoyles"
+    pages: "<front>\r\n/donate\r\n/coloring-book"
   'entity_bundle:node':
     id: 'entity_bundle:node'
     negate: false

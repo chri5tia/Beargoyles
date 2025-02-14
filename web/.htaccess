@@ -100,8 +100,8 @@ AddEncoding gzip svgz
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/foo will be redirected to http://example.com/foo)
   # uncomment the following:
-  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+ RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+ RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
   # VirtualDocumentRoot and the rewrite rules are not working properly.
@@ -184,3 +184,17 @@ AddEncoding gzip svgz
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
 </IfModule>
+
+RewriteEngine On
+
+# Redirect subdomain to main domain
+RewriteCond %{HTTP_HOST} ^beargoyles\.owltreebooks\.com$ [NC]
+RewriteRule ^(.*)$ https://beargoyles.com/$1 [R=301,L]
+
+# Ensure HTTPS is always used
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://beargoyles.com/$1 [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
