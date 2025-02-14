@@ -11,7 +11,7 @@ _core:
 id: beargoyles_branding
 theme: beargoyles
 region: sidebar_second
-weight: -11
+weight: -10
 provider: null
 plugin: system_branding_block
 settings:

@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 189a2e33-a306-4487-8009-d4a14a3f2152
 name: Beargoyles
-mail: christiahall+beargoyles@gmail.com
+mail: overlords@beargoyles.com
 slogan: 'Huggable Guardians'
 page:
   403: ''
@@ -12,4 +12,4 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
-mail_notification: null
+mail_notification: overlords@beargoyles.com
