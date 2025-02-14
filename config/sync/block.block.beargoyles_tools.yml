@@ -6,22 +6,31 @@ dependencies:
     - system.menu.tools
   module:
     - system
+    - user
   theme:
     - beargoyles
 _core:
   default_config_hash: pniBX-qx0km_xEJ-zQdo_jUjI3whmWIxhdyKVH4_qqc
 id: beargoyles_tools
 theme: beargoyles
-region: sidebar_second
-weight: -5
+region: header_top_left
+weight: -11
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
   id: 'system_menu_block:tools'
   label: Tools
-  label_display: visible
+  label_display: '0'
   provider: system
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      content_editor: content_editor
+      administrator: administrator

@@ -13,7 +13,7 @@ dependencies:
 id: beargoyles_donate
 theme: beargoyles
 region: sidebar_second
-weight: -6
+weight: -9
 provider: null
 plugin: 'block_content:daa19d22-0d63-4721-928c-f17e6b217957'
 settings:

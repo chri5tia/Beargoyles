@@ -5,10 +5,10 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://android-chrome-192x192.png'
+  path: 'public://bg_100.png'
 favicon:
   use_default: 0
-  path: 'public://favicon.ico'
+  path: 'public://bg_white.ico'
   mimetype: image/vnd.microsoft.icon
 scrolltop: ''
 scrolltop_display: 1

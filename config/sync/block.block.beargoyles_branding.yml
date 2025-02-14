@@ -10,8 +10,8 @@ _core:
   default_config_hash: 7EA9OiBOT_LIAvYf-qtAv77KjubLFa3LIcQzcYXbGrk
 id: beargoyles_branding
 theme: beargoyles
-region: header
-weight: 0
+region: sidebar_second
+weight: -11
 provider: null
 plugin: system_branding_block
 settings:

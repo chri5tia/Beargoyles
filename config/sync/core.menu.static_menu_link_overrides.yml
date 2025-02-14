@@ -7,3 +7,9 @@ definitions:
     parent: ''
     enabled: true
     expanded: false
+  contact__site_page:
+    weight: -49
+    menu_name: footer
+    parent: ''
+    enabled: true
+    expanded: false

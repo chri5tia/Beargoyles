@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_backgroundeffectinstructions
 theme: beargoyles
 region: sidebar_second
-weight: -5
+weight: -7
 provider: null
 plugin: 'block_content:04bb2f60-1f85-4b1c-8227-e845cf82dfb8'
 settings:
