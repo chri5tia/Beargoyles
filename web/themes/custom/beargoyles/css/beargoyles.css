@@ -200,7 +200,7 @@ ul.tabs.primary, div.view-header,
 .clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
 .comment, .block, .block-beargoyles-page-title,
 .block-beargoyles-local-tasks, .field-item:hover,
-ol.search-results.node_search-results, .field--name-field-beargoyle-tags .field__item, .sideleaf {
+ol.search-results.node_search-results, .field--name-field-beargoyle-tags .field__item, .sideleaf, label, textarea.form-textarea {
   border-radius: 15px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
