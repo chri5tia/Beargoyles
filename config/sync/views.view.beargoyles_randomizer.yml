@@ -1723,7 +1723,7 @@ display:
         filters: false
         filter_groups: false
       display_extenders: {  }
-      path: all-beargoyles-page
+      path: all-beargoyles
     cache_metadata:
       max-age: 0
       contexts:
