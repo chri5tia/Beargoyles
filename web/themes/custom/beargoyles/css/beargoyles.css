@@ -386,3 +386,9 @@ img.image-style-medium {
   border-radius:120px;
   padding: 10px;
 }
+
+label {
+  font-weight: 800;
+  font-size: 42px;
+  background: white;
+}
