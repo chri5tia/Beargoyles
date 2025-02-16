@@ -392,3 +392,15 @@ label {
   font-size: 42px;
   background: white;
 }
+
+select#edit-tid {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
+  box-shadow: none;
+  padding: 15px 24px;
+  text-transform: uppercase;
+  opacity: 90%;
+  color: #FFFFFF;
+  background-color: #333333;
+}

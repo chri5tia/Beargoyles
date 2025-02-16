@@ -31,7 +31,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'All Beargoyles'
+      title: 'Admin: All Beargoyles'
       fields:
         field_preview:
           id: field_preview
