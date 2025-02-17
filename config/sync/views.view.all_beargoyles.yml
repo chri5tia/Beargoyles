@@ -658,6 +658,9 @@ display:
             created: created
             field_coloring_page_file: field_coloring_page_file
             status: status
+            field_beargoyle_tags: field_beargoyle_tags
+            field_admin_tags: field_admin_tags
+            promote: promote
           default: '-1'
           info:
             field_preview:
@@ -668,14 +671,14 @@ display:
               empty_column: false
               responsive: ''
             title:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
             created:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -689,7 +692,24 @@ display:
               empty_column: false
               responsive: ''
             status:
-              sortable: false
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_beargoyle_tags:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_admin_tags:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            promote:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
