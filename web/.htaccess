@@ -187,14 +187,14 @@ AddEncoding gzip svgz
 
 RewriteEngine On
 
-# Redirect subdomain to main domain
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Redirect specific subdomain to main domain
 RewriteCond %{HTTP_HOST} ^beargoyles\.owltreebooks\.com$ [NC]
 RewriteRule ^(.*)$ https://beargoyles.com/$1 [R=301,L]
 
 # Ensure HTTPS is always used
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://beargoyles.com/$1 [R=301,L]
-
-RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
