@@ -1,0 +1,10 @@
+uuid: 8585c954-c2f9-4233-8a52-a29dec328fba
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: f7dN3Eb7xyyMUWug2Gwt-bjoXTpTvtXXGMQmIS4LJ44
+id: example
+question: 'What is the secret password?'
+solution: 'beep boop, ""beep boop", beepboop, "beepboop"'
+hint: 'Look for it at the bottom or side of the page in quotes, like this: "B_______p"'

@@ -1,0 +1,7 @@
+uuid: 327910b8-e279-4947-ae6a-b12cca68fb80
+langcode: en
+status: false
+dependencies: {  }
+formId: node_beargoyle_art_page_form
+captchaType: default
+label: node_beargoyle_art_page_form

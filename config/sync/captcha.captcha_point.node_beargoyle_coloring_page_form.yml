@@ -1,0 +1,7 @@
+uuid: e8ae9e9c-79cd-445d-9ad2-0f54f12f8106
+langcode: en
+status: false
+dependencies: {  }
+formId: node_beargoyle_coloring_page_form
+captchaType: default
+label: node_beargoyle_coloring_page_form
