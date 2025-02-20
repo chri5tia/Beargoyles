@@ -2,9 +2,9 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
 uuid: 189a2e33-a306-4487-8009-d4a14a3f2152
-name: Beargoyles
+name: Beargoyles.com
 mail: overlords@beargoyles.com
-slogan: 'Huggable Guardians'
+slogan: 'A collection of huggable guardians to color and enjoy'
 page:
   403: ''
   404: ''

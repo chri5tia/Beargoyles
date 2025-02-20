@@ -14,7 +14,7 @@ _core:
 id: beargoyles_account_menu
 theme: beargoyles
 region: header_top_right
-weight: -10
+weight: -11
 provider: null
 plugin: 'system_menu_block:account'
 settings:

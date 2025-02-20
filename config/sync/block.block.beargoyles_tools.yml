@@ -14,7 +14,7 @@ _core:
 id: beargoyles_tools
 theme: beargoyles
 region: header_top_left
-weight: -11
+weight: -12
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

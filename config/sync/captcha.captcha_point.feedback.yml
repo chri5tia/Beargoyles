@@ -1,0 +1,7 @@
+uuid: 12f8cf8e-d26c-44eb-965d-0e2d7c04ff78
+langcode: en
+status: true
+dependencies: {  }
+formId: feedback
+captchaType: riddler/Riddler
+label: contact_message_feedback_form

@@ -1,4 +1,4 @@
-uuid: 116e739c-b49a-4158-a5dd-74f707a018e0
+uuid: 80e93507-802b-471d-a083-30bb56233bfa
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,10 @@ dependencies:
     - system
   theme:
     - beargoyles
-_core:
-  default_config_hash: 7EA9OiBOT_LIAvYf-qtAv77KjubLFa3LIcQzcYXbGrk
-id: beargoyles_branding
+id: beargoyles_sitebranding
 theme: beargoyles
-region: sidebar_second
-weight: -10
+region: banner
+weight: -11
 provider: null
 plugin: system_branding_block
 settings:
@@ -19,11 +17,11 @@ settings:
   label: 'Site branding'
   label_display: '0'
   provider: system
-  use_site_logo: true
+  use_site_logo: false
   use_site_name: true
-  use_site_slogan: false
+  use_site_slogan: true
 visibility:
   request_path:
     id: request_path
-    negate: true
+    negate: false
     pages: '<front>'

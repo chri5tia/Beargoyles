@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_buymeacoffee
 theme: beargoyles
 region: sidebar_second
-weight: -8
+weight: -7
 provider: null
 plugin: 'block_content:6fbd581d-f8ad-4081-9f01-a4aa256ef6f0'
 settings:

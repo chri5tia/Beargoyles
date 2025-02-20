@@ -9,6 +9,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  captcha: 0
   ckeditor5: 0
   comment: 0
   config: 0
@@ -45,6 +46,7 @@ module:
   photoswipe: 0
   profile: 0
   redirect: 0
+  riddler: 0
   search: 0
   shortcut: 0
   state_machine: 0
