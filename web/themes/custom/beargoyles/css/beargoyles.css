@@ -393,7 +393,7 @@ input#edit-captcha-response, textarea#edit-message-0-value {
   opacity: 90%;
 }
 
-input#edit-name, input#edit-mail,
+input#edit-name, input#edit-mail, input#edit-pass,
 input#edit-captcha-response, textarea#edit-message-0-value {
   margin-bottom: 20px;
 }
