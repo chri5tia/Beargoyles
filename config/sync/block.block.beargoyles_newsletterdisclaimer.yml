@@ -1,0 +1,30 @@
+uuid: ac966fa2-d231-4cfd-a200-4fc1ff7a133d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5d3c96b5-2939-470a-b013-c0d8236ea4e2'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_newsletterdisclaimer
+theme: beargoyles
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:5d3c96b5-2939-470a-b013-c0d8236ea4e2'
+settings:
+  id: 'block_content:5d3c96b5-2939-470a-b013-c0d8236ea4e2'
+  label: 'Newsletter Disclaimer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact

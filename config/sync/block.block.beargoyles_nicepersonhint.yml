@@ -1,25 +1,22 @@
 uuid: 36c33067-0d49-441d-a782-0eca9f328ea8
 langcode: en
-status: true
+status: false
 dependencies:
-  content:
-    - 'block_content:basic:aaf6819b-89ac-4402-9cc9-4daaaaaecdc0'
   module:
-    - block_content
     - system
   theme:
     - beargoyles
 id: beargoyles_nicepersonhint
 theme: beargoyles
 region: sidebar_second
-weight: -8
+weight: -7
 provider: null
 plugin: 'block_content:aaf6819b-89ac-4402-9cc9-4daaaaaecdc0'
 settings:
   id: 'block_content:aaf6819b-89ac-4402-9cc9-4daaaaaecdc0'
   label: 'Nice Person Test'
   label_display: '0'
-  provider: block_content
+  provider: core
   status: true
   info: ''
   view_mode: default
