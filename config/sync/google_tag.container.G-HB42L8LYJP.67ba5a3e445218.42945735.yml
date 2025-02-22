@@ -1,0 +1,38 @@
+uuid: 461b00c0-6fcf-453b-a739-efe218b64913
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+id: G-HB42L8LYJP.67ba5a3e445218.42945735
+label: G-HB42L8LYJP
+weight: 0
+tag_container_ids:
+  - G-HB42L8LYJP
+advanced_settings:
+  consent_mode: true
+dimensions_metrics: {  }
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+  user_role:
+    id: user_role
+    negate: true
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      content_editor: content_editor
+      administrator: administrator
+events:
+  search: {  }
+  custom: {  }
+  sign_up:
+    method: CMS
+  generate_lead:
+    value: ''
+    currency: ''
+  login:
+    method: CMS

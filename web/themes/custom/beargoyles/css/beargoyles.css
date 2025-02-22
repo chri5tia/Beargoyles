@@ -387,16 +387,21 @@ div#site-slogan, div#site-name, a#logo img, h2 {
 }
 
 .view-header {
-  padding:10px;
-  /*border: 1px #846baf solid;*/
-  /*background-color: #FFFFFF;*/
-  /*border-radius: 15px;*/
-  /*border-top-right-radius: 100px;*/
-  /*border-bottom-left-radius: 100px;*/
-  /*margin-bottom: 25px;*/
-  line-height: 1.2;
-  font-size: 38px;
-  color: #51387e;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  border-top-right-radius: 100px;
+  margin-bottom: 25px;
+  border: 2px solid #eaeaea;
+  padding: 15px;
+  padding-right: 30px;
+}
+
+.view-header p {
+  line-height: 1.5;
+  font-size: 24px;
+  color: #333333;
+  font-style: italic;
+  margin-bottom: 0;
 }
 
 /*
