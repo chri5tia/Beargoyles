@@ -22,7 +22,7 @@ ul.tabs li, h1.page-title, ol.search-results.node_search-results,
 }
 
 .clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item,
-#subfooter, div#site-slogan, div#site-name {
+#subfooter, div#site-slogan, div#site-name, a#logo img {
   opacity: 85%;
 }
 
