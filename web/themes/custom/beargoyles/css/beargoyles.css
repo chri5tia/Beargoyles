@@ -409,13 +409,17 @@ h2 {
 }
 
 /* Round Corner */
-.sideleaf, .sideleaf2, label, .captcha {
+.sideleaf, .sideleaf2, label, .captcha, div#site-slogan, div#site-name {
   border-radius: 15px;
   border-top-right-radius: 100px;
 }
 
-.sideleaf2, label {
+.sideleaf2, label, div#site-slogan, div#site-name {
   border-bottom-left-radius: 100px;
+}
+
+a#logo img {
+  border-radius: 50px;
 }
 
 label {
@@ -430,4 +434,9 @@ label {
 
 legend.captcha__title.js-form-required.form-required {
   display: none;
+}
+
+div#site-slogan, div#site-name, a#logo img {
+  background-color: #FFFFFF;
+  display: inline-block;
 }

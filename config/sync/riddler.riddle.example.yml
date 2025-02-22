@@ -7,4 +7,4 @@ _core:
 id: example
 question: 'What is the secret password?'
 solution: 'beep boop, ""beep boop", beepboop, "beepboop"'
-hint: 'Look for it at the bottom or side of the page in quotes, like this: "B_______p"'
+hint: 'Look in the privacy statement, like "B___ ___p"'

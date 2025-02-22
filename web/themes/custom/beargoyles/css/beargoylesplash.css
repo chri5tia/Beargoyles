@@ -22,7 +22,7 @@ ul.tabs li, h1.page-title, ol.search-results.node_search-results,
 }
 
 .clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item,
-#subfooter {
+#subfooter, div#site-slogan, div#site-name {
   opacity: 85%;
 }
 
@@ -60,7 +60,7 @@ button, img, input, label,
 .menu-item, ul.tabs li, h1.page-title,
 .col-md-8, .block-system-breadcrumb-block,
 .node--view-mode-teaser, .path-node #content-wrapper, #subfooter, ol.search-results.node_search-results,
-.sideleaf {
+.sideleaf, div#site-slogan, div#site-name {
 z-index: 100;
 position:relative;
 }
