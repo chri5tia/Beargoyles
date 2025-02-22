@@ -448,16 +448,12 @@ legend.captcha__title.js-form-required.form-required {
   display: none;
 }
 
-.field__item a, .field__label, #site-name a, h1 ah2 a, h3 a, h4 a, h5 a, h6 a {
+.field__item a, .field__label, #site-name a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: 600;
 }
 
 .footer {
   text-align: justify;
-}
-
-span.field.field--name-title.field--type-string.field--label-hidden {
-  font-weight:500;
 }
 
 span.file.file--mime-application-pdf.file--application-pdf {
