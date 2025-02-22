@@ -409,12 +409,12 @@ h2 {
 }
 
 /* Round Corner */
-.sideleaf, .sideleaf2, label, .captcha, div#site-slogan, div#site-name {
+.sideleaf, .sideleaf2, label, .captcha, div#site-slogan, div#site-name, h2 {
   border-radius: 15px;
   border-top-right-radius: 100px;
 }
 
-.sideleaf2, label, div#site-slogan, div#site-name {
+.sideleaf2, label, div#site-slogan, div#site-name, h2 {
   border-bottom-left-radius: 100px;
 }
 
@@ -436,7 +436,7 @@ legend.captcha__title.js-form-required.form-required {
   display: none;
 }
 
-div#site-slogan, div#site-name, a#logo img {
+div#site-slogan, div#site-name, a#logo img, h2 {
   background-color: #FFFFFF;
   display: inline-block;
 }
