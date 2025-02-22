@@ -456,6 +456,10 @@ legend.captcha__title.js-form-required.form-required {
   text-align: justify;
 }
 
+span.field.field--name-title.field--type-string.field--label-hidden {
+  font-weight:500;
+}
+
 span.file.file--mime-application-pdf.file--application-pdf {
   font-size: larger;
   font-weight: bolder;
@@ -519,6 +523,10 @@ input#edit-captcha-response, textarea#edit-message-0-value {
 input#edit-name, input#edit-mail, input#edit-pass,
 input#edit-captcha-response, textarea#edit-message-0-value {
   margin-bottom: 20px;
+}
+
+.search-block-form input.form-search {
+  width: 100%;
 }
 
 /* Images */
