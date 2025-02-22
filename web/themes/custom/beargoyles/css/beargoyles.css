@@ -69,8 +69,7 @@ h6, #subfooter {
 
 /* Spacing and Alignment */
 
-input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
-div.view-header {
+input.form-text, input.form-email, input.form-search, textarea.form-textarea, select {
   padding:10px;
 }
 
@@ -116,11 +115,6 @@ ol.search-results.node_search-results {
   border: 3px #666666 dashed;
 }
 
-/* thin light purple border */
-div.view-header {
-  border: 1px #846baf solid;
-}
-
 /* Regular corners with no borders */
 .image-style-gallery-thumb, .image-style-gallery-photo {
   border-radius: 0;
@@ -140,7 +134,7 @@ input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover,
 ul.menu li, ul.tabs li a:hover,
 .node--view-mode-teaser,
 .path-node #content-wrapper, .block-beargoyles-page-title,
-.block-beargoyles-local-tasks, div.view-header,
+.block-beargoyles-local-tasks,
 h1.page-title, ul.tabs.primary, ol.search-results.node_search-results, #subfooter {
   background-color: #FFFFFF;
 }
@@ -169,7 +163,7 @@ h1.page-title, ul.tabs.primary, ol.search-results.node_search-results, #subfoote
 div.messages.messages--status,
 .item-list ul li, h1.page-title,
 .field--type-text-with-summary,
-ul.tabs.primary, div.view-header,
+ul.tabs.primary,
 .clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
 .comment, .block, .block-beargoyles-page-title,
 .block-beargoyles-local-tasks, .field-item:hover,
@@ -206,12 +200,7 @@ ul.tabs li a:hover {
 
 /* MIGRATE */
 
-div.view-header {
-  margin-bottom: 25px;
-  line-height: 1.2;
-  font-size: 38px;
-  color: #51387e;
-}
+
 
 .item-list ul li {
   background-color: #FFFFFF;
@@ -297,7 +286,7 @@ input.form-text:focus,input.search-text:focus,textarea.form-textarea:focus {
   font-size: 18px;
 }
 
-.title-sep:after, #pre-header h2:after, #promoted h2:after, .sidebar h2:after, #footer h2:after, .view-header {
+.title-sep:after, #pre-header h2:after, #promoted h2:after, .sidebar h2:after, #footer h2:after {
   display: none;
 }
 
@@ -397,6 +386,19 @@ div#site-slogan, div#site-name, a#logo img, h2 {
   display: inline-block;
 }
 
+.view-header {
+  padding:10px;
+  /*border: 1px #846baf solid;*/
+  /*background-color: #FFFFFF;*/
+  /*border-radius: 15px;*/
+  /*border-top-right-radius: 100px;*/
+  /*border-bottom-left-radius: 100px;*/
+  /*margin-bottom: 25px;*/
+  line-height: 1.2;
+  font-size: 38px;
+  color: #51387e;
+}
+
 /*
  * Fonts, Copy, Text and Markup, Headings, and Labels
  */
@@ -474,6 +476,11 @@ span.file.file--mime-application-pdf.file--application-pdf {
 }
 
 /* Form Elements */
+
+input, button, select {
+  font-size: 18px;
+}
+
 #paypal-form-fields-container-WAQZYM62ZJPS4 input {
   width: 100%;
   min-height: auto!important;
@@ -514,12 +521,13 @@ input#edit-captcha-response, textarea#edit-message-0-value {
   min-height: 50px;
   border: 2px solid #eaeaea;
   opacity: 90%;
-}
-
-input#edit-name, input#edit-mail, input#edit-pass,
-input#edit-captcha-response, textarea#edit-message-0-value {
   margin-bottom: 20px;
 }
+
+/*input#edit-name, input#edit-mail, input#edit-pass,*/
+/*input#edit-captcha-response, textarea#edit-message-0-value, input#edit-keys {*/
+/*  margin-bottom: 20px;*/
+/*}*/
 
 .search-block-form input.form-search {
   width: 100%;
