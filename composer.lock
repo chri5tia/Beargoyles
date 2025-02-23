@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3013342c9cd59ac1979588c4511f2c89",
+    "content-hash": "430184800297ea45a457ab7f4e8bb2a6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1472,17 +1472,17 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "3.5.2",
+            "version": "3.5.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "3.5.2"
+                "reference": "3.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.5.2.zip",
-                "reference": "3.5.2",
-                "shasum": "d5c42971050bf6656644f15a7602ae4e0502674e"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.5.3.zip",
+                "reference": "3.5.3",
+                "shasum": "363cdd6e6ca47983900f40793edf9a8b26f132bb"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10 || ^11"
@@ -1493,8 +1493,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.5.2",
-                    "datestamp": "1739914592",
+                    "version": "3.5.3",
+                    "datestamp": "1740156799",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2455,17 +2455,17 @@
         },
         {
             "name": "drupal/entity",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "86c0b75c173144aaedde3e3258dc0d3ce11d1a22"
+                "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "dfb214fd45bd6ad79604d23a39a96b3d4c38f8e1"
             },
             "require": {
                 "drupal/core": "^10.1 || ^11"
@@ -2473,8 +2473,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1723380062",
+                    "version": "8.x-1.6",
+                    "datestamp": "1740006812",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2993,6 +2993,74 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
+        },
+        {
+            "name": "drupal/pdf",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/pdf.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/pdf-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "2f2d7570a454ea01f2e5987bec23f67c3f079d37"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1689358560",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "alextataurov",
+                    "homepage": "https://www.drupal.org/user/957718"
+                },
+                {
+                    "name": "axelm",
+                    "homepage": "https://www.drupal.org/user/1065700"
+                },
+                {
+                    "name": "DanielFbrg",
+                    "homepage": "https://www.drupal.org/user/884704"
+                },
+                {
+                    "name": "jmomandown",
+                    "homepage": "https://www.drupal.org/user/1844552"
+                },
+                {
+                    "name": "m.abdulqader",
+                    "homepage": "https://www.drupal.org/user/1281252"
+                },
+                {
+                    "name": "ram4nd",
+                    "homepage": "https://www.drupal.org/user/601534"
+                },
+                {
+                    "name": "shenzhuxi",
+                    "homepage": "https://www.drupal.org/user/193802"
+                }
+            ],
+            "description": "Display PDF file in Drupal without external readers and plugins.",
+            "homepage": "https://www.drupal.org/project/pdf",
+            "support": {
+                "source": "https://git.drupalcode.org/project/pdf"
             }
         },
         {
@@ -4246,7 +4314,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.43.1",
+            "version": "v11.43.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -4302,7 +4370,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.43.1",
+            "version": "v11.43.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -4348,7 +4416,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.43.1",
+            "version": "v11.43.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -4396,7 +4464,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.43.1",
+            "version": "v11.43.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -4695,6 +4763,15 @@
                 "source": "https://github.com/mck89/peast/tree/v1.16.3"
             },
             "time": "2024-07-23T14:00:32+00:00"
+        },
+        {
+            "name": "mozilla/pdf.js",
+            "version": "2.6.347",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/mozilla/pdf.js/releases/download/v2.6.347/pdfjs-2.6.347-dist.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "nikic/php-parser",
