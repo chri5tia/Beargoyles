@@ -394,6 +394,7 @@ div#site-slogan, div#site-name, a#logo img, h2 {
   border: 2px solid #eaeaea;
   padding: 15px;
   padding-right: 30px;
+  display:none;
 }
 
 .view-header p {
