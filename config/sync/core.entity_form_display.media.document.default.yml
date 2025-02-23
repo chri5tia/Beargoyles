@@ -19,7 +19,7 @@ content:
     weight: 0
     region: content
     settings:
-      progress_indicator: bar
+      progress_indicator: throbber
     third_party_settings: {  }
 hidden:
   created: true

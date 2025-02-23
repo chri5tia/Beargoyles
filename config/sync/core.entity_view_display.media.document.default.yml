@@ -6,7 +6,7 @@ dependencies:
     - field.field.media.document.field_media_document
     - media.type.document
   module:
-    - file
+    - pdf
 _core:
   default_config_hash: XxUyhaTuM0OUUZpr8G6jdrFBEh5eag7auWxBKhm6cvY
 id: media.document.default
@@ -15,10 +15,16 @@ bundle: document
 mode: default
 content:
   field_media_document:
-    type: file_default
+    type: pdf_default
     label: hidden
     settings:
-      use_description_as_link_text: true
+      keep_pdfjs: '1'
+      width: 100%
+      height: 600px
+      page: ''
+      zoom: page-fit
+      custom_zoom: '60'
+      pagemode: ''
     third_party_settings: {  }
     weight: 0
     region: content
