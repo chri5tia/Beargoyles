@@ -1,0 +1,29 @@
+uuid: b66a6151-deec-4414-9f3e-ca5425f56e6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.beargoyles_randomizer
+  module:
+    - system
+    - views
+  theme:
+    - beargoyles
+id: beargoyles_views_block__beargoyles_randomizer_block_1
+theme: beargoyles
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:beargoyles_randomizer-block_1'
+settings:
+  id: 'views_block:beargoyles_randomizer-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/all-beargoyles\r\n/all-free-coloring-pages"

@@ -320,14 +320,23 @@ input#edit-submit {
 
 img.image-style-thumbnail {
   border-radius: 50px;
-  padding: 5px;
+  background-color: #FFFFFF;
+  border: 1px #666666 solid;
 }
 
 img.image-style-medium {
-  border-radius:120px;
-  padding: 10px;
+  border-radius: 120px;
+  background-color: #FFFFFF;
+  border: 1px #666666 solid;
+  opacity: 85%;
 }
 
+img.image-style-large-white-circle {
+  border-radius:150px;
+  background-color: #FFFFFF;
+  border: 1px #666666 solid;
+  opacity: 85%;
+}
 
 
 /* START NEW ORGANIZATION PATTERN */
