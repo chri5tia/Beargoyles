@@ -16,18 +16,6 @@
         "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        "pdf.js": {
-            "type": "package",
-            "package": {
-                "name": "mozilla/pdf.js",
-                "version": "2.6.347",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/mozilla/pdf.js/releases/download/v2.6.347/pdfjs-2.6.347-dist.zip",
-                    "type": "zip"
-                }
-            }
         }
     },
     "require": {
@@ -48,11 +36,9 @@
         "drupal/media_gallery": "^3.0",
         "drupal/media_pdf_thumbnail": "^6.1",
         "drupal/pathauto": "^1.13",
-        "drupal/pdf": "^1.2",
         "drupal/redirect": "^1.10",
         "drupal/riddler": "^3.0",
         "drush/drush": "^13.3",
-        "mozilla/pdf.js": "^2.6",
         "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
