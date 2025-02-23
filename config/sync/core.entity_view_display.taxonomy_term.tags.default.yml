@@ -4,18 +4,10 @@ status: true
 dependencies:
   config:
     - taxonomy.vocabulary.tags
-  module:
-    - text
 id: taxonomy_term.tags.default
 targetEntityType: taxonomy_term
 bundle: tags
 mode: default
-content:
-  description:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
-hidden: {  }
+content: {  }
+hidden:
+  description: true
