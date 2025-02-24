@@ -8,8 +8,8 @@ dependencies:
     - beargoyles
 id: beargoyles_sitebranding
 theme: beargoyles
-region: banner
-weight: -11
+region: header
+weight: -10
 provider: null
 plugin: system_branding_block
 settings:

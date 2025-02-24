@@ -305,7 +305,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      enabled: false
+      enabled: true
       pager:
         type: full
         options:
@@ -669,7 +669,7 @@ display:
         filters: false
         filter_groups: false
       display_extenders: {  }
-      path: node
+      path: node_alt
     cache_metadata:
       max-age: -1
       contexts:

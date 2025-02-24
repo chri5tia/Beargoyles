@@ -15,7 +15,7 @@ provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: 'Search form'
+  label: 'Search Beargoyles.com'
   label_display: '0'
   provider: search
   page_id: ''

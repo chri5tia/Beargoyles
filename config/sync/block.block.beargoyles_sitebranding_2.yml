@@ -9,7 +9,7 @@ dependencies:
 id: beargoyles_sitebranding_2
 theme: beargoyles
 region: sidebar_second
-weight: -11
+weight: -10
 provider: null
 plugin: system_branding_block
 settings:
