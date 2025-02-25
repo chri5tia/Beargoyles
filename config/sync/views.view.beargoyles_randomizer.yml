@@ -8,13 +8,17 @@ dependencies:
     - field.storage.node.field_beargoyle_tags
     - field.storage.node.field_coloring_page_file
     - field.storage.node.field_preview
+    - image.style.large
+    - image.style.large_white_circle
     - image.style.media_library
-    - image.style.medium
     - image.style.thumbnail
     - node.type.beargoyle_coloring_page
     - system.menu.admin
+    - taxonomy.vocabulary.administrative
     - taxonomy.vocabulary.tags
   content:
+    - 'taxonomy_term:administrative:084decab-1c7f-4db2-ac3e-42c735f8f663'
+    - 'taxonomy_term:administrative:392dc3a8-9f42-4b7f-9382-52e2c3f99cc5'
     - 'taxonomy_term:tags:5c8cbc80-079c-4347-80ca-02f7b4a6debf'
   module:
     - media
@@ -792,7 +796,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: media_library
+            image_style: large
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -975,6 +979,98 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 179
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: administrative
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        tid_1:
+          id: tid_1
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 181
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: administrative
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -983,7 +1079,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: sideleaf
+          row_class: ''
           default_row_class: true
       row:
         type: fields
@@ -1001,6 +1097,7 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+      display_description: 'Single Beargoyle'
       display_extenders: {  }
       block_description: 'Random Beargoyle block'
     cache_metadata:
@@ -1014,7 +1111,7 @@ display:
         - 'config:field.storage.node.field_preview'
   block_2:
     id: block_2
-    display_title: 'Block 2'
+    display_title: 'Random lineup'
     display_plugin: block
     position: 3
     display_options:
@@ -1221,6 +1318,7 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+      display_description: ''
       display_extenders: {  }
       block_description: 'Random lineup of Beargoyles'
     cache_metadata:
@@ -1504,7 +1602,7 @@ display:
         - 'config:field.storage.node.field_preview'
   page_2:
     id: page_2
-    display_title: 'Page 2'
+    display_title: All
     display_plugin: page
     position: 3
     display_options:
@@ -1563,7 +1661,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: medium
+            image_style: large_white_circle
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -1726,6 +1824,7 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+      display_description: 'All Beargoyles in a grid of circles'
       display_extenders: {  }
       path: all-beargoyles
     cache_metadata:
@@ -1740,7 +1839,7 @@ display:
         - 'config:field.storage.node.field_preview'
   page_3:
     id: page_3
-    display_title: 'Page 2'
+    display_title: 'All Free'
     display_plugin: page
     position: 3
     display_options:
@@ -1800,7 +1899,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: medium
+            image_style: large_white_circle
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -1986,16 +2085,13 @@ display:
         groups:
           1: AND
       style:
-        type: grid
+        type: grid_responsive
         options:
           grouping: {  }
-          columns: 4
-          automatic_width: true
+          columns: 5
+          cell_min_width: 100
+          grid_gutter: 25
           alignment: horizontal
-          row_class_custom: ''
-          row_class_default: true
-          col_class_custom: ''
-          col_class_default: true
       row:
         type: fields
         options:
@@ -2013,6 +2109,7 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+      display_description: 'All beargoyles tagged free in large circles'
       display_extenders: {  }
       path: all-free-coloring-pages
     cache_metadata:
