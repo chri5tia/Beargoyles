@@ -11,7 +11,7 @@ _core:
 id: beargoyles_branding
 theme: beargoyles
 region: sidebar_second
-weight: -10
+weight: -11
 provider: null
 plugin: system_branding_block
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: '<front>'
+    pages: "<front>\r\n/all-beargoyles\r\n/all-free-coloring-pages"
