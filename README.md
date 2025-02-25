@@ -1,6 +1,6 @@
 # Readme for Beargoyles.com
 
-![Beargoyle Artwork](https://beargoyles.com/sites/default/files/styles/large/public/2025-01/2024-01-14-14.27.13-v3-oil.png.webp?itok=uH55NfNP)
+![Beargoyle Artwork]([https://beargoyles.com/sites/default/files/styles/large/public/2025-01/2024-01-14-14.27.13-v3-oil.png.webp))
 
 ## For Developers
 
