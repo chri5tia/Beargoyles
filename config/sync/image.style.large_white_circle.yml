@@ -1,0 +1,21 @@
+uuid: be47e6c2-9b73-4be0-b679-2af1c0c7b8fe
+langcode: en
+status: true
+dependencies: {  }
+name: large_white_circle
+label: 'Large White Circle (480x480)'
+effects:
+  f672b775-c9c6-48f2-9a2c-219dc91050d2:
+    uuid: f672b775-c9c6-48f2-9a2c-219dc91050d2
+    id: image_scale
+    weight: 1
+    data:
+      width: 250
+      height: 250
+      upscale: false
+  6bf7d3dc-612e-4155-b72d-8416f05e13c0:
+    uuid: 6bf7d3dc-612e-4155-b72d-8416f05e13c0
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp
