@@ -11,7 +11,7 @@ weight: 0
 tag_container_ids:
   - G-HB42L8LYJP
 advanced_settings:
-  consent_mode: true
+  consent_mode: false
 dimensions_metrics: {  }
 conditions:
   request_path:
@@ -20,19 +20,11 @@ conditions:
     pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
   user_role:
     id: user_role
-    negate: true
+    negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
     roles:
-      content_editor: content_editor
-      administrator: administrator
+      anonymous: anonymous
+      authenticated: authenticated
 events:
   search: {  }
-  custom: {  }
-  sign_up:
-    method: CMS
-  generate_lead:
-    value: ''
-    currency: ''
-  login:
-    method: CMS

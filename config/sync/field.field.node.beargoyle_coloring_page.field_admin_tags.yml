@@ -7,7 +7,7 @@ dependencies:
     - node.type.beargoyle_coloring_page
     - taxonomy.vocabulary.administrative
   content:
-    - 'taxonomy_term:administrative:52e010b7-6eed-4f58-baa8-516a11513290'
+    - 'taxonomy_term:administrative:084decab-1c7f-4db2-ac3e-42c735f8f663'
 id: node.beargoyle_coloring_page.field_admin_tags
 field_name: field_admin_tags
 entity_type: node
@@ -18,7 +18,7 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 52e010b7-6eed-4f58-baa8-516a11513290
+    target_uuid: 084decab-1c7f-4db2-ac3e-42c735f8f663
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
