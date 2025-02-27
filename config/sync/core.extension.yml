@@ -34,7 +34,6 @@ module:
   inline_entity_form: 0
   link: 0
   media: 0
-  media_gallery: 0
   media_library: 0
   media_pdf_thumbnail: 0
   menu_link_content: 0
