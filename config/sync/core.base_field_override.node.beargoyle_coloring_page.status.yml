@@ -1,0 +1,22 @@
+uuid: b2ec9739-8a11-4d9d-952b-0aebb140a8cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.beargoyle_coloring_page
+id: node.beargoyle_coloring_page.status
+field_name: status
+entity_type: node
+bundle: beargoyle_coloring_page
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
