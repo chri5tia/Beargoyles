@@ -669,7 +669,7 @@ display:
         filters: false
         filter_groups: false
       display_extenders: {  }
-      path: node_alt
+      path: altfront
     cache_metadata:
       max-age: -1
       contexts:
