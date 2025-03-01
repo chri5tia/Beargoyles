@@ -1,0 +1,4 @@
+generate pdf links:
+  title: 'Generate PDF links'
+  description: 'Allows users to generate PDF download links'
+  restrict access: TRUE

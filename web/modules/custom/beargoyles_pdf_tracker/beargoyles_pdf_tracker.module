@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Hooks for Beargoyles PDF Tracker module.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for node templates.
+ *
+ * Attaches JavaScript for handling PDF downloads.
+ */
+function beargoyles_pdf_tracker_preprocess_node(&$variables) {
+  if ($variables['node']->hasField('field_coloring_page_file') && !$variables['node']->get('field_coloring_page_file')->isEmpty()) {
+    $variables['#attached']['library'][] = 'beargoyles_pdf_tracker/beargoyles_pdf_tracker';
+  }
+}

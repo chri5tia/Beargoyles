@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
+    - beargoyles_pdf_tracker
     - text
     - user
 id: node.beargoyle_coloring_page.default
@@ -33,11 +34,9 @@ content:
     weight: 4
     region: content
   field_coloring_page_file:
-    type: entity_reference_entity_view
+    type: pdf_download_formatter
     label: inline
-    settings:
-      view_mode: default
-      link: false
+    settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content

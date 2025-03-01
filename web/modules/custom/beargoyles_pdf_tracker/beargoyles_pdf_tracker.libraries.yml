@@ -1,0 +1,6 @@
+beargoyles_pdf_tracker:
+  version: 1.x
+  js:
+    js/pdf_download.js: { attributes: { defer: true } }
+  dependencies:
+    - core/jquery

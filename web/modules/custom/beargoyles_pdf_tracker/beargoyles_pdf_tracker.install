@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function beargoyles_pdf_tracker_schema(): array {
+  $schema['beargoyles_pdf_downloads'] = [
+    'description' => 'Stores PDF download tracking logs.',
+    'fields' => [
+      'id' => ['type' => 'serial', 'not null' => TRUE],
+      'nid' => ['type' => 'int', 'not null' => TRUE, 'description' => 'Node ID of the PDF.'],
+      'fid' => ['type' => 'int', 'not null' => TRUE, 'description' => 'File ID of the PDF.'],
+      'token' => ['type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'description' => 'Unique download token.'],
+      'expires' => ['type' => 'int', 'not null' => TRUE, 'description' => 'Expiration timestamp.'],
+      'ip_address' => ['type' => 'varchar', 'length' => 45, 'not null' => TRUE, 'description' => 'IP address of downloader.'],
+      'timestamp' => ['type' => 'int', 'not null' => TRUE, 'description' => 'Time of download.'],
+      'user_agent' => ['type' => 'varchar', 'length' => 255, 'not null' => FALSE, 'description' => 'User agent of downloader.'],
+      'referrer' => ['type' => 'varchar', 'length' => 512, 'not null' => FALSE, 'description' => 'Referrer URL.'],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'nid' => ['nid'],
+      'token' => ['token'],
+    ],
+  ];
+
+  return $schema;
+}

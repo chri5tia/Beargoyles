@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - file
 third_party_settings:
   menu_ui:
     available_menus:

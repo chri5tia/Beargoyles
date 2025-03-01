@@ -1,0 +1,9 @@
+name: 'Beargoyles PDF Tracker'
+type: module
+description: 'Tracks PDF downloads, generates unique links, and prevents unauthorized sharing.'
+core_version_requirement: ^10
+package: 'Beargoyles'
+dependencies:
+  - drupal:node
+  - drupal:file
+  - drupal:user

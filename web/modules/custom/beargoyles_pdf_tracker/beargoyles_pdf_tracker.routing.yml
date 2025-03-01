@@ -1,0 +1,15 @@
+beargoyles_pdf_tracker.download:
+  path: '/download/{token}'
+  defaults:
+    _controller: '\Drupal\beargoyles_pdf_tracker\Controller\PDFDownloadController::download'
+    _title: 'Download PDF'
+  requirements:
+    _access: 'TRUE'
+
+beargoyles_pdf_tracker.generate_link:
+  path: '/generate-download-link/{nid}'
+  defaults:
+    _controller: '\Drupal\beargoyles_pdf_tracker\Controller\PDFDownloadController::generateDownloadLink'
+    _title: 'Generate Download Link'
+  requirements:
+    _access: 'TRUE'
