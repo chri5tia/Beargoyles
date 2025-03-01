@@ -36,7 +36,7 @@
             },
             error: function (xhr, status, error) {
               console.error("❌ AJAX request failed:", status, error);
-              alert('An error occurred while trying to generate the download link.');
+              alert('An error occurred while trying to generate the download link.");
             }
           });
         });
@@ -44,3 +44,4 @@
     }
   };
 })(jQuery, Drupal);
+

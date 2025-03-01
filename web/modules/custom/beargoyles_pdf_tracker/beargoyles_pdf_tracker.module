@@ -15,3 +15,16 @@ function beargoyles_pdf_tracker_preprocess_node(&$variables) {
     $variables['#attached']['library'][] = 'beargoyles_pdf_tracker/beargoyles_pdf_tracker';
   }
 }
+
+use Drupal\Core\Messenger\MessengerInterface;
+
+/**
+ * Implements hook_preprocess_html().
+ *
+ * Ensures the PDF download behavior is attached.
+ */
+function beargoyles_pdf_tracker_preprocess_html(&$variables) {
+  \Drupal::messenger()->addMessage("✅ PDF Tracker Library is being attached globally.", MessengerInterface::TYPE_STATUS);
+  $variables['#attached']['library'][] = 'beargoyles_pdf_tracker/beargoyles_pdf_tracker';
+}
+
