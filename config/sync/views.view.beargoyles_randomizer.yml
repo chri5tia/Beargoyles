@@ -17,8 +17,7 @@ dependencies:
     - taxonomy.vocabulary.administrative
     - taxonomy.vocabulary.tags
   content:
-    - 'taxonomy_term:administrative:084decab-1c7f-4db2-ac3e-42c735f8f663'
-    - 'taxonomy_term:administrative:392dc3a8-9f42-4b7f-9382-52e2c3f99cc5'
+    - 'taxonomy_term:administrative:c75b797a-e6b2-4eb9-9521-7ddbda9f6431'
     - 'taxonomy_term:tags:5c8cbc80-079c-4347-80ca-02f7b4a6debf'
   module:
     - media
@@ -979,52 +978,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        tid:
-          id: tid
-          table: taxonomy_index
-          field: tid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value:
-            - 179
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: administrative
-          type: textfield
-          hierarchy: false
-          limit: true
-          error_message: true
         tid_1:
           id: tid_1
           table: taxonomy_index
