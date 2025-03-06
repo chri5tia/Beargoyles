@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/all-beargoyles\r\n/all-free-coloring-pages\r\n/node_alt"
+    pages: "/all-beargoyles\r\n/all-free-coloring-pages\r\n/altfront"
