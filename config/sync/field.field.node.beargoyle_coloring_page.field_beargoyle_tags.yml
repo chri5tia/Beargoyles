@@ -7,7 +7,7 @@ dependencies:
     - node.type.beargoyle_coloring_page
     - taxonomy.vocabulary.tags
   content:
-    - 'taxonomy_term:tags:5c8cbc80-079c-4347-80ca-02f7b4a6debf'
+    - 'taxonomy_term:tags:78a6de6c-ff9a-4b7c-84ed-f15e9c88b445'
 id: node.beargoyle_coloring_page.field_beargoyle_tags
 field_name: field_beargoyle_tags
 entity_type: node
@@ -18,7 +18,7 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 5c8cbc80-079c-4347-80ca-02f7b4a6debf
+    target_uuid: 78a6de6c-ff9a-4b7c-84ed-f15e9c88b445
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
