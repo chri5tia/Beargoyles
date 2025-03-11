@@ -9,7 +9,7 @@ _core:
 id: beargoyles_local_actions
 theme: beargoyles
 region: content
-weight: -10
+weight: -11
 provider: null
 plugin: local_actions_block
 settings:

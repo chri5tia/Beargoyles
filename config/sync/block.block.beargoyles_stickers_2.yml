@@ -1,4 +1,4 @@
-uuid: abf39af5-db7a-4a40-b9ea-029e841c2daa
+uuid: 188e6b39-c215-4266-9f5a-360fe868721e
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
     - system
   theme:
     - beargoyles
-id: beargoyles_stickers
+id: beargoyles_stickers_2
 theme: beargoyles
-region: sidebar_second
-weight: -9
+region: content
+weight: -6
 provider: null
 plugin: 'block_content:6bf40b92-3eee-49ba-8b49-f7df4bab33be'
 settings:
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "<front>\r\n/donate"
+    pages: "/coloring-book\r\n/altfront"
