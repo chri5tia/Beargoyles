@@ -183,7 +183,7 @@ button, .button, .field--type-image,
 .menu-item, ul.tabs li, ul.menu li,
 ul.links.field__items li,
 #main-navigation ul.menu li,
-input.button, figure.caption-img img, input.pp-WAQZYM62ZJPS4 {
+input.button, figure.caption-img img, input.pp-WAQZYM62ZJPS4, input.pp-59E8KFEYB3JV8 {
   border-radius: 15px;
 }
 
@@ -474,12 +474,14 @@ span.file.file--mime-application-pdf.file--application-pdf {
   font-weight: bolder;
 }
 
-#paypal-form-fields-container-WAQZYM62ZJPS4 .input-label {
+#paypal-form-fields-container-WAQZYM62ZJPS4 .input-label,
+#paypal-form-fields-container-59E8KFEYB3JV8 .input-label {
   font-size:large!important;
   font-weight: 600!important;
 }
 
-#paypal-form-fields-container-WAQZYM62ZJPS4 #desc-label {
+#paypal-form-fields-container-WAQZYM62ZJPS4 #desc-label,
+#paypal-form-fields-container-59E8KFEYB3JV8 #desc-label {
   font-size: larger!important;
   font-weight: 600!important;
   line-height: 1.5!important;
@@ -492,7 +494,9 @@ input, button, select {
   font-size: 18px;
 }
 
-#paypal-form-fields-container-WAQZYM62ZJPS4 input {
+#paypal-form-fields-container-WAQZYM62ZJPS4 input,
+#paypal-form-fields-container-59E8KFEYB3JV8 select#selector,
+#paypal-form-fields-container-59E8KFEYB3JV8 select#quantity {
   width: 100%;
   min-height: auto!important;
   font-size: large!important;
@@ -510,7 +514,7 @@ input, button, select {
   background-color: #333333;
 }
 
-select#edit-tid {
+select#edit-tid, select#selector {
   border-width: 1px;
   border-style: solid;
   border-radius: 15px;
