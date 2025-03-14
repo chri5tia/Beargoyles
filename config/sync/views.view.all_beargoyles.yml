@@ -8,7 +8,7 @@ dependencies:
     - field.storage.node.field_beargoyle_tags
     - field.storage.node.field_coloring_page_file
     - field.storage.node.field_preview
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.beargoyle_coloring_page
     - system.menu.admin
     - taxonomy.vocabulary.administrative
@@ -189,7 +189,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: thumbnail
+            image_style: medium
             image_loading:
               attribute: lazy
           group_column: target_id
