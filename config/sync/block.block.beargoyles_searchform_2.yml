@@ -10,7 +10,7 @@ dependencies:
 id: beargoyles_searchform_2
 theme: beargoyles
 region: content
-weight: -3
+weight: -2
 provider: null
 plugin: search_form_block
 settings:
