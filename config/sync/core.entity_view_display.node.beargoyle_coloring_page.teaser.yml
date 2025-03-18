@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.beargoyle_coloring_page.body
+    - field.field.node.beargoyle_coloring_page.field_admin_notes
     - field.field.node.beargoyle_coloring_page.field_admin_tags
+    - field.field.node.beargoyle_coloring_page.field_art_version
     - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
     - field.field.node.beargoyle_coloring_page.field_preview
@@ -40,6 +42,8 @@ content:
     region: content
 hidden:
   body: true
+  field_admin_notes: true
   field_admin_tags: true
+  field_art_version: true
   field_coloring_page_file: true
   links: true

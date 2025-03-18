@@ -1,0 +1,29 @@
+uuid: c05d5dd5-0ce5-4a18-98cc-ea44a31de163
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_art_version
+    - media.type.image
+    - node.type.beargoyle_coloring_page
+id: node.beargoyle_coloring_page.field_art_version
+field_name: field_art_version
+entity_type: node
+bundle: beargoyle_coloring_page
+label: 'Art version'
+description: 'Upload the art version, if different than the colorable PDF. PNG.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
