@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_stickers
 theme: beargoyles
 region: sidebar_second
-weight: -9
+weight: -7
 provider: null
 plugin: 'block_content:6bf40b92-3eee-49ba-8b49-f7df4bab33be'
 settings:
