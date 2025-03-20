@@ -1,0 +1,8 @@
+uuid: 2ad9e2a2-4947-4a83-b9bd-6860e5f7b5a9
+langcode: en
+status: true
+dependencies: {  }
+id: custom_short_date
+label: 'Custom short date'
+locked: false
+pattern: 'F d, Y'
