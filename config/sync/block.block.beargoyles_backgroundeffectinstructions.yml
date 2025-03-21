@@ -6,12 +6,11 @@ dependencies:
     - 'block_content:basic:04bb2f60-1f85-4b1c-8227-e845cf82dfb8'
   module:
     - block_content
-    - system
   theme:
     - beargoyles
 id: beargoyles_backgroundeffectinstructions
 theme: beargoyles
-region: sidebar_second
+region: footer_fourth
 weight: -3
 provider: null
 plugin: 'block_content:04bb2f60-1f85-4b1c-8227-e845cf82dfb8'
@@ -23,8 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: default
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: "<front>\r\n/donate\r\n/free-coloring-pages"
+visibility: {  }

@@ -9,7 +9,7 @@ dependencies:
     - beargoyles
 id: beargoyles_searchform
 theme: beargoyles
-region: sidebar_second
+region: footer_first
 weight: -8
 provider: null
 plugin: search_form_block
@@ -23,4 +23,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/search\r\n/search/*\r\n/all-beargoyles\r\n/all-free-coloring-pages\r\n/contact\r\n/altfront"
+    pages: "/search\r\n/search/*"

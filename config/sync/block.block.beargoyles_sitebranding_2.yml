@@ -8,7 +8,7 @@ dependencies:
     - beargoyles
 id: beargoyles_sitebranding_2
 theme: beargoyles
-region: sidebar_second
+region: footer_first
 weight: -10
 provider: null
 plugin: system_branding_block
@@ -17,11 +17,7 @@ settings:
   label: 'Site branding'
   label_display: '0'
   provider: system
-  use_site_logo: true
-  use_site_name: false
+  use_site_logo: false
+  use_site_name: true
   use_site_slogan: false
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: '<front>'
+visibility: {  }

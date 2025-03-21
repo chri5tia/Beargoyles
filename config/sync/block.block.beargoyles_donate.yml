@@ -6,13 +6,12 @@ dependencies:
     - 'block_content:basic:daa19d22-0d63-4721-928c-f17e6b217957'
   module:
     - block_content
-    - node
     - system
   theme:
     - beargoyles
 id: beargoyles_donate
 theme: beargoyles
-region: sidebar_second
+region: footer_third
 weight: -5
 provider: null
 plugin: 'block_content:daa19d22-0d63-4721-928c-f17e6b217957'
@@ -28,12 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "<front>\r\n/donate\r\n/coloring-book\r\n/what-is-a-beargoyle"
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      beargoyle_coloring_page: beargoyle_coloring_page
-      page: page
+    pages: /donate
