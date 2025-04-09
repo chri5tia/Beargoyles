@@ -19,6 +19,7 @@ dependencies:
     - taxonomy.vocabulary.tags
   content:
     - 'taxonomy_term:administrative:c75b797a-e6b2-4eb9-9521-7ddbda9f6431'
+    - 'taxonomy_term:tags:78a6de6c-ff9a-4b7c-84ed-f15e9c88b445'
   module:
     - media
     - node
@@ -2057,7 +2058,8 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: {  }
+          value:
+            188: 188
           group: 1
           exposed: true
           expose:
