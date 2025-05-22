@@ -1,0 +1,30 @@
+uuid: 31ae643c-5dbd-4b24-9de6-2988bc95fc93
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:91ee5c2e-422c-412c-8f6a-93e3854556c9'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_description
+theme: beargoyles
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:91ee5c2e-422c-412c-8f6a-93e3854556c9'
+settings:
+  id: 'block_content:91ee5c2e-422c-412c-8f6a-93e3854556c9'
+  label: Description
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /front
