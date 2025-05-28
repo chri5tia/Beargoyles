@@ -9,7 +9,7 @@ title: 'NICE PERSON TEST'
 administration_mode: false
 administration_mode_on_admin_routes: false
 whitelist_ips: ''
-wrong_captcha_response_message: nope
+wrong_captcha_response_message: 'That is incorrect. Please see the paragraph below for the secret password.'
 default_validation: 1
 persistence: 3
 enable_stats: true

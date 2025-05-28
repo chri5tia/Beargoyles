@@ -6,5 +6,5 @@ _core:
   default_config_hash: f7dN3Eb7xyyMUWug2Gwt-bjoXTpTvtXXGMQmIS4LJ44
 id: example
 question: 'What is the secret password?'
-solution: 'beep boop, ""beep boop", beepboop, "beepboop"'
-hint: 'Look in the privacy statement, like "B___ ___p"'
+solution: 'bg, BG, b g, B G'
+hint: "Look in the privacy statement for the secret password.\t"
