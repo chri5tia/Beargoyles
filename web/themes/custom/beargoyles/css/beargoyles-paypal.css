@@ -1,0 +1,18 @@
+/* IDS
+ *
+ V9F4T8ZKSNE96
+ 59E8KFEYB3JV8
+ WAQZYM62ZJPS4
+ */
+
+#paypal-form-fields-container-V9F4T8ZKSNE96 .input-label,
+#paypal-form-fields-container-V9F4T8ZKSNE96 #desc-label,
+#paypal-form-fields-container-V9F4T8ZKSNE96 input,
+#paypal-form-fields-container-59E8KFEYB3JV8 .selectContainer select,
+#paypal-form-fields-container-59E8KFEYB3JV8 .item-header,
+#paypal-form-fields-container-59E8KFEYB3JV8 .input-label,
+#paypal-form-fields-container-WAQZYM62ZJPS4 #desc-label {
+  font-size: 2rem!important;
+  line-height: 1.5!important;
+  font-weight: normal;
+}
