@@ -47,6 +47,7 @@ module:
   profile: 0
   redirect: 0
   riddler: 0
+  scheduler: 0
   search: 0
   shortcut: 0
   state_machine: 0

@@ -39,6 +39,7 @@
         "drupal/pathauto": "^1.13",
         "drupal/redirect": "^1.10",
         "drupal/riddler": "^3.0",
+        "drupal/scheduler": "^2.2",
         "drupal/views_bulk_operations": "^4.3",
         "drush/drush": "^13.3",
         "oomphinc/composer-installers-extender": "^2.0"

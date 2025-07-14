@@ -15,6 +15,7 @@ dependencies:
     - inline_entity_form
     - media_library
     - path
+    - scheduler
     - text
 id: node.beargoyle_coloring_page.default
 targetEntityType: node
@@ -105,6 +106,17 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 52
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 14
@@ -138,4 +150,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  unpublish_on: true
