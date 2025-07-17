@@ -6,6 +6,7 @@ input#edit-name,
 input#edit-pass,
 select#edit-selector,
 select#edit-tid,
+select#edit-tid-1,
 textarea#edit-message-0-value {
   color: #FFFFFF;
 }
@@ -65,6 +66,7 @@ input#edit-name,
 input#edit-pass,
 select#edit-selector,
 select#edit-tid,
+select#edit-tid-1,
 textarea#edit-message-0-value,
 #header {
   background-color: #333333;

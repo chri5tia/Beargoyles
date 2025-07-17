@@ -320,7 +320,7 @@ input, button, select {
   font-size: 18px;
 }
 
-select#edit-tid, select#selector {
+select#edit-tid, select#selector, select#edit-tid-1{
   box-shadow: none;
   padding: 15px 24px;
   text-transform: uppercase;

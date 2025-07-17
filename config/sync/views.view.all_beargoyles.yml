@@ -1225,8 +1225,8 @@ display:
       path: admin/all
       menu:
         type: normal
-        title: 'All Beargoyles'
-        description: 'Table of illustrations'
+        title: 'Better Content View'
+        description: 'Table of illustrations, etc.'
         weight: 0
         expanded: true
         menu_name: admin
