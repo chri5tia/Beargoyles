@@ -5,6 +5,7 @@ global-styles:
   css:
     theme:
       css/beargoyles.css: {}
+      css/beargoyles-colors.css: {}
       css/beargoylesplash.css: {}
       css/beargoyles-paypal.css: {}
   js:

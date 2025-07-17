@@ -1,4 +1,8 @@
-
+/*
+ * Markup and styling for beargoyles.com
+ * Colors are defined in beargoyles-colors.css
+ * @todo: Move colors to it's own style sheet
+ */
 
 /* FONTS AND MARKUP */
 
@@ -23,7 +27,6 @@ a {
 }
 
 a:hover {
-  color:#51387e;
   text-decoration:underline;
 }
 
@@ -44,28 +47,6 @@ div.meta.submitted {
   float:right;
   font-size: 85%;
 }
-
-/* text colors */
-
-/* purple text */
-a, a:hover,
-input.form-text, input.form-email, input.form-search, textarea.form-textarea, select,
-div.meta.submitted,a:focus,ul.menu li a.active,ul.menu li a:hover,ul.links li a.active,
-ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title, input, .search-result__title a:hover  {
-  color: #51387e;
-}
-
-/* charcoal text */
-
-h1, h3, h4, h5 {
-  color:#333333;
-}
-
-/* silver text */
-h6, #subfooter {
-  color: #666666;
-}
-
 
 /* Spacing and Alignment */
 
@@ -105,14 +86,15 @@ article nav {
   float:right;
 }
 
-/* Borders */
+/* BORDERS */
 
-/* Thick charcoal dashed border */
+/* Thick dashed */
 .comment,
 .node--view-mode-teaser,
 .path-node #content-wrapper,
 ol.search-results.node_search-results {
-  border: 3px #666666 dashed;
+  border-width: 3px;
+  border-style: dashed;
 }
 
 /* Regular corners with no borders */
@@ -120,23 +102,6 @@ ol.search-results.node_search-results {
   border-radius: 0;
   border-width: 0;
   padding:5px;
-}
-
-/* Light purple */
-input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover,.dark input[type="submit"],.highlighted-block .btn:hover,.highlighted-block .btn:focus,.call-to-action .btn,.tag a:hover, ::-moz-selection, ::selection, input.form-text:focus,input.search-text:focus,textarea.form-textarea:focus {
-  border-color: #846baf;
-}
-
-/* Background colors */
-/* White */
-
-#subfooter ul.menu li,
-ul.menu li, ul.tabs li a:hover,
-.node--view-mode-teaser,
-.path-node #content-wrapper, .block-beargoyles-page-title,
-.block-beargoyles-local-tasks,
-h1.page-title, ul.tabs.primary, ol.search-results.node_search-results, #subfooter {
-  background-color: #FFFFFF;
 }
 
 /* Menus */
@@ -203,9 +168,9 @@ ul.tabs li a:hover {
 
 
 .item-list ul li {
-  background-color: #FFFFFF;
   opacity: 80%;
-  border: 1px grey solid;
+  border-width: 1px;
+  border-style: solid;
   padding: 15px;
   padding-bottom: 50px;
   margin-bottom: 25px;
@@ -242,38 +207,12 @@ ul.tabs li a:hover {
   line-height:150%;
 }
 
-.field--name-field-beargoyle-tags .field__item:hover {
-  background-color: #c1c4c9;
-}
-
 .field--name-field-beargoyle-tags .field__item a:hover {
   text-decoration:none;
-  color: #30054a;
 }
 
 h1.page-title {
   font-size: 72px;
-}
-
-/* Get rid of all the red */
-a:hover,a:focus,ul.menu li a.active,ul.menu li a:hover,ul.links li a.active,ul.links li a:hover,#forum thead a:hover,#block-node-recent .node-title a:hover {
-  color: #846baf;
-}
-
-input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover,.dark input[type="submit"],.highlighted-block .btn:hover,.highlighted-block .btn:focus,.call-to-action .btn,.tag a:hover {
-  background-color: #846baf;
-}
-
-::-moz-selection {
-  background-color: #846baf;
-}
-
-::selection {
-  background-color: #846baf;
-}
-
-input.form-text:focus,input.search-text:focus,textarea.form-textarea:focus {
-  border-color: #846baf;
 }
 
 #desc-label {
@@ -305,7 +244,6 @@ input.form-text:focus,input.search-text:focus,textarea.form-textarea:focus {
 
 .bottomleaf {
   padding: 20px;
-  color: #666666;
   font-size: small;
 }
 
@@ -320,20 +258,17 @@ input#edit-submit {
 
 img.image-style-thumbnail {
   border-radius: 50px;
-  background-color: #FFFFFF;
   border: 1px #666666 solid;
 }
 
 img.image-style-medium {
   border-radius: 120px;
-  background-color: #FFFFFF;
   border: 1px #666666 solid;
   opacity: 85%;
 }
 
 img.image-style-large-white-circle {
   border-radius:150px;
-  background-color: #FFFFFF;
   border: 1px #666666 solid;
   opacity: 85%;
 }
@@ -344,7 +279,6 @@ img.image-style-large-white-circle {
 /* Blocks */
 
 div#block-branding-beargoyles {
-  background: #FFFFFF;
   opacity: 85%;
   z-index: 100;
   position: relative;
@@ -369,7 +303,6 @@ Off-White/super light grey: #f4f7fb
 
 .sideleaf, .roundcorner, .captcha  {
   border: 1px #846baf solid;
-  background-color: #FFFFFF;
   padding: 35px;
 }
 
@@ -386,12 +319,7 @@ Off-White/super light grey: #f4f7fb
   border-bottom-left-radius: 100px;
 }
 
-.captcha {
-  background-color: #FFFFFF;
-}
-
 div#site-slogan, div#site-name, a#logo img, h2 {
-  background-color: #FFFFFF;
   display: inline-block;
 }
 
