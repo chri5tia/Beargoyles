@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4caf35107f594bd4356c11f3d24db90",
+    "content-hash": "ef6ccc55efc88e3a4a8f85fdd430eb54",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -481,16 +481,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.10.1",
+            "version": "4.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "362310b13ececa9f6f0a4a880811fa08fecc348b"
+                "reference": "e550ea4f177f199e0e9451168342bf3f321d92b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/362310b13ececa9f6f0a4a880811fa08fecc348b",
-                "reference": "362310b13ececa9f6f0a4a880811fa08fecc348b",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/e550ea4f177f199e0e9451168342bf3f321d92b0",
+                "reference": "e550ea4f177f199e0e9451168342bf3f321d92b0",
                 "shasum": ""
             },
             "require": {
@@ -531,9 +531,9 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.10.1"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.10.2"
             },
-            "time": "2024-12-13T19:55:40+00:00"
+            "time": "2025-07-16T20:54:09+00:00"
         },
         {
             "name": "consolidation/config",
@@ -1420,13 +1420,36 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "dev-3286466-fix-accessibility-issue",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
-                "url": "git@git.drupal.org:issue/admin_toolbar-3286466.git",
-                "reference": "feca979a15faa276a4e807c99ad9633ed4482302"
+                "url": "https://git.drupalcode.org/project/admin_toolbar.git",
+                "reference": "3.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.6.1.zip",
+                "reference": "3.6.1",
+                "shasum": "40e8874bdf100de90e0eec6984be14f0ec7765b0"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/admin_toolbar_tools": "*"
             },
             "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.6.1",
+                    "datestamp": "1749079734",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -1443,14 +1466,34 @@
                 },
                 {
                     "name": "Adrian Cid Almaguer (adriancid)",
-                    "email": "adriancid@gmail.com",
                     "homepage": "https://www.drupal.org/u/adriancid",
+                    "email": "adriancid@gmail.com",
                     "role": "Maintainer"
                 },
                 {
                     "name": "Mohamed Anis Taktak (matio89)",
                     "homepage": "https://www.drupal.org/u/matio89",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "fethi.krout",
+                    "homepage": "https://www.drupal.org/user/3206765"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "matio89",
+                    "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "musa.thomas",
+                    "homepage": "https://www.drupal.org/user/1213824"
+                },
+                {
+                    "name": "romainj",
+                    "homepage": "https://www.drupal.org/user/370706"
                 }
             ],
             "description": "Provides a drop-down menu interface to the core Drupal Toolbar.",
@@ -1460,10 +1503,9 @@
                 "Toolbar"
             ],
             "support": {
-                "issues": "https://www.drupal.org/project/issues/admin_toolbar",
-                "source": "https://git.drupalcode.org/project/admin_toolbar"
-            },
-            "time": "2025-06-23T21:10:26+00:00"
+                "source": "https://git.drupalcode.org/project/admin_toolbar",
+                "issues": "https://www.drupal.org/project/issues/admin_toolbar"
+            }
         },
         {
             "name": "drupal/adminimal_admin_toolbar",
@@ -8642,7 +8684,7 @@
             "extra": {
                 "drupal": {
                     "version": "5.4.0",
-                    "datestamp": "1751916158",
+                    "datestamp": "1752755621",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8763,17 +8805,9 @@
             }
         }
     ],
-    "aliases": [
-        {
-            "package": "drupal/admin_toolbar",
-            "version": "dev-3286466-fix-accessibility-issue",
-            "alias": "3.6.1",
-            "alias_normalized": "3.6.1.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "RC",
     "stability-flags": {
-        "drupal/admin_toolbar": 20,
         "drupal/bootstrap_business": 10
     },
     "prefer-stable": true,

@@ -9,10 +9,6 @@
         "chat": "https://www.drupal.org/node/314178"
     },
     "repositories": {
-        "admin_toolbar_issue3286466": {
-            "type": "git",
-            "url": "git@git.drupal.org:issue/admin_toolbar-3286466.git"
-        },
         "asset-packagist": {
             "type": "composer",
             "url": "https://asset-packagist.org"
@@ -26,7 +22,7 @@
         "bower-asset/photoswipe": "^5",
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
-        "drupal/admin_toolbar": "dev-3286466-fix-accessibility-issue as 3.6.1",
+        "drupal/admin_toolbar": "3.6.1",
         "drupal/adminimal_admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.7",
         "drupal/bootstrap_business": "^1.0@beta",

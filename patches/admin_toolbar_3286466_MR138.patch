@@ -1,0 +1,1239 @@
+From eb31fd8d5fddca2dac5d784a564ce6ab8ca9088e Mon Sep 17 00:00:00 2001
+From: Camille Davis <camille.davis@civicactions.com>
+Date: Thu, 2 Mar 2023 17:12:53 -0800
+Subject: [PATCH 1/8] Add Extend/Collapse buttons to desktop view and close on
+ Escape.
+
+---
+ css/admin.toolbar.css | 224 ++++++++++++++++++++++++------------------
+ js/admin_toolbar.js   |  92 ++++++++++++++---
+ 2 files changed, 207 insertions(+), 109 deletions(-)
+
+diff --git a/css/admin.toolbar.css b/css/admin.toolbar.css
+index e23f7ce..b3e808d 100644
+--- a/css/admin.toolbar.css
++++ b/css/admin.toolbar.css
+@@ -1,18 +1,36 @@
+-.toolbar-tray-horizontal .menu-item:hover {
++/* All levels */
++
++.toolbar-tray-horizontal .menu-item--expanded {
++  background-color: #f5f5f2;
++}
++
++.toolbar-tray-horizontal .menu-item:hover,
++.toolbar-tray-horizontal .menu-item.hover-intent {
+   background: #fff;
+ }
+ 
+-.toolbar-tray-horizontal .menu-item a:focus {
++.toolbar-tray-horizontal a {
++  display: inline-block;
++}
++
++.toolbar-tray-horizontal .toolbar-menu .toolbar-icon.toolbar-handle {
++  display: inline-block;
++  position: relative;
++  padding: 1em 0;
++  line-height: 1;
++}
++
++.menu-item a:focus,
++.toolbar .toolbar-icon.toolbar-handle:focus {
+   background: #abeae4;
+ }
+ 
+-.toolbar-tray-horizontal
+-  .toolbar-menu:not(:first-child)
+-  li.menu-item--expanded
+-  > a:focus {
+-  background-image: url(../misc/icons/0074bd/chevron-right.svg);
+-  background-repeat: no-repeat;
+-  background-position: center right;
++html:not([dir="rtl"]) .toolbar-tray-horizontal .toolbar-handle::before {
++  left: auto;
++}
++
++[dir="rtl"] .toolbar-tray-horizontal .toolbar-handle::before {
++  right: auto;
+ }
+ 
+ .toolbar-tray-horizontal .menu-item--expanded .menu {
+@@ -21,8 +39,91 @@
+   background: #fff;
+ }
+ 
+-.toolbar-tray-horizontal .menu-item--expanded {
+-  background-color: #f5f5f2;
++.toolbar-menu .menu-item > span {
++  padding: 1em 1.3333em;
++  display: block;
++  color: #434343;
++  cursor: pointer;
++}
++
++html:not([dir="rtl"]) .toolbar-tray-vertical .menu-item--expanded > .toolbar-box a {
++  margin-right: 4em;
++}
++
++[dir="rtl"] .toolbar-tray-vertical .menu-item--expanded > .toolbar-box a {
++  margin-left: 4em;
++}
++
++.toolbar .toolbar-tray-vertical li.open > ul.toolbar-menu.clearfix {
++  display: block;
++}
++
++/* Level 1 */
++
++html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 > .toolbar-box a {
++  padding-right: 0.6667em;
++}
++
++[dir="rtl"] .toolbar-tray-horizontal .level-1 > .toolbar-box a {
++  padding-left: 0.6667em;
++}
++
++.toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle {
++  width: 3.3844em;
++}
++
++html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle::before {
++  right: 0.923em;
++}
++
++[dir="rtl"] .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle::before {
++  left: 0.923em;
++  right: auto;
++}
++
++/* Sub-levels */
++
++.toolbar-tray-horizontal .level-1 :not(.menu-item--expanded) > .toolbar-box a {
++  width: 100%;
++}
++
++.toolbar-tray-horizontal .level-1 .menu-item--expanded > .toolbar-box a {
++  width: calc(100% - 3em);
++}
++
++.toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle {
++  width: 3em;
++}
++
++.toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-box .toolbar-icon.toolbar-handle::before {
++  background-size: auto;
++  position: absolute;
++}
++
++.toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle.open::before {
++  transform: rotate(180deg);
++  filter: brightness(0) saturate(100%) invert(51%) sepia(5%) saturate(8%) hue-rotate(12deg) brightness(90%) contrast(88%);
++}
++
++html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded > .toolbar-box .toolbar-handle::before {
++  background-image: url(../misc/icons/0074bd/chevron-right.svg);
++  background-position: right;
++  right: 0;
++}
++
++[dir="rtl"] .toolbar-tray-horizontal .level-1 .menu-item--expanded > .toolbar-box .toolbar-handle::before {
++  background-image: url(../misc/icons/0074bd/chevron-left.svg);
++  background-position: left;
++  left: 0;
++  right: auto;
++}
++
++html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle.open::before {
++  background-position: left;
++}
++
++[dir="rtl"] .toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle.open::before {
++  background-position: right;
+ }
+ 
+ .toolbar-tray-horizontal ul li li.menu-item {
+@@ -41,20 +142,19 @@
+   border-top: 1px solid #ddd;
+ }
+ 
+-.toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul ul,
+-.toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul ul ul,
+-.toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul ul ul ul,
+-.toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul ul ul ul ul {
++.toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul {
++  display: none;
+   left: -999em; /* LTR */
+   display: none;
+ }
+ 
+ /* Lists nested under hovered list items */
+-.toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul,
+-.toolbar-tray-horizontal li li.menu-item--expanded.hover-intent ul,
+-.toolbar-tray-horizontal li li li.menu-item--expanded.hover-intent ul,
+-.toolbar-tray-horizontal li li li li.menu-item--expanded.hover-intent ul,
+-.toolbar-tray-horizontal li li li li li.menu-item--expanded.hover-intent ul {
++.toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul {
++  display: block;
++  position: absolute;
++  width: 200px;
++  box-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.4);
++  z-index: 1;
+   left: auto; /* LTR */
+   display: block;
+ }
+@@ -64,43 +164,23 @@
+   padding: 12px 15px 12px 12px;
+ }
+ 
+-.toolbar-tray-horizontal ul li.menu-item--expanded.hover-intent ul {
+-  position: absolute;
+-  z-index: 1;
+-  display: block;
+-  width: 200px;
+-  box-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.4);
+-}
+-
+-.toolbar-tray-horizontal ul li.menu-item--expanded .menu-item > ul {
++.toolbar-tray-horizontal li.menu-item--expanded .menu-item > ul {
+   display: none;
+ }
+ 
+-.toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded {
+-  background-image: url(../misc/icons/0074bd/chevron-right.svg);
+-  background-repeat: no-repeat;
+-  background-position: center right;
+-}
+-
+-.toolbar-tray-horizontal
+-  ul
+-  li.menu-item--expanded
+-  ul
+-  li.menu-item--expanded
+-  a.is-active {
+-  background: unset;
+-}
+-
+-.toolbar-tray-horizontal ul li.menu-item--expanded .menu-item.hover-intent ul {
++.toolbar-tray-horizontal li.menu-item--expanded .menu-item.hover-intent > ul {
+   display: block;
+   margin: -40px 0 0 197px;
+ }
+ 
+-.toolbar-tray-horizontal li:hover ul li {
+-  float: none;
++[dir="rtl"] .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item.hover-intent ul {
++  margin: -40px 197px 0 0;
+ }
+ 
+-.toolbar-tray-horizontal li.hover-intent ul li {
++.toolbar-tray-horizontal li:hover ul li,
++.toolbar-tray-horizontal li.hover-intent ul li,
++[dir="rtl"] .toolbar-tray-horizontal li:hover ul li,
++[dir="rtl"] .toolbar-tray-horizontal li.hover-intent ul li {
+   float: none;
+ }
+ 
+@@ -111,51 +191,3 @@
+   width: 200px;
+   padding-top: 0;
+ }
+-
+-.toolbar .toolbar-tray-vertical li.open > ul.toolbar-menu.clearfix {
+-  display: block;
+-}
+-
+-.toolbar-menu .menu-item > span {
+-  display: block;
+-  padding: 1em 1.3333em;
+-  cursor: pointer;
+-  color: #434343;
+-}
+-
+-[dir="rtl"]
+-  .toolbar-tray-horizontal
+-  ul
+-  li.menu-item--expanded
+-  ul
+-  li.menu-item--expanded {
+-  background-image: url(../misc/icons/0074bd/chevron-left.svg);
+-  background-position: center left;
+-}
+-
+-[dir="rtl"]
+-  .toolbar-tray-horizontal
+-  .toolbar-menu:not(:first-child)
+-  li.menu-item--expanded
+-  > a:focus {
+-  background-image: url(../misc/icons/0074bd/chevron-left.svg);
+-  background-repeat: no-repeat;
+-  background-position: center left;
+-}
+-
+-[dir="rtl"]
+-  .toolbar-tray-horizontal
+-  ul
+-  li.menu-item--expanded
+-  .menu-item.hover-intent
+-  ul {
+-  margin: -40px 197px 0 0;
+-}
+-
+-[dir="rtl"] .toolbar-tray-horizontal li:hover ul li {
+-  float: none;
+-}
+-
+-[dir="rtl"] .toolbar-tray-horizontal li.hover-intent ul li {
+-  float: none;
+-}
+diff --git a/js/admin_toolbar.js b/js/admin_toolbar.js
+index 9c8ea5e..55b4957 100644
+--- a/js/admin_toolbar.js
++++ b/js/admin_toolbar.js
+@@ -4,28 +4,94 @@
+ 
+       $('a.toolbar-icon', context).removeAttr('title');
+ 
+-      // Make the toolbar menu navigable with keyboard.
+-      $('ul.toolbar-menu li.menu-item--expanded a', context).on('focusin', function () {
+-        $('li.menu-item--expanded', context).removeClass('hover-intent');
+-        $(this).parents('li.menu-item--expanded').addClass('hover-intent');
+-      });
++      // Get keyboard functionality from mobile menu.
++      if ('drupalToolbarMenu' in $.fn) {
++        $(once('keyboar-navigation', '.toolbar-menu-administration')).each(function () {
++          const $toolbar = $(this);
++
++          // Initialize Extend/Collapse buttons even if menu was loaded horizontally.
++          $toolbar.children('.toolbar-menu').drupalToolbarMenu()
++
++          // Don't automatically open active page's menu if not on mobile.
++          function closeActiveTrail() {
++            if (!$toolbar.closest('.toolbar-tray-horizontal').length) {
++              return;
++            }
++            $toolbar.find('.menu-item--active-trail.open, .menu-item--active-trail .open').each(function () {
++              this.classList.remove('open');
++            })
++          }
++          closeActiveTrail();
++
++          // Watch for addition/removal of 'open' class.
++          const classObserver = new MutationObserver((mutations) => {
++            mutations.forEach(mu => {
++              if (mu.type !== "attributes" && mu.attributeName !== "class") {
++                return;
++              }
++
++              const classList = mu.target.classList;
++              const oldClassList = mu.oldValue.split(' ');
++
++              // If menu was opened using button, add 'hover-intent' class and prevent hover-out from closing.
++              if (classList.contains('open') && !classList.contains('hover-intent')
++                && (!oldClassList.includes('open') || oldClassList.includes('hover-intent'))) {
++                classList.add('hover-intent');
++                return;
++              }
++
++              // When menu is closed using button, remove 'hover-intent' class.
++              if (!classList.contains('open') && oldClassList.includes('open')
++                && classList.contains('hover-intent')) {
++                classList.remove('hover-intent');
++                return;
++              }
++            });
++          });
+ 
+-      $('ul.toolbar-menu li.menu-item a', context).keydown(function (e) {
+-        if ((e.shiftKey && (e.keyCode || e.which) == 9)) {
+-          if ($(this).parent('.menu-item').prev().hasClass('menu-item--expanded')) {
+-            $(this).parent('.menu-item').prev().addClass('hover-intent');
++          $toolbar.find('.menu-item--expanded').each(function () {
++            const li = this;
++            classObserver.observe((li), { attributes: true, attributeOldValue: true });
++          });
++        });
++      }
++
++      $(once('dismiss-menus', '.toolbar-menu-administration')).each(function () {
++        const $toolbar = $(this);
++
++        function dismissOpenMenus() {
++          if (!$toolbar.closest('.toolbar-tray-horizontal').length) {
++            return;
+           }
++          $toolbar.find('.open').each(function () {
++            this.classList.remove('open');
++          });
++          $toolbar.find('.hover-intent').each(function () {
++            this.classList.remove('hover-intent');
++          });
+         }
++
++        // Dismiss any open menus by pressing Escape key.
++        $(document).keyup(function (e) {
++          if (e.which !== 27) {
++            return;
++          }
++          dismissOpenMenus();
++        });
++
++        // Dismiss any open menus by clicking out.
++        $(document).click(function (e) {
++          if ($(e.target).closest('#toolbar-item-administration-tray').length) {
++            return;
++          }
++          dismissOpenMenus();
++        });
+       });
+ 
+       $('.toolbar-menu:first-child > .menu-item:not(.menu-item--expanded) a, .toolbar-tab > a', context).on('focusin', function () {
+         $('.menu-item--expanded').removeClass('hover-intent');
+       });
+ 
+-      $('.toolbar-menu:first-child > .menu-item', context).on('hover', function () {
+-        $(this, 'a').css("background: #fff;");
+-      });
+-
+       $('ul:not(.toolbar-menu)', context).on({
+         mousemove: function () {
+           $('li.menu-item--expanded').removeClass('hover-intent');
+-- 
+GitLab
+
+
+From d9e5c187934a9b70a87f537caf41fe85314d9e93 Mon Sep 17 00:00:00 2001
+From: Camille Davis <camille.davis@civicactions.com>
+Date: Tue, 7 Mar 2023 17:33:56 -0800
+Subject: [PATCH 2/8] Fix padding at top of body when horizontal toolbar wraps
+ on small screens.
+
+---
+ js/admin_toolbar.js | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+diff --git a/js/admin_toolbar.js b/js/admin_toolbar.js
+index 55b4957..d3600d6 100644
+--- a/js/admin_toolbar.js
++++ b/js/admin_toolbar.js
+@@ -6,7 +6,7 @@
+ 
+       // Get keyboard functionality from mobile menu.
+       if ('drupalToolbarMenu' in $.fn) {
+-        $(once('keyboar-navigation', '.toolbar-menu-administration')).each(function () {
++        $(once('keyboard-navigation', '.toolbar-menu-administration')).each(function () {
+           const $toolbar = $(this);
+ 
+           // Initialize Extend/Collapse buttons even if menu was loaded horizontally.
+@@ -88,6 +88,16 @@
+         });
+       });
+ 
++      // Fix padding at top of body when horizontal toolbar wraps.
++      $(once('update-toolbar-height', 'body')).each(function () {
++        // Set timer so padding doesn't update continuously on resize.
++        let timer;
++        jQuery(window).on('resize', function () {
++          clearTimeout(timer);
++          timer = setTimeout(Drupal.toolbar.ToolbarVisualView.prototype.updateToolbarHeight.bind(Drupal.toolbar.views.toolbarVisualView), 100);
++        });
++      })
++
+       $('.toolbar-menu:first-child > .menu-item:not(.menu-item--expanded) a, .toolbar-tab > a', context).on('focusin', function () {
+         $('.menu-item--expanded').removeClass('hover-intent');
+       });
+-- 
+GitLab
+
+
+From 2b68f7a9c2d4331ae217a902fe5ec8f74470f07e Mon Sep 17 00:00:00 2001
+From: DEDX <camille.davis@civicactions.com>
+Date: Tue, 11 Apr 2023 14:17:50 -0700
+Subject: [PATCH 3/8] Fix overlap issue when horizontal toolbar wraps.
+
+---
+ css/admin.toolbar.css | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/css/admin.toolbar.css b/css/admin.toolbar.css
+index b3e808d..b247fc2 100644
+--- a/css/admin.toolbar.css
++++ b/css/admin.toolbar.css
+@@ -18,6 +18,7 @@
+   position: relative;
+   padding: 1em 0;
+   line-height: 1;
++  z-index: auto;
+ }
+ 
+ .menu-item a:focus,
+-- 
+GitLab
+
+
+From 79e9c22c54d88eae377cf73c92ed8973a2697262 Mon Sep 17 00:00:00 2001
+From: DEDX <camille.davis@civicactions.com>
+Date: Wed, 31 May 2023 12:42:57 -0700
+Subject: [PATCH 4/8] Use arrows from Gin on level-1 dropdowns.
+
+---
+ css/admin.toolbar.css | 80 +++++++++++++++----------------------------
+ 1 file changed, 28 insertions(+), 52 deletions(-)
+
+diff --git a/css/admin.toolbar.css b/css/admin.toolbar.css
+index b247fc2..e11d5b4 100644
+--- a/css/admin.toolbar.css
++++ b/css/admin.toolbar.css
+@@ -9,42 +9,31 @@
+   background: #fff;
+ }
+ 
+-.toolbar-tray-horizontal a {
+-  display: inline-block;
++.toolbar-tray-horizontal .toolbar-box {
++  display: flex;
+ }
+ 
+ .toolbar-tray-horizontal .toolbar-menu .toolbar-icon.toolbar-handle {
+-  display: inline-block;
++  display: block;
+   position: relative;
+-  padding: 1em 0;
++  height: auto;
+   line-height: 1;
+   z-index: auto;
+ }
+ 
+-.menu-item a:focus,
++.toolbar .menu-item a:focus,
+ .toolbar .toolbar-icon.toolbar-handle:focus {
+   background: #abeae4;
+ }
+ 
+-html:not([dir="rtl"]) .toolbar-tray-horizontal .toolbar-handle::before {
+-  left: auto;
+-}
+-
+-[dir="rtl"] .toolbar-tray-horizontal .toolbar-handle::before {
+-  right: auto;
+-}
+-
+-.toolbar-tray-horizontal .menu-item--expanded .menu {
+-  width: auto;
+-  height: auto;
+-  background: #fff;
++.toolbar-tray-horizontal .toolbar-handle.open::before {
++  transform: rotate(180deg);
++  filter: brightness(0) saturate(100%) invert(51%) sepia(5%) saturate(8%) hue-rotate(12deg) brightness(90%) contrast(88%);
+ }
+ 
+-.toolbar-menu .menu-item > span {
+-  padding: 1em 1.3333em;
+-  display: block;
+-  color: #434343;
+-  cursor: pointer;
++.toolbar-tray-horizontal .toolbar-handle:focus::before,
++.toolbar-tray-horizontal .toolbar-handle.open:focus::before {
++  filter: brightness(0);
+ }
+ 
+ html:not([dir="rtl"]) .toolbar-tray-vertical .menu-item--expanded > .toolbar-box a {
+@@ -61,49 +50,46 @@ html:not([dir="rtl"]) .toolbar-tray-vertical .menu-item--expanded > .toolbar-box
+ 
+ /* Level 1 */
+ 
+-html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 > .toolbar-box a {
+-  padding-right: 0.6667em;
++html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1.menu-item--expanded > .toolbar-box a {
++  padding-right: .2rem;
+ }
+ 
+-[dir="rtl"] .toolbar-tray-horizontal .level-1 > .toolbar-box a {
+-  padding-left: 0.6667em;
++[dir="rtl"] .toolbar-tray-horizontal .level-1.menu-item--expanded > .toolbar-box a {
++  padding-left: .2rem;
+ }
+ 
+ .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle {
+-  width: 3.3844em;
++  width: 2rem;
++}
++
++.toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle::before {
++  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='none' d='m4 8 8 8 8-8' stroke='%230074bd' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
++  width: .9rem;
++  height: .6rem;
++  top: calc(50% - .2rem);
+ }
+ 
+ html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle::before {
+-  right: 0.923em;
++  left: .2rem;
+ }
+ 
+ [dir="rtl"] .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle::before {
+-  left: 0.923em;
+-  right: auto;
++  right: .2rem;
+ }
+ 
+ /* Sub-levels */
+ 
+-.toolbar-tray-horizontal .level-1 :not(.menu-item--expanded) > .toolbar-box a {
++.toolbar-tray-horizontal .level-1 .menu-item a {
+   width: 100%;
+ }
+ 
+-.toolbar-tray-horizontal .level-1 .menu-item--expanded > .toolbar-box a {
+-  width: calc(100% - 3em);
+-}
+-
+ .toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle {
+-  width: 3em;
++  width: 3.4rem;
+ }
+ 
+ .toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-box .toolbar-icon.toolbar-handle::before {
+   background-size: auto;
+-  position: absolute;
+-}
+-
+-.toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle.open::before {
+-  transform: rotate(180deg);
+-  filter: brightness(0) saturate(100%) invert(51%) sepia(5%) saturate(8%) hue-rotate(12deg) brightness(90%) contrast(88%);
++  width: auto;
+ }
+ 
+ html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded > .toolbar-box .toolbar-handle::before {
+@@ -116,7 +102,6 @@ html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded > .
+   background-image: url(../misc/icons/0074bd/chevron-left.svg);
+   background-position: left;
+   left: 0;
+-  right: auto;
+ }
+ 
+ html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle.open::before {
+@@ -143,21 +128,12 @@ html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded .to
+   border-top: 1px solid #ddd;
+ }
+ 
+-.toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul {
+-  display: none;
+-  left: -999em; /* LTR */
+-  display: none;
+-}
+-
+-/* Lists nested under hovered list items */
+ .toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul {
+   display: block;
+   position: absolute;
+   width: 200px;
+   box-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.4);
+   z-index: 1;
+-  left: auto; /* LTR */
+-  display: block;
+ }
+ 
+ .toolbar-tray-horizontal .menu ul li a,
+-- 
+GitLab
+
+
+From ff921d963d2ec4aff8bb79694d35f998bc542ec3 Mon Sep 17 00:00:00 2001
+From: DEDX <camille.davis@civicactions.com>
+Date: Fri, 2 Jun 2023 15:26:32 -0700
+Subject: [PATCH 5/8] Make keyboard accessibility optional.
+
+---
+ admin_toolbar.install                     | 17 ++++++++
+ admin_toolbar.module                      |  7 +++
+ config/install/admin_toolbar.settings.yml |  1 +
+ config/schema/admin_toolbar.schema.yml    |  3 ++
+ css/admin.toolbar.css                     | 19 ++++++--
+ js/admin_toolbar.js                       | 53 +++++++++++++++++------
+ src/Form/AdminToolbarSettingsForm.php     |  7 +++
+ 7 files changed, 89 insertions(+), 18 deletions(-)
+
+diff --git a/admin_toolbar.install b/admin_toolbar.install
+index 35e9a67..336870a 100644
+--- a/admin_toolbar.install
++++ b/admin_toolbar.install
+@@ -87,3 +87,20 @@ function admin_toolbar_update_8005() {
+     ->set('enable_toggle_shortcut', FALSE)
+     ->save(TRUE);
+ }
++
++
++/**
++ * Add remove_keyboard_accessibility into the config.
++ *
++ * Removes top-level keyboard navigation arrows on desktop.
++ *
++ * @see https://www.drupal.org/project/admin_toolbar/issues/3286466
++ */
++function admin_toolbar_update_8006() {
++  $config_factory = \Drupal::configFactory();
++  $config = $config_factory->getEditable('admin_toolbar.settings');
++  if (empty($config->get('remove_keyboard_accessibility'))) {
++    $config->set('remove_keyboard_accessibility', 0);
++    $config->save(TRUE);
++  }
++}
+diff --git a/admin_toolbar.module b/admin_toolbar.module
+index 978a13d..ce86d99 100644
+--- a/admin_toolbar.module
++++ b/admin_toolbar.module
+@@ -51,6 +51,13 @@ function admin_toolbar_toolbar_alter(&$items) {
+   if ($admin_toolbar_config->get('enable_toggle_shortcut')) {
+     $items['administration']['#attached']['library'][] = 'admin_toolbar/toolbar.toggle_shortcut';
+   }
++
++  // Class that hides top-level keyboard navigation arrows on desktop.
++  if ($admin_toolbar_config->get('remove_keyboard_accessibility')) {
++    $items['administration']['tray']['#wrapper_attributes'] = [
++      'class' => ['remove-keyboard-accessibility'],
++    ];
++  }
+ }
+ 
+ /**
+diff --git a/config/install/admin_toolbar.settings.yml b/config/install/admin_toolbar.settings.yml
+index ad7d6ab..6cd682c 100644
+--- a/config/install/admin_toolbar.settings.yml
++++ b/config/install/admin_toolbar.settings.yml
+@@ -4,3 +4,4 @@ sticky_behavior: 'enabled'
+ hoverintent_behavior:
+   enabled: true
+   timeout: 500
++remove_keyboard_accessibility: false
+diff --git a/config/schema/admin_toolbar.schema.yml b/config/schema/admin_toolbar.schema.yml
+index 3b1aadf..b73a8c3 100644
+--- a/config/schema/admin_toolbar.schema.yml
++++ b/config/schema/admin_toolbar.schema.yml
+@@ -25,3 +25,6 @@ admin_toolbar.settings:
+         timeout:
+           type: integer
+           label: 'hoverIntent timeout'
++    remove_keyboard_accessibility:
++      type: boolean
++      label: 'Hide keyboard navigation arrows in top-level menus on desktop'
+diff --git a/css/admin.toolbar.css b/css/admin.toolbar.css
+index e11d5b4..dc265b4 100644
+--- a/css/admin.toolbar.css
++++ b/css/admin.toolbar.css
+@@ -13,7 +13,7 @@
+   display: flex;
+ }
+ 
+-.toolbar-tray-horizontal .toolbar-menu .toolbar-icon.toolbar-handle {
++.toolbar-tray-horizontal:not(.remove-keyboard-accessibility) .toolbar-menu .toolbar-icon.toolbar-handle {
+   display: block;
+   position: relative;
+   height: auto;
+@@ -23,7 +23,7 @@
+ 
+ .toolbar .menu-item a:focus,
+ .toolbar .toolbar-icon.toolbar-handle:focus {
+-  background: #abeae4;
++  background-color: #abeae4;
+ }
+ 
+ .toolbar-tray-horizontal .toolbar-handle.open::before {
+@@ -50,11 +50,11 @@ html:not([dir="rtl"]) .toolbar-tray-vertical .menu-item--expanded > .toolbar-box
+ 
+ /* Level 1 */
+ 
+-html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1.menu-item--expanded > .toolbar-box a {
++html:not([dir="rtl"]) .toolbar-tray-horizontal:not(.remove-keyboard-accessibility) .level-1.menu-item--expanded > .toolbar-box a {
+   padding-right: .2rem;
+ }
+ 
+-[dir="rtl"] .toolbar-tray-horizontal .level-1.menu-item--expanded > .toolbar-box a {
++[dir="rtl"] .toolbar-tray-horizontal:not(.remove-keyboard-accessibility) .level-1.menu-item--expanded > .toolbar-box a {
+   padding-left: .2rem;
+ }
+ 
+@@ -112,6 +112,17 @@ html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded .to
+   background-position: right;
+ }
+ 
++.toolbar-tray-horizontal.remove-keyboard-accessibility .level-1 .menu-item--expanded > .toolbar-box a {
++  background-repeat: no-repeat;
++  background-position: center right; /* LTR */
++  background-image: url(../misc/icons/0074bd/chevron-right.svg); /* LTR */
++}
++
++[dir="rtl"] .toolbar-tray-horizontal.remove-keyboard-accessibility .level-1 .menu-item--expanded > .toolbar-box a {
++  background-position: center left;
++  background-image: url(../misc/icons/0074bd/chevron-left.svg);
++}
++
+ .toolbar-tray-horizontal ul li li.menu-item {
+   border-top: none transparent;
+   border-right: 1px solid #ddd;
+diff --git a/js/admin_toolbar.js b/js/admin_toolbar.js
+index d3600d6..21b7dff 100644
+--- a/js/admin_toolbar.js
++++ b/js/admin_toolbar.js
+@@ -25,7 +25,7 @@
+ 
+           // Watch for addition/removal of 'open' class.
+           const classObserver = new MutationObserver((mutations) => {
+-            mutations.forEach(mu => {
++            mutations.forEach((mu) => {
+               if (mu.type !== "attributes" && mu.attributeName !== "class") {
+                 return;
+               }
+@@ -50,8 +50,7 @@
+           });
+ 
+           $toolbar.find('.menu-item--expanded').each(function () {
+-            const li = this;
+-            classObserver.observe((li), { attributes: true, attributeOldValue: true });
++            classObserver.observe(this, {attributes: true, attributeOldValue: true});
+           });
+         });
+       }
+@@ -90,6 +89,7 @@
+ 
+       // Fix padding at top of body when horizontal toolbar wraps.
+       $(once('update-toolbar-height', 'body')).each(function () {
++
+         // Set timer so padding doesn't update continuously on resize.
+         let timer;
+         jQuery(window).on('resize', function () {
+@@ -98,19 +98,44 @@
+         });
+       })
+ 
+-      $('.toolbar-menu:first-child > .menu-item:not(.menu-item--expanded) a, .toolbar-tab > a', context).on('focusin', function () {
+-        $('.menu-item--expanded').removeClass('hover-intent');
+-      });
++      // If keyboard navigation arrows are disabled, show menu when parent link receives focus.
++      if ($('#toolbar-item-administration-tray.remove-keyboard-accessibility').length) {
++        $('ul.toolbar-menu li.menu-item--expanded a', context).on('focusin', function () {
++          $('li.menu-item--expanded', context).removeClass('hover-intent');
++          $(this).parents('li.menu-item--expanded').addClass('hover-intent');
++        });
+ 
+-      $('ul:not(.toolbar-menu)', context).on({
+-        mousemove: function () {
+-          $('li.menu-item--expanded').removeClass('hover-intent');
+-        },
+-        hover: function () {
+-          $('li.menu-item--expanded').removeClass('hover-intent');
+-        }
+-      });
++        $('ul.toolbar-menu li.menu-item a', context).keydown(function (e) {
++          if ((e.shiftKey && (e.keyCode || e.which) == 9)) {
++            if ($(this).parent('.menu-item').prev().hasClass('menu-item--expanded')) {
++              $(this).parent('.menu-item').prev().addClass('hover-intent');
++            }
++          }
++        });
+ 
++        $('.toolbar-menu:first-child > .menu-item:not(.menu-item--expanded) a, .toolbar-tab > a', context).on('focusin', function () {
++          $('.menu-item--expanded').removeClass('hover-intent');
++        });
++
++        // If menu switches from vertical to horizontal, remove 'open' classes.
++        $(once('remove-open-class-on-orientation-switch', '.toolbar-tray')).each(function () {
++          const classObserver = new MutationObserver((mutations) => {
++            mutations.forEach((mu) => {
++              if (mu.type !== "attributes" && mu.attributeName !== "class" || mu.oldValue === null) {
++                return;
++              }
++
++              const classList = mu.target.classList;
++              const oldClassList = mu.oldValue.split(' ');
++              if (classList.contains('toolbar-tray-horizontal') && oldClassList.includes('toolbar-tray-vertical')) {
++                $(mu.target).find('.open').removeClass('open');
++              }
++            });
++          });
++
++          classObserver.observe(this, {attributes: true, attributeOldValue: true});
++        })
++      }
+     }
+   };
+ })(jQuery, Drupal);
+diff --git a/src/Form/AdminToolbarSettingsForm.php b/src/Form/AdminToolbarSettingsForm.php
+index a15a3de..66b8e9c 100644
+--- a/src/Form/AdminToolbarSettingsForm.php
++++ b/src/Form/AdminToolbarSettingsForm.php
+@@ -79,6 +79,12 @@ class AdminToolbarSettingsForm extends ConfigFormBase {
+       '#type' => 'markup',
+       '#markup' => $this->t('The Admin Toolbar module provides a better user experience for the default Drupal Toolbar.<br/>It is a drop-down menu that allows quicker access to all the administration pages in a more efficient way, with fewer clicks and less scrolling.<br/><br/>The following settings mostly provide advanced configuration of the JavaScript behavior of the Toolbar: sticky and hoverIntent.'),
+     ];
++    $form['remove_keyboard_accessibility'] = [
++      '#type' => 'checkbox',
++      '#title' => $this->t('Remove keyboard accessibility on desktop'),
++      '#description' => $this->t('Hide top-level keyboard navigation arrows on desktop.'),
++      '#default_value' => $config->get('remove_keyboard_accessibility'),
++    ];
+ 
+     // Add 'sticky behavior' wrapper as a 'fieldset' so it stays displayed.
+     $form['sticky_options_wrapper'] = [
+@@ -186,6 +192,7 @@ class AdminToolbarSettingsForm extends ConfigFormBase {
+       ->set('menu_depth', $form_state->getValue('menu_depth'))
+       ->set('sticky_behavior', $form_state->getValue('sticky_behavior'))
+       ->set('hoverintent_behavior', $form_state->getValue('hoverintent_behavior'))
++      ->set('remove_keyboard_accessibility', $form_state->getValue('remove_keyboard_accessibility'))
+       ->save();
+     parent::submitForm($form, $form_state);
+     $this->cacheMenu->deleteAll();
+-- 
+GitLab
+
+
+From 3daf9d5c3b395d14c89e6a59c52d8a83a20ccd8f Mon Sep 17 00:00:00 2001
+From: DEDX <camille.davis@civicactions.com>
+Date: Tue, 26 Dec 2023 12:18:56 -0800
+Subject: [PATCH 6/8] Fix wording
+
+---
+ js/admin_toolbar.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/js/admin_toolbar.js b/js/admin_toolbar.js
+index 21b7dff..90add86 100644
+--- a/js/admin_toolbar.js
++++ b/js/admin_toolbar.js
+@@ -12,7 +12,7 @@
+           // Initialize Extend/Collapse buttons even if menu was loaded horizontally.
+           $toolbar.children('.toolbar-menu').drupalToolbarMenu()
+ 
+-          // Don't automatically open active page's menu if not on mobile.
++          // Don't automatically open active page's menu if not in vertical mode.
+           function closeActiveTrail() {
+             if (!$toolbar.closest('.toolbar-tray-horizontal').length) {
+               return;
+-- 
+GitLab
+
+
+From d411d38e716781560d1eb04eb419d94a0cbd6e8c Mon Sep 17 00:00:00 2001
+From: DEDX <camille.davis@civicactions.com>
+Date: Wed, 27 Dec 2023 11:56:03 -0800
+Subject: [PATCH 7/8] Update esc behavior to only close submenu under focus and
+ move focus to parent toggle.
+
+---
+ js/admin_toolbar.js | 40 +++++++++++++++++++++++++++++++---------
+ 1 file changed, 31 insertions(+), 9 deletions(-)
+
+diff --git a/js/admin_toolbar.js b/js/admin_toolbar.js
+index 90add86..66b05c8 100644
+--- a/js/admin_toolbar.js
++++ b/js/admin_toolbar.js
+@@ -58,24 +58,46 @@
+       $(once('dismiss-menus', '.toolbar-menu-administration')).each(function () {
+         const $toolbar = $(this);
+ 
+-        function dismissOpenMenus() {
+-          if (!$toolbar.closest('.toolbar-tray-horizontal').length) {
+-            return;
+-          }
+-          $toolbar.find('.open').each(function () {
++        // Closes a given menu and its children (or all menus if none was specified).
++        function closeMenus($menu = $toolbar) {
++
++          // Close all child menus of the specified menu.
++          $menu.find('.open').each(function () {
+             this.classList.remove('open');
+           });
+-          $toolbar.find('.hover-intent').each(function () {
++          $menu.find('.hover-intent').each(function () {
+             this.classList.remove('hover-intent');
+           });
++
++          // If specified menu is not top-level, close it and focus on its parent button.
++          if ($menu === $toolbar) {
++            return;
++          }
++          const $button = $menu.prev().find('.toolbar-handle.open');
++          $button.click();
++          $button.focus();
+         }
+ 
+-        // Dismiss any open menus by pressing Escape key.
++        // Dismiss open menus by pressing Escape key.
+         $(document).keyup(function (e) {
+           if (e.which !== 27) {
+             return;
+           }
+-          dismissOpenMenus();
++
++          // If focus is on the toggle button of an open submenu, close the menu and its children.
++          if ($(document.activeElement).closest('.toolbar-handle.open').length > 0) {
++            closeMenus($(document.activeElement).closest('.toolbar-handle.open').parent().next());
++            return;
++          }
++
++          // If focus is on an open submenu, close it and its children.
++          if ($(document.activeElement).closest('.menu-item.open > .toolbar-menu').length > 0) {
++            closeMenus($(document.activeElement).closest('.menu-item.open > .toolbar-menu'));
++            return;
++          }
++
++          // Dismiss any remaining open menus.
++          closeMenus();
+         });
+ 
+         // Dismiss any open menus by clicking out.
+@@ -83,7 +105,7 @@
+           if ($(e.target).closest('#toolbar-item-administration-tray').length) {
+             return;
+           }
+-          dismissOpenMenus();
++          closeMenus();
+         });
+       });
+ 
+-- 
+GitLab
+
+
+From 9bfd26ec1d8186fd25e0973b12a8ef2e96397467 Mon Sep 17 00:00:00 2001
+From: DYdave <DYdave@467284.no-reply.drupal.org>
+Date: Thu, 17 Apr 2025 23:21:39 +0200
+Subject: [PATCH 8/8] Fixed validation jobs errors.
+
+---
+ admin_toolbar.install |   1 -
+ css/admin.toolbar.css | 122 +++++++++++++++++++++++++++++++-----------
+ 2 files changed, 91 insertions(+), 32 deletions(-)
+
+diff --git a/admin_toolbar.install b/admin_toolbar.install
+index 336870a..aef860f 100644
+--- a/admin_toolbar.install
++++ b/admin_toolbar.install
+@@ -88,7 +88,6 @@ function admin_toolbar_update_8005() {
+     ->save(TRUE);
+ }
+ 
+-
+ /**
+  * Add remove_keyboard_accessibility into the config.
+  *
+diff --git a/css/admin.toolbar.css b/css/admin.toolbar.css
+index dc265b4..9622411 100644
+--- a/css/admin.toolbar.css
++++ b/css/admin.toolbar.css
+@@ -13,12 +13,14 @@
+   display: flex;
+ }
+ 
+-.toolbar-tray-horizontal:not(.remove-keyboard-accessibility) .toolbar-menu .toolbar-icon.toolbar-handle {
+-  display: block;
++.toolbar-tray-horizontal:not(.remove-keyboard-accessibility)
++  .toolbar-menu
++  .toolbar-icon.toolbar-handle {
+   position: relative;
++  z-index: auto;
++  display: block;
+   height: auto;
+   line-height: 1;
+-  z-index: auto;
+ }
+ 
+ .toolbar .menu-item a:focus,
+@@ -28,7 +30,8 @@
+ 
+ .toolbar-tray-horizontal .toolbar-handle.open::before {
+   transform: rotate(180deg);
+-  filter: brightness(0) saturate(100%) invert(51%) sepia(5%) saturate(8%) hue-rotate(12deg) brightness(90%) contrast(88%);
++  filter: brightness(0) saturate(100%) invert(51%) sepia(5%) saturate(8%)
++    hue-rotate(12deg) brightness(90%) contrast(88%);
+ }
+ 
+ .toolbar-tray-horizontal .toolbar-handle:focus::before,
+@@ -36,7 +39,11 @@
+   filter: brightness(0);
+ }
+ 
+-html:not([dir="rtl"]) .toolbar-tray-vertical .menu-item--expanded > .toolbar-box a {
++html:not([dir="rtl"])
++  .toolbar-tray-vertical
++  .menu-item--expanded
++  > .toolbar-box
++  a {
+   margin-right: 4em;
+ }
+ 
+@@ -50,12 +57,20 @@ html:not([dir="rtl"]) .toolbar-tray-vertical .menu-item--expanded > .toolbar-box
+ 
+ /* Level 1 */
+ 
+-html:not([dir="rtl"]) .toolbar-tray-horizontal:not(.remove-keyboard-accessibility) .level-1.menu-item--expanded > .toolbar-box a {
+-  padding-right: .2rem;
++html:not([dir="rtl"])
++  .toolbar-tray-horizontal:not(.remove-keyboard-accessibility)
++  .level-1.menu-item--expanded
++  > .toolbar-box
++  a {
++  padding-right: 0.2rem;
+ }
+ 
+-[dir="rtl"] .toolbar-tray-horizontal:not(.remove-keyboard-accessibility) .level-1.menu-item--expanded > .toolbar-box a {
+-  padding-left: .2rem;
++[dir="rtl"]
++  .toolbar-tray-horizontal:not(.remove-keyboard-accessibility)
++  .level-1.menu-item--expanded
++  > .toolbar-box
++  a {
++  padding-left: 0.2rem;
+ }
+ 
+ .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle {
+@@ -63,18 +78,27 @@ html:not([dir="rtl"]) .toolbar-tray-horizontal:not(.remove-keyboard-accessibilit
+ }
+ 
+ .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle::before {
++  top: calc(50% - 0.2rem);
++  width: 0.9rem;
++  height: 0.6rem;
++  /* cspell:disable-next-line */
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3e%3cpath fill='none' d='m4 8 8 8 8-8' stroke='%230074bd' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+-  width: .9rem;
+-  height: .6rem;
+-  top: calc(50% - .2rem);
+ }
+ 
+-html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle::before {
+-  left: .2rem;
++html:not([dir="rtl"])
++  .toolbar-tray-horizontal
++  .level-1
++  > .toolbar-box
++  .toolbar-handle::before {
++  left: 0.2rem;
+ }
+ 
+-[dir="rtl"] .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-handle::before {
+-  right: .2rem;
++[dir="rtl"]
++  .toolbar-tray-horizontal
++  .level-1
++  > .toolbar-box
++  .toolbar-handle::before {
++  right: 0.2rem;
+ }
+ 
+ /* Sub-levels */
+@@ -87,40 +111,71 @@ html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 > .toolbar-box .toolbar-
+   width: 3.4rem;
+ }
+ 
+-.toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-box .toolbar-icon.toolbar-handle::before {
+-  background-size: auto;
++.toolbar-tray-horizontal
++  .level-1
++  .menu-item--expanded
++  .toolbar-box
++  .toolbar-icon.toolbar-handle::before {
+   width: auto;
++  background-size: auto;
+ }
+ 
+-html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded > .toolbar-box .toolbar-handle::before {
++html:not([dir="rtl"])
++  .toolbar-tray-horizontal
++  .level-1
++  .menu-item--expanded
++  > .toolbar-box
++  .toolbar-handle::before {
++  right: 0;
+   background-image: url(../misc/icons/0074bd/chevron-right.svg);
+   background-position: right;
+-  right: 0;
+ }
+ 
+-[dir="rtl"] .toolbar-tray-horizontal .level-1 .menu-item--expanded > .toolbar-box .toolbar-handle::before {
++[dir="rtl"]
++  .toolbar-tray-horizontal
++  .level-1
++  .menu-item--expanded
++  > .toolbar-box
++  .toolbar-handle::before {
++  left: 0;
+   background-image: url(../misc/icons/0074bd/chevron-left.svg);
+   background-position: left;
+-  left: 0;
+ }
+ 
+-html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle.open::before {
++html:not([dir="rtl"])
++  .toolbar-tray-horizontal
++  .level-1
++  .menu-item--expanded
++  .toolbar-handle.open::before {
+   background-position: left;
+ }
+ 
+-[dir="rtl"] .toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle.open::before {
++[dir="rtl"]
++  .toolbar-tray-horizontal
++  .level-1
++  .menu-item--expanded
++  .toolbar-handle.open::before {
+   background-position: right;
+ }
+ 
+-.toolbar-tray-horizontal.remove-keyboard-accessibility .level-1 .menu-item--expanded > .toolbar-box a {
++.toolbar-tray-horizontal.remove-keyboard-accessibility
++  .level-1
++  .menu-item--expanded
++  > .toolbar-box
++  a {
++  background-image: url(../misc/icons/0074bd/chevron-right.svg); /* LTR */
+   background-repeat: no-repeat;
+   background-position: center right; /* LTR */
+-  background-image: url(../misc/icons/0074bd/chevron-right.svg); /* LTR */
+ }
+ 
+-[dir="rtl"] .toolbar-tray-horizontal.remove-keyboard-accessibility .level-1 .menu-item--expanded > .toolbar-box a {
+-  background-position: center left;
++[dir="rtl"]
++  .toolbar-tray-horizontal.remove-keyboard-accessibility
++  .level-1
++  .menu-item--expanded
++  > .toolbar-box
++  a {
+   background-image: url(../misc/icons/0074bd/chevron-left.svg);
++  background-position: center left;
+ }
+ 
+ .toolbar-tray-horizontal ul li li.menu-item {
+@@ -140,11 +195,11 @@ html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded .to
+ }
+ 
+ .toolbar-tray-horizontal li.menu-item--expanded.hover-intent ul {
+-  display: block;
+   position: absolute;
++  z-index: 1;
++  display: block;
+   width: 200px;
+   box-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.4);
+-  z-index: 1;
+ }
+ 
+ .toolbar-tray-horizontal .menu ul li a,
+@@ -161,7 +216,12 @@ html:not([dir="rtl"]) .toolbar-tray-horizontal .level-1 .menu-item--expanded .to
+   margin: -40px 0 0 197px;
+ }
+ 
+-[dir="rtl"] .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item.hover-intent ul {
++[dir="rtl"]
++  .toolbar-tray-horizontal
++  ul
++  li.menu-item--expanded
++  .menu-item.hover-intent
++  ul {
+   margin: -40px 197px 0 0;
+ }
+ 
+-- 
+GitLab
+

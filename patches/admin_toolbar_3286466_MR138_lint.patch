@@ -1,0 +1,237 @@
+diff --git a/admin_toolbar_search/css/admin.toolbar_search.css b/admin_toolbar_search/css/admin.toolbar_search.css
+index c34800b..f6b134b 100644
+--- a/admin_toolbar_search/css/admin.toolbar_search.css
++++ b/admin_toolbar_search/css/admin.toolbar_search.css
+@@ -81,6 +81,10 @@
+   color: white;
+ }
+ 
++.admin-toolbar-search-autocomplete-opened {
++  z-index: 1001;
++}
++
+ #toolbar-item-administration-search-tray label {
+   display: inline-block;
+   color: #000000;
+diff --git a/admin_toolbar_search/js/admin_toolbar_search.js b/admin_toolbar_search/js/admin_toolbar_search.js
+index 81b9191..3fc590e 100644
+--- a/admin_toolbar_search/js/admin_toolbar_search.js
++++ b/admin_toolbar_search/js/admin_toolbar_search.js
+@@ -5,8 +5,6 @@
+ 
+ (function ($, Drupal) {
+ 
+-  'use strict';
+-
+   Drupal.behaviors.adminToolbarSearch = {
+ 
+     // If extra links have been fetched.
+@@ -54,15 +52,17 @@
+             }
+           },
+           open: function () {
+-            var zIndex = $('#toolbar-item-administration-tray')
+-              .css('z-index') + 1;
+-            $(this).autocomplete('widget').css('z-index', zIndex);
++            const tray = document.getElementById('toolbar-item-administration-tray');
++            const widget = $(this).autocomplete('widget')[0];
++            if (tray && widget) {
++              widget.classList.add('admin-toolbar-search-autocomplete-opened');
++            }
+ 
+             return false;
+           },
+           select: function (event, ui) {
+             if (ui.item.value) {
+-              location.href = ui.item.value;
++              window.location.href = ui.item.value;
+               return false;
+             }
+           }
+@@ -93,7 +93,7 @@
+         if ($(this).hasClass('menu-item')) {
+           var $link = $(this).find('a:first');
+           if ($link.length && !$link.hasClass('admin-toolbar-search-ignore')) {
+-            breadcrumbs.unshift($link.text());
++            breadcrumbs.unshift($link[0].textContent);
+           }
+         }
+       });
+@@ -119,7 +119,7 @@
+               matchCount++;
+             }
+           });
+-          if (matchCount == keywords.length) {
++          if (matchCount === keywords.length) {
+             suggestions.push(element);
+           }
+         }
+@@ -129,17 +129,20 @@
+     /**
+      * Populates the links in admin toolbar search.
+      */
+-    populateLinks: function ($self) {
++    populateLinks($self) {
++      var getUrl;
++      var baseUrl;
+       // Populate only when links array is empty (only the first time).
+       if ($self.links.length === 0) {
+-        var getUrl = window.location;
+-        var baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
++        getUrl = window.location;
++        baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+         $('.toolbar-tray a[data-drupal-link-system-path]').each(function () {
++          var label;
+           if (this.href !== baseUrl) {
+-            var label = $self.getItemLabel(this);
++            label = $self.getItemLabel(this);
+             $self.links.push({
+               'value': this.href,
+-              'label': label + ' ' + this.href,
++              'label': `${label} ${this.href}`,
+               'labelRaw': Drupal.checkPlain(label)
+             });
+           }
+@@ -147,5 +150,4 @@
+       }
+     },
+   };
+-
+ })(jQuery, Drupal);
+diff --git a/js/admin_toolbar.js b/js/admin_toolbar.js
+index 66b05c8..4649fc2 100644
+--- a/js/admin_toolbar.js
++++ b/js/admin_toolbar.js
+@@ -1,6 +1,6 @@
+ (function ($, Drupal) {
+   Drupal.behaviors.adminToolbar = {
+-    attach: function (context, settings) {
++    attach(context) {
+ 
+       $('a.toolbar-icon', context).removeAttr('title');
+ 
+@@ -41,10 +41,9 @@
+               }
+ 
+               // When menu is closed using button, remove 'hover-intent' class.
+-              if (!classList.contains('open') && oldClassList.includes('open')
+-                && classList.contains('hover-intent')) {
++              if (!classList.contains('open') && oldClassList.includes('open') &&
++                classList.contains('hover-intent')) {
+                 classList.remove('hover-intent');
+-                return;
+               }
+             });
+           });
+@@ -128,7 +127,7 @@
+         });
+ 
+         $('ul.toolbar-menu li.menu-item a', context).keydown(function (e) {
+-          if ((e.shiftKey && (e.keyCode || e.which) == 9)) {
++          if ((e.shiftKey && (e.keyCode || e.which) === 9)) {
+             if ($(this).parent('.menu-item').prev().hasClass('menu-item--expanded')) {
+               $(this).parent('.menu-item').prev().addClass('hover-intent');
+             }
+@@ -158,6 +157,6 @@
+           classObserver.observe(this, {attributes: true, attributeOldValue: true});
+         })
+       }
+-    }
++    },
+   };
+ })(jQuery, Drupal);
+diff --git a/js/jquery.hoverIntent.js b/js/jquery.hoverIntent.js
+index 1300148..7bf3491 100644
+--- a/js/jquery.hoverIntent.js
++++ b/js/jquery.hoverIntent.js
+@@ -7,6 +7,8 @@
+  * Copyright 2007-2019 Brian Cherne
+  */
+ 
++/* global jQuery */
++
+ /**
+  * hoverIntent is similar to jQuery's built-in "hover" method except that
+  * instead of firing the handlerIn function immediately, hoverIntent checks
+@@ -33,15 +35,16 @@
+ 
+ ;(function(factory) {
+     'use strict';
++
+     if (typeof define === 'function' && define.amd) {
+         define(['jquery'], factory);
+     } else if (typeof module === 'object' && module.exports) {
++        // eslint-disable-next-line import/no-unresolved
+         module.exports = factory(require('jquery'));
+     } else if (jQuery && !jQuery.fn.hoverIntent) {
+         factory(jQuery);
+     }
+ })(function($) {
+-    'use strict';
+ 
+     // default configuration values
+     var _cfg = {
+@@ -54,7 +57,8 @@
+     var INSTANCE_COUNT = 0;
+ 
+     // current X and Y position of mouse, updated during mousemove tracking (shared across instances)
+-    var cX, cY;
++    var cX;
++    var cY;
+ 
+     // saves the current pointer position coordinates based on the given mousemove event
+     var track = function(ev) {
+@@ -75,7 +79,7 @@
+             // clear coordinate data from state object
+             delete s.pX; delete s.pY;
+             return cfg.over.apply($el[0],[ev]);
+-        } else {
++        }
+             // set previous coordinates for next comparison
+             s.pX = cX; s.pY = cY;
+             // use self-calling timeout, guarantees intervals are spaced out properly (avoids JavaScript timer bugs)
+@@ -108,10 +112,19 @@
+             if ( !isFunction(cfg.out) ) {
+                 cfg.out = cfg.over;
+             }
++        // eslint-disable-next-line object-shorthand
+         } else if ( isFunction(handlerOut) ) {
+-            cfg = $.extend(cfg, { over: handlerIn, out: handlerOut, selector: selector } );
++            cfg = $.extend(cfg, {
++                    over: handlerIn,
++                    out: handlerOut,
++                    selector: selector
++                });
+         } else {
+-            cfg = $.extend(cfg, { over: handlerIn, out: handlerIn, selector: handlerOut } );
++            cfg = $.extend(cfg, {
++                over: handlerIn,
++                out: handlerIn,
++                selector: handlerOut
++            });
+         }
+ 
+         // A private function for handling mouse 'hovering'
+@@ -141,7 +154,8 @@
+             if (state.timeoutId) { state.timeoutId = clearTimeout(state.timeoutId); }
+ 
+             // namespaced event used to register and unregister mousemove tracking
+-            var mousemove = state.event = 'mousemove.hoverIntent.hoverIntent'+instanceId;
++            const mousemove = 'mousemove.hoverIntent.hoverIntent${instanceId}';
++            state.event = mousemove;
+ 
+             // handle the event, based on its type
+             if (e.type === 'mouseenter') {
+@@ -164,6 +178,11 @@
+         };
+ 
+         // listen for mouseenter and mouseleave
+-        return this.on({'mouseenter.hoverIntent':handleHover,'mouseleave.hoverIntent':handleHover}, cfg.selector);
++        return this.on(
++            {
++                'mouseenter.hoverIntent':handleHover,
++                'mouseleave.hoverIntent':handleHover
++            },
++            cfg.selector);
+     };
+ });
