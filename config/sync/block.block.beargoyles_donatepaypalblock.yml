@@ -1,9 +1,9 @@
-uuid: e193847f-9e2d-4de7-8eec-fd966542cb22
+uuid: d5a7fe32-f1ba-4e4c-87a1-6f18247473b2
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:697095fc-2abd-4d62-a16f-c742b3276e17'
+    - 'block_content:basic:ee588b6a-c8dc-476e-be3a-e8c1e075f46d'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: beargoyles_donatepaypalblock
 theme: beargoyles
 region: sidebar_second
-weight: -11
+weight: 0
 provider: null
-plugin: 'block_content:697095fc-2abd-4d62-a16f-c742b3276e17'
+plugin: 'block_content:ee588b6a-c8dc-476e-be3a-e8c1e075f46d'
 settings:
-  id: 'block_content:697095fc-2abd-4d62-a16f-c742b3276e17'
+  id: 'block_content:ee588b6a-c8dc-476e-be3a-e8c1e075f46d'
   label: 'Donate paypal block'
   label_display: '0'
   provider: block_content
