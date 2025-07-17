@@ -1,0 +1,189 @@
+/* WHITE */
+input#edit-captcha-response,
+input#edit-keys,
+input#edit-mail,
+input#edit-name,
+input#edit-pass,
+select#edit-selector,
+select#edit-tid,
+textarea#edit-message-0-value {
+  color: #FFFFFF;
+}
+
+/* Background color */
+a#logo img,
+div#block-branding-beargoyles,
+div#site-name,
+div#site-slogan,
+h1.page-title,
+h2,
+img.image-style-large-white-circle,
+img.image-style-medium,
+img.image-style-thumbnail,
+label,
+label.input-label,
+ol.search-results.node_search-results,
+ul.menu li,
+ul.tabs li a:hover,
+ul.tabs.primary,
+.block-beargoyles-local-tasks,
+.block-beargoyles-page-title,
+.captcha,
+.item-list ul li,
+.roundcorner,
+.sideleaf,
+.view-header,
+#subfooter {
+  background-color: #FFFFFF;
+}
+
+/* CHARCOAL */
+div#site-slogan,
+h1,
+h1 a,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+h5,
+h5 a,
+h6 a,
+ol.search-results.node_search-results,
+.comment,
+.node--view-mode-teaser,
+.path-node #content-wrapper,
+#site-name a {
+  color: #333333;
+}
+
+/* Background color */
+input#edit-captcha-response,
+input#edit-keys,
+input#edit-mail,
+input#edit-name,
+input#edit-pass,
+select#edit-selector,
+select#edit-tid,
+textarea#edit-message-0-value,
+#header {
+  background-color: #333333;
+}
+
+/* Border color */
+.node--view-mode-teaser,
+.path-node #content-wrapper {
+  border-color: #333333;
+}
+
+/* PURPLE */
+a,
+a:hover,
+a:focus,
+div.meta.submitted,
+h2,
+input,
+input.form-email,
+input.form-search,
+input.form-text,
+label,
+label.input-label,
+select,
+textarea.form-textarea,
+.search-result__title a:hover,
+ul.links li a.active,
+ul.links li a:hover,
+ul.menu li a.active,
+ul.menu li a:hover,
+#block-node-recent .node-title,
+#region-sidebar-second ul.menu li,
+#forum thead a:hover {
+  color: #51387e;
+}
+
+/* LIGHT PURPLE */
+a:focus,
+a:hover,
+#block-node-recent .node-title a:hover,
+#forum thead a:hover,
+ul.links li a.active,
+ul.links li a:hover,
+ul.menu li a.active,
+ul.menu li a:hover {
+  color: #846baf;
+}
+
+/* Border color */
+input.form-text:focus,
+input.search-text:focus,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+textarea.form-textarea:focus,
+.call-to-action .btn,
+.dark input[type="submit"],
+.highlighted-block .btn:focus,
+.highlighted-block .btn:hover,
+.sideleaf,
+.roundcorner,
+.captcha,
+.tag a:hover,
+::-moz-selection,
+::selection {
+  border-color: #846baf;
+}
+
+/* Background color */
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.call-to-action .btn,
+.dark input[type="submit"],
+.highlighted-block .btn:focus,
+.highlighted-block .btn:hover,
+.tag a:hover,
+::-moz-selection,
+::selection {
+  background-color: #846baf;
+}
+
+/* DARK PURPLE */
+.field--name-field-beargoyle-tags .field__item a:hover {
+  color: #30054a;
+}
+
+/* SILVER */
+h6,
+img.image-style-large-white-circle,
+img.image-style-medium,
+img.image-style-thumbnail,
+.bottomleaf,
+#subfooter {
+  color: #666666;
+}
+
+/* LIGHT SILVER */
+/* Background color */
+.field--name-field-beargoyle-tags .field__item:hover {
+  background-color: #c1c4c9;
+}
+
+/* ONE OFFS */
+.breadcrumb,
+input#edit-captcha-response,
+input#edit-keys,
+input#edit-mail,
+input#edit-name,
+input#edit-pass,
+textarea#edit-message-0-value,
+.view-header {
+  border-color: #eaeaea;
+}
+
+#subfooter {
+  border-top-color: #eaeaea;
+}
+
+.item-list ul li {
+  border-color: grey;
+}

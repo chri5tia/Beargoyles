@@ -1,0 +1,217 @@
+/* BORDER STYLE */
+
+/* Solid */
+img.image-style-large-white-circle,
+img.image-style-medium,
+img.image-style-thumbnail,
+input#edit-captcha-response,
+input#edit-keys,
+input#edit-mail,
+input#edit-name,
+input#edit-pass,
+select#edit-tid,
+select#selector,
+textarea#edit-message-0-value,
+.breadcrumb,
+.captcha,
+.item-list ul li,
+.region-sidebar-second ul.menu li,
+.roundcorner,
+.sideleaf,
+.view-header {
+  border-style: solid;
+}
+
+
+/* Solid top */
+#subfooter {
+  border-top-style: solid;
+}
+
+/* Dashed */
+.comment,
+.node--view-mode-teaser,
+.path-node #content-wrapper,
+ol.search-results.node_search-results {
+  border-style: dashed;
+}
+
+/* BORDER THICKNESS */
+
+/* No border */
+.region-sidebar-second ul.menu li,
+ul.tabs li a:hover {
+  border: 0;
+}
+.image-style-gallery-thumb, .image-style-gallery-photo {
+  border-width: 0;
+}
+
+/* Fine border */
+img.image-style-large-white-circle,
+img.image-style-medium,
+img.image-style-thumbnail,
+select#edit-tid,
+select#selector,
+.breadcrumb,
+.captcha,
+.item-list ul li,
+.roundcorner,
+.sideleaf {
+  border-width: 1px;
+}
+
+
+/* Fine border on top */
+#subfooter {
+  border-top-width: 1px;
+}
+
+/* Thick border */
+.comment,
+.node--view-mode-teaser,
+ol.search-results.node_search-results,
+.path-node #content-wrapper {
+  border-width: 3px;
+}
+
+/* Medium border */
+input#edit-captcha-response,
+input#edit-keys,
+input#edit-mail,
+input#edit-name,
+input#edit-pass,
+textarea#edit-message-0-value,
+.view-header {
+  border-width: 2px;
+}
+
+
+/* Thick bottom border */
+.region-sidebar-second ul.menu li {
+  border-bottom: 3px;
+}
+
+/* CORNERS/BORDER RADIUS */
+
+/* Border radius 0 */
+.image-style-gallery-photo,
+.image-style-gallery-thumb {
+  border-radius: 0;
+}
+
+/* Border radius 6px */
+.breadcrumb {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  margin: 0;
+}
+
+/* Border radius 15px */
+button,
+figure.caption-img img,
+h2,
+h1.page-title,
+input#edit-captcha-response,
+input#edit-keys,
+input#edit-mail,
+input#edit-name,
+input#edit-pass,
+input.button,
+input.pp-59E8KFEYB3JV8,
+input.pp-WAQZYM62ZJPS4,
+label,
+select#edit-tid,
+select#selector,
+textarea#edit-message-0-value,
+textarea.form-textarea,
+ul.links.field__items li,
+ul.menu li,
+ul.tabs li,
+ul.tabs.primary,
+#main-navigation ul.menu li,
+.block,
+.block-beargoyles-local-tasks,
+.block-beargoyles-page-title,
+.button,
+.captcha,
+.clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
+.comment,
+.field--name-field-beargoyle-tags .field__item,
+.field--type-image,
+.field--type-text-with-summary,
+.field-item:hover,
+.item-list ul li,
+.menu-item,
+.node--view-mode-teaser,
+.node__content,
+.path-node #content-wrapper,
+.region-content,
+.sideleaf,
+.sideleaf2,
+.view-header,
+div#site-name,
+div#site-slogan,
+div.messages.messages--status {
+  border-radius: 15px;
+}
+
+
+/* Border radius 50px */
+
+a#logo img, img.image-style-thumbnail {
+  border-radius: 50px;
+}
+
+/* Medium circle */
+img.image-style-medium {
+  border-radius: 120px;
+}
+
+/* Large circle */
+img.image-style-large-white-circle {
+  border-radius:150px;
+}
+
+/* Top content leaf */
+div.messages.messages {
+  margin-right:0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 150px;
+}
+
+/* Block leaf */
+.comment,
+div#site-name,
+div#site-slogan,
+div.messages.messages--status,
+h1.page-title,
+h2 .sideleaf2,
+label,
+ol.search-results.node_search-results,
+textarea.form-textarea,
+ul.tabs.primary,
+.block,
+.block-beargoyles-local-tasks,
+.block-beargoyles-page-title,
+.clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
+.field--name-field-beargoyle-tags .field__item,
+.field--type-text-with-summary,
+.field-item:hover,
+.item-list ul li,
+.node--view-mode-teaser,
+.node__content,
+.region-content,
+.path-node #content-wrapper {
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+
+/* Leaf parts idfk border top right radius 100 */
+.captcha,
+.sideleaf,
+.view-header {
+  border-top-right-radius: 100px;
+}

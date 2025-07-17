@@ -1,7 +1,8 @@
 /*
- * Markup and styling for beargoyles.com
- * Colors are defined in beargoyles-colors.css
- * @todo: Move colors to it's own style sheet
+ * General markup and styling for beargoyles.com
+ * Colors are defined in colors.css
+ * Borders are defined in borders.css
+ * Anything related to the background splash paint affect in splash.css
  */
 
 /* FONTS AND MARKUP */
@@ -93,21 +94,15 @@ article nav {
 .node--view-mode-teaser,
 .path-node #content-wrapper,
 ol.search-results.node_search-results {
-  border-width: 3px;
-  border-style: dashed;
 }
 
 /* Regular corners with no borders */
 .image-style-gallery-thumb, .image-style-gallery-photo {
-  border-radius: 0;
-  border-width: 0;
   padding:5px;
 }
 
 /* Menus */
 .region-sidebar-second ul.menu li {
-  border: 0;
-  border-bottom: 3px #51387e solid;
   text-align:center;
   padding: 10px;
   margin-right:25px;
@@ -122,70 +117,19 @@ ol.search-results.node_search-results {
   margin: 20px;
 }
 
-/* Leaf shape for content containers */
-.node--view-mode-teaser, .path-node #content-wrapper,
-.region-content, .node__content,
-div.messages.messages--status,
-.item-list ul li, h1.page-title,
-.field--type-text-with-summary,
-ul.tabs.primary,
-.clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
-.comment, .block, .block-beargoyles-page-title,
-.block-beargoyles-local-tasks, .field-item:hover,
-ol.search-results.node_search-results, .field--name-field-beargoyle-tags .field__item,
-textarea.form-textarea {
-  border-radius: 15px;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-}
-
 .search-block-form {
   margin-bottom:50px;
 }
 
-/* Rounded rectangles for smaller objects */
-button, .button, .field--type-image,
-.menu-item, ul.tabs li, ul.menu li,
-ul.links.field__items li,
-#main-navigation ul.menu li,
-input.button, figure.caption-img img, input.pp-WAQZYM62ZJPS4, input.pp-59E8KFEYB3JV8 {
-  border-radius: 15px;
-}
-
-div.messages.messages {
-  margin-right:0;
-  border-bottom-left-radius: 15px;
-  border-top-right-radius: 150px;
-}
-
-/* No border */
-ul.tabs li a:hover {
-  border: 0;
-}
-
-/* MIGRATE */
-
-
-
 .item-list ul li {
   opacity: 80%;
-  border-width: 1px;
-  border-style: solid;
   padding: 15px;
   padding-bottom: 50px;
   margin-bottom: 25px;
 }
 
 .breadcrumb {
-  /* background-color: #fcfcfc; */
-  border: 1px solid #eaeaea;
-  /* padding: 14px 20px!important; */
-  /* margin-bottom: 30px; */
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
   margin: 0;
-  /* padding: 0px; */
 }
 
 #banner-inside {
@@ -230,7 +174,6 @@ h1.page-title {
 }
 
 #subfooter {
-  border-top: 1px solid #eaeaea;
   padding: 10px;
   margin-bottom: 0;
 }
@@ -256,20 +199,11 @@ input#edit-submit {
   line-height:2;
 }
 
-img.image-style-thumbnail {
-  border-radius: 50px;
-  border: 1px #666666 solid;
-}
-
 img.image-style-medium {
-  border-radius: 120px;
-  border: 1px #666666 solid;
   opacity: 85%;
 }
 
 img.image-style-large-white-circle {
-  border-radius:150px;
-  border: 1px #666666 solid;
   opacity: 85%;
 }
 
@@ -302,7 +236,6 @@ Off-White/super light grey: #f4f7fb
 }
 
 .sideleaf, .roundcorner, .captcha  {
-  border: 1px #846baf solid;
   padding: 35px;
 }
 
@@ -310,25 +243,12 @@ Off-White/super light grey: #f4f7fb
   margin-bottom:50px;
 }
 
-.sideleaf, .sideleaf2, label, .captcha, div#site-slogan, div#site-name, h2 {
-  border-radius: 15px;
-  border-top-right-radius: 100px;
-}
-
-.sideleaf2, label, div#site-slogan, div#site-name, h2 {
-  border-bottom-left-radius: 100px;
-}
-
 div#site-slogan, div#site-name, a#logo img, h2 {
   display: inline-block;
 }
 
 .view-header {
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  border-top-right-radius: 100px;
   margin-bottom: 25px;
-  border: 2px solid #eaeaea;
   padding: 15px;
   padding-right: 30px;
   display:none;
@@ -354,7 +274,6 @@ b, em, strong {
 div#site-slogan {
   font-size: 24px;
   font-style: italic;
-  color: #333333;
 }
 
 h1, #site-name a {
@@ -364,25 +283,18 @@ h1, #site-name a {
 }
 
 #site-name a {
-  font-size: 72px;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, #site-name a {
-  color: #333333;
+  font-size: 52px;
 }
 
 h2 {
   line-height: 200%;
   font-family: nunito, sans-serif;
-  color: #51387e;
   font-weight: normal;
 }
 
 label, label.input-label {
-  color: #51387e;
   font-weight: 500;
   font-size: 42px;
-  background: #FFFFFF;
 }
 
 legend.captcha__title.js-form-required.form-required {
@@ -409,26 +321,17 @@ input, button, select {
 }
 
 select#edit-tid, select#selector {
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 15px;
   box-shadow: none;
   padding: 15px 24px;
   text-transform: uppercase;
   opacity: 90%;
-  color: #FFFFFF;
-  background-color: #333333;
 }
 
 input#edit-keys, input#edit-name, input#edit-mail, input#edit-pass,
 input#edit-captcha-response, textarea#edit-message-0-value {
-  background: #333333;
-  color: #FFFFFF;
   font-size: 24px;
   padding: 15px;
-  border-radius: 15px;
   min-height: 50px;
-  border: 2px solid #eaeaea;
   opacity: 90%;
   margin-bottom: 20px;
 }
@@ -445,6 +348,5 @@ input#edit-captcha-response, textarea#edit-message-0-value {
 /* Images */
 
 a#logo img {
-  border-radius: 50px;
   opacity: 85%;
 }
