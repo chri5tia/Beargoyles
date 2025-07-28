@@ -1,0 +1,30 @@
+uuid: 454ca27a-5338-4d82-9c84-e6b5bc67a816
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_buymeacoffeebutton
+theme: beargoyles
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'block_content:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
+settings:
+  id: 'block_content:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
+  label: 'Buy me a coffee button'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/what-is-a-beargoyle\r\n/donate\r\n/download/*\r\n/contact"

@@ -1,23 +1,23 @@
-uuid: 31ae643c-5dbd-4b24-9de6-2988bc95fc93
+uuid: 87c61c85-c15a-41ee-96ae-4e5d37442003
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:91ee5c2e-422c-412c-8f6a-93e3854556c9'
+    - 'block_content:basic:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
   module:
     - block_content
     - system
   theme:
     - beargoyles
-id: beargoyles_description
+id: beargoyles_buymeacoffeebutton_2
 theme: beargoyles
 region: footer_first
-weight: -11
+weight: -10
 provider: null
-plugin: 'block_content:91ee5c2e-422c-412c-8f6a-93e3854556c9'
+plugin: 'block_content:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
 settings:
-  id: 'block_content:91ee5c2e-422c-412c-8f6a-93e3854556c9'
-  label: Description
+  id: 'block_content:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
+  label: 'Buy me a coffee button'
   label_display: '0'
   provider: block_content
   status: true
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /front
+    pages: /terms-of-use

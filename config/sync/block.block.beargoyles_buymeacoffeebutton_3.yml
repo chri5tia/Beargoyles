@@ -1,0 +1,30 @@
+uuid: 2bbeaa9b-851c-4c41-81b2-2e199c84a3af
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_buymeacoffeebutton_3
+theme: beargoyles
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
+settings:
+  id: 'block_content:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
+  label: 'Buy me a coffee button'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/coloring-book\r\n/all-free-coloring-pages\r\n/all-beargoyles\r\n/tags"

@@ -169,6 +169,10 @@ h1.page-title {
   font-size: 18px;
 }
 
+.sidebar-no-border {
+  margin-bottom: 20px;
+}
+
 .title-sep:after, #pre-header h2:after, #promoted h2:after, .sidebar h2:after, #footer h2:after {
   display: none;
 }

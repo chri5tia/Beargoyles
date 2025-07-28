@@ -60,7 +60,7 @@ button, img, input, label,
 .menu-item, ul.tabs li, h1.page-title,
 .col-md-8, .block-system-breadcrumb-block,
 .node--view-mode-teaser, .path-node #content-wrapper, #subfooter, ol.search-results.node_search-results,
-.sideleaf, div#site-slogan, div#site-name, select#edit-tid, select#edit-tid-1 {
+.sideleaf, .sidebar-no-border, div#site-slogan, div#site-name, select#edit-tid, select#edit-tid-1 {
 z-index: 100;
 position:relative;
 }
