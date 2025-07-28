@@ -1,0 +1,46 @@
+uuid: 995d9d96-b021-4e41-813e-5dda3f73126f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.administrative
+  module:
+    - path
+    - text
+id: taxonomy_term.administrative.default
+targetEntityType: taxonomy_term
+bundle: administrative
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

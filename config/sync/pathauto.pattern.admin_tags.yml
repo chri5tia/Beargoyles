@@ -1,0 +1,22 @@
+uuid: 41c00d08-d510-4e0c-9845-62af663d35d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: admin_tags
+label: 'Admin Tags'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary:name]/[term:name]'
+selection_criteria:
+  dce4df17-07bf-496b-adbe-fe0a717da126:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: dce4df17-07bf-496b-adbe-fe0a717da126
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      administrative: administrative
+selection_logic: and
+weight: -5
+relationships: {  }
