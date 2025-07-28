@@ -7,12 +7,12 @@ dependencies:
 id: beargoyle_tags
 label: 'Beargoyle Tags'
 type: 'canonical_entities:taxonomy_term'
-pattern: '[term:name]'
+pattern: '[term:vocabulary:name]/[term:name]'
 selection_criteria:
-  d62c9412-d8b0-49ea-883c-242f5386beda:
+  88ee5074-a77b-4a70-97dd-f5ab3f4f24d5:
     id: 'entity_bundle:taxonomy_term'
     negate: false
-    uuid: d62c9412-d8b0-49ea-883c-242f5386beda
+    uuid: 88ee5074-a77b-4a70-97dd-f5ab3f4f24d5
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:

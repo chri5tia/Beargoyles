@@ -1,9 +1,25 @@
 uuid: 76d77cf0-3e8f-4908-b72d-9de4b79b552d
 langcode: en
 status: true
-dependencies: {  }
-name: Administrative
+dependencies:
+  module:
+    - scheduler
+third_party_settings:
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Admin Tags'
 vid: administrative
 description: 'Tags for admins and content editors only.'
 weight: 0
-new_revision: false
+new_revision: true
