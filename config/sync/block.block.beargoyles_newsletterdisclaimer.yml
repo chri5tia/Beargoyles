@@ -17,7 +17,7 @@ provider: null
 plugin: 'block_content:5d3c96b5-2939-470a-b013-c0d8236ea4e2'
 settings:
   id: 'block_content:5d3c96b5-2939-470a-b013-c0d8236ea4e2'
-  label: 'Newsletter Disclaimer'
+  label: 'Privacy Statement'
   label_display: '0'
   provider: block_content
   status: true
