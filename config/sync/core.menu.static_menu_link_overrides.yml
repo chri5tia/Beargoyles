@@ -4,9 +4,9 @@ definitions:
   standard__front_page:
     menu_name: main
     parent: ''
-    weight: -50
+    weight: -49
     expanded: false
-    enabled: true
+    enabled: false
   contact__site_page:
     menu_name: footer
     parent: ''

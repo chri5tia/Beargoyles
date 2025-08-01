@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_description
 theme: beargoyles
 region: footer_first
-weight: -11
+weight: -13
 provider: null
 plugin: 'block_content:91ee5c2e-422c-412c-8f6a-93e3854556c9'
 settings:
