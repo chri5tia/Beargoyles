@@ -5,7 +5,7 @@ enable_globally: 0
 enable_globally_on_admin_routes: false
 default_challenge: riddler/Riddler
 description: ''
-title: 'NICE PERSON TEST'
+title: 'Secret Password'
 administration_mode: false
 administration_mode_on_admin_routes: false
 whitelist_ips: ''
