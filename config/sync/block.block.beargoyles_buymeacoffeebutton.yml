@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "<front>\r\n/what-is-a-beargoyle\r\n/donate\r\n/download/*\r\n/contact\r\n/tags/*"
+    pages: "/what-is-a-beargoyle\r\n/donate\r\n/download/*\r\n/contact\r\n/tags/*"

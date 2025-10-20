@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_views_block__beargoyles_randomizer_block_4
 theme: beargoyles
 region: banner
-weight: -13
+weight: -15
 provider: null
 plugin: 'views_block:beargoyles_randomizer-block_4'
 settings:

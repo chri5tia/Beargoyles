@@ -3602,7 +3602,7 @@ display:
     position: 3
     display_options:
       enabled: true
-      title: 'All Free Coloring Pages'
+      title: 'All Beargoyles'
       fields:
         field_preview:
           id: field_preview
