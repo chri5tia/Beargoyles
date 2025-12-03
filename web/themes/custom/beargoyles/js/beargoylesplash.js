@@ -60,7 +60,7 @@ function OilPainting() {
   }
 
   var prepopulateBackground = function () {
-    const totalClusters = 10; // Total number of clusters
+    const totalClusters = 50; // Total number of clusters
     const blackClusters = 5; // Number of black clusters
 
     // Helper function to draw a cluster
