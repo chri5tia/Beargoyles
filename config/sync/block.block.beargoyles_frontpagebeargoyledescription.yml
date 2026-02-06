@@ -1,23 +1,23 @@
-uuid: 148f3949-f1dc-463c-b2bf-069b05218ff6
+uuid: 7b7b7b1b-3331-4bbd-ba6b-2606130e3035
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:381f9119-69e2-41bc-95ba-6b766a5ad71c'
+    - 'block_content:basic:7b2ff54a-505c-48c5-a92a-c64a32687ec2'
   module:
     - block_content
     - system
   theme:
     - beargoyles
-id: beargoyles_newhomepage
+id: beargoyles_frontpagebeargoyledescription
 theme: beargoyles
 region: content
-weight: -8
+weight: -9
 provider: null
-plugin: 'block_content:381f9119-69e2-41bc-95ba-6b766a5ad71c'
+plugin: 'block_content:7b2ff54a-505c-48c5-a92a-c64a32687ec2'
 settings:
-  id: 'block_content:381f9119-69e2-41bc-95ba-6b766a5ad71c'
-  label: 'New Homepage'
+  id: 'block_content:7b2ff54a-505c-48c5-a92a-c64a32687ec2'
+  label: 'Front page Beargoyle Description'
   label_display: '0'
   provider: block_content
   status: true

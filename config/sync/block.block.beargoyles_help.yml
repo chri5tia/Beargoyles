@@ -11,7 +11,7 @@ _core:
 id: beargoyles_help
 theme: beargoyles
 region: content
-weight: -10
+weight: -11
 provider: null
 plugin: help_block
 settings:

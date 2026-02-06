@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_termsofuse
 theme: beargoyles
 region: content
-weight: -6
+weight: -4
 provider: null
 plugin: 'block_content:9612a325-6445-49d2-b5dc-2749819ed71b'
 settings:
@@ -22,7 +22,7 @@ settings:
   provider: block_content
   status: true
   info: ''
-  view_mode: full
+  view_mode: default
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'

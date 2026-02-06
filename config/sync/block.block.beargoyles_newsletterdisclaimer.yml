@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_newsletterdisclaimer
 theme: beargoyles
 region: content
-weight: -7
+weight: -5
 provider: null
 plugin: 'block_content:5d3c96b5-2939-470a-b013-c0d8236ea4e2'
 settings:
