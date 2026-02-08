@@ -1,17 +1,17 @@
-uuid: b76e25ce-b86c-4f09-9af7-1c0fd279b99f
+uuid: 7d71ce4b-7b67-401e-8315-94945329682e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_coloring_page_file
-    - media.type.document
+    - field.storage.node.field_image_tablet
+    - media.type.image
     - node.type.beargoyle_coloring_page
-id: node.beargoyle_coloring_page.field_coloring_page_file
-field_name: field_coloring_page_file
+id: node.beargoyle_coloring_page.field_image_tablet
+field_name: field_image_tablet
 entity_type: node
 bundle: beargoyle_coloring_page
-label: 'Printable Coloring Page'
-description: 'PDF format, black and white.'
+label: 'Tablet Version'
+description: 'Transparent PNG with black lines.'
 required: false
 translatable: false
 default_value: {  }
@@ -20,10 +20,10 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      document: document
+      image: image
     sort:
       field: _none
       direction: ASC
-    auto_create: true
+    auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

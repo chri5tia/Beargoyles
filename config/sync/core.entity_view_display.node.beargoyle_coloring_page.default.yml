@@ -7,8 +7,10 @@ dependencies:
     - field.field.node.beargoyle_coloring_page.field_admin_notes
     - field.field.node.beargoyle_coloring_page.field_admin_tags
     - field.field.node.beargoyle_coloring_page.field_art_version
+    - field.field.node.beargoyle_coloring_page.field_beargoyle_or_short_name
     - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
+    - field.field.node.beargoyle_coloring_page.field_image_tablet
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
@@ -24,6 +26,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 6
+    region: content
+  field_art_version:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
     weight: 3
     region: content
   field_beargoyle_tags:
@@ -32,16 +42,23 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_coloring_page_file:
-    type: entity_reference_entity_view
+    type: entity_reference_label
     label: inline
     settings:
-      view_mode: default
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_image_tablet:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_preview:
     type: entity_reference_entity_view
@@ -50,7 +67,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   links:
     settings: {  }
@@ -60,4 +77,4 @@ content:
 hidden:
   field_admin_notes: true
   field_admin_tags: true
-  field_art_version: true
+  field_beargoyle_or_short_name: true

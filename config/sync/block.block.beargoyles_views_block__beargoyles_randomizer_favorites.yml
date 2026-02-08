@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_views_block__beargoyles_randomizer_favorites
 theme: beargoyles
 region: content
-weight: -8
+weight: -6
 provider: null
 plugin: 'views_block:beargoyles_randomizer-favorites'
 settings:
@@ -21,9 +21,9 @@ settings:
   label_display: '0'
   provider: views
   views_label: ''
-  items_per_page: none
+  items_per_page: '3'
 visibility:
   request_path:
     id: request_path
-    negate: false
-    pages: '<front>'
+    negate: true
+    pages: "<front>\r\n/all-free-coloring-pages"

@@ -1,0 +1,21 @@
+uuid: 6443e28e-2893-4d3e-a156-9fe74167a65e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beargoyle_or_short_name
+    - node.type.beargoyle_coloring_page
+id: node.beargoyle_coloring_page.field_beargoyle_or_short_name
+field_name: field_beargoyle_or_short_name
+entity_type: node
+bundle: beargoyle_coloring_page
+label: 'Beargoyle or Short Name'
+description: 'Enter a short name such as "Scoot" or "Beargoyle #1234"'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'This Illustration'
+default_value_callback: ''
+settings: {  }
+field_type: string

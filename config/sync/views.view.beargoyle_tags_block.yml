@@ -75,7 +75,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 50
+          items_per_page: 6
       exposed_form:
         type: basic
         options:
@@ -94,7 +94,20 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        random:
+          id: random
+          table: views
+          field: random
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: random
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       arguments: {  }
       filters:
         status:
@@ -118,11 +131,13 @@ display:
           value:
             tags: tags
       style:
-        type: default
+        type: grid_responsive
         options:
-          row_class: ''
-          default_row_class: false
           uses_fields: false
+          columns: 10
+          cell_min_width: 100
+          grid_gutter: 10
+          alignment: vertical
       row:
         type: 'entity:taxonomy_term'
       query:
@@ -138,7 +153,7 @@ display:
       footer: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -152,7 +167,7 @@ display:
     display_options:
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

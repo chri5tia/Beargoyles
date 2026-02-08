@@ -10,8 +10,8 @@ id: node.beargoyle_coloring_page.field_art_version
 field_name: field_art_version
 entity_type: node
 bundle: beargoyle_coloring_page
-label: 'Art version'
-description: 'Upload the art version, if different than the colorable PDF. PNG.'
+label: 'Finished Art'
+description: 'Upload the finished art version in PNG format.'
 required: false
 translatable: false
 default_value: {  }

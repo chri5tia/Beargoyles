@@ -7,8 +7,10 @@ dependencies:
     - field.field.node.beargoyle_coloring_page.field_admin_notes
     - field.field.node.beargoyle_coloring_page.field_admin_tags
     - field.field.node.beargoyle_coloring_page.field_art_version
+    - field.field.node.beargoyle_coloring_page.field_beargoyle_or_short_name
     - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
+    - field.field.node.beargoyle_coloring_page.field_image_tablet
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
@@ -24,7 +26,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 6
     region: content
     settings:
       rows: 9
@@ -34,13 +36,13 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_admin_notes:
     type: string_textarea
-    weight: 5
+    weight: 7
     region: content
     settings:
       rows: 5
@@ -48,7 +50,7 @@ content:
     third_party_settings: {  }
   field_admin_tags:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 9
     region: content
     settings:
       match_operator: CONTAINS
@@ -58,14 +60,22 @@ content:
     third_party_settings: {  }
   field_art_version:
     type: media_library_widget
-    weight: 3
+    weight: 5
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_beargoyle_or_short_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_beargoyle_tags:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -75,7 +85,7 @@ content:
     third_party_settings: {  }
   field_coloring_page_file:
     type: inline_entity_form_simple
-    weight: 1
+    weight: 2
     region: content
     settings:
       form_mode: default
@@ -86,47 +96,54 @@ content:
       collapsed: false
       revision: true
     third_party_settings: {  }
+  field_image_tablet:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_preview:
     type: media_library_widget
-    weight: 2
+    weight: 3
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 10
+    weight: 12
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 52
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 50
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 14
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 11
+    weight: 13
     region: content
     settings:
       display_label: true
@@ -141,12 +158,12 @@ content:
     third_party_settings: {  }
   uid:
     type: options_select
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
