@@ -26,7 +26,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_art_version:
     type: entity_reference_label
@@ -42,7 +42,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_coloring_page_file:
     type: entity_reference_label

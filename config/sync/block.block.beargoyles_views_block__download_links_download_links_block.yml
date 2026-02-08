@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_views_block__download_links_download_links_block
 theme: beargoyles
 region: sidebar_second
-weight: -14
+weight: -15
 provider: null
 plugin: 'views_block:download_links-download_links_block'
 settings:

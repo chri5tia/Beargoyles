@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_views_block__beargoyles_randomizer_block_1_2
 theme: beargoyles
 region: sidebar_second
-weight: -12
+weight: -11
 provider: null
 plugin: 'views_block:beargoyles_randomizer-block_1'
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/all-beargoyles\r\n/all-beargoyles-admin\r\n/all-free-coloring-pages\r\n/altfront\r\n/front\r\n/our-favorites"
+    pages: "/all-beargoyles\r\n/all-beargoyles-admin\r\n/all-free-coloring-pages\r\n/altfront\r\n/our-favorites"
