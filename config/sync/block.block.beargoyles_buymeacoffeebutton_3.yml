@@ -6,7 +6,6 @@ dependencies:
     - 'block_content:basic:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
   module:
     - block_content
-    - system
   theme:
     - beargoyles
 id: beargoyles_buymeacoffeebutton_3
@@ -23,8 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: default
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: "/coloring-book\r\n/all-free-coloring-pages\r\n/all-beargoyles\r\n/tags"
+visibility: {  }
