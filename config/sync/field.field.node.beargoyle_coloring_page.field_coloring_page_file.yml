@@ -10,7 +10,7 @@ id: node.beargoyle_coloring_page.field_coloring_page_file
 field_name: field_coloring_page_file
 entity_type: node
 bundle: beargoyle_coloring_page
-label: 'Download Coloring Page'
+label: 'Print and Color Version'
 description: 'PDF format, black and white.'
 required: false
 translatable: false
