@@ -69,7 +69,6 @@ input.form-text, input.form-email, input.form-search, textarea.form-textarea, se
 }
 
 .field--type-image {
-  float:left;
   margin-right: 25px;
   margin-bottom: 15px;
 }
