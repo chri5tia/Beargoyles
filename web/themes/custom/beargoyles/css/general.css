@@ -312,11 +312,6 @@ legend.captcha__title.js-form-required.form-required {
   text-align: justify;
 }
 
-span.file.file--mime-application-pdf.file--application-pdf {
-  font-size: larger;
-  font-weight: bolder;
-}
-
 /* Form Elements */
 
 input, button, select {
