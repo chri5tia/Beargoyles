@@ -1,0 +1,30 @@
+uuid: b8c626bb-a38b-4ea8-a4bb-040e7136b87e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6d610b06-d389-472b-a9fa-46d5a37e5065'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_nowfortablets
+theme: beargoyles
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:6d610b06-d389-472b-a9fa-46d5a37e5065'
+settings:
+  id: 'block_content:6d610b06-d389-472b-a9fa-46d5a37e5065'
+  label: 'Now for tablets!'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

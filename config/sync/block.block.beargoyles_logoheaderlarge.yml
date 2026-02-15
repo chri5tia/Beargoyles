@@ -1,0 +1,30 @@
+uuid: 9b755c18-d685-47f6-a0cf-7851c5d9fcd7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:01a0a046-ca2b-4c52-8248-f6157084edce'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_logoheaderlarge
+theme: beargoyles
+region: header
+weight: -15
+provider: null
+plugin: 'block_content:01a0a046-ca2b-4c52-8248-f6157084edce'
+settings:
+  id: 'block_content:01a0a046-ca2b-4c52-8248-f6157084edce'
+  label: 'Logo header large'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

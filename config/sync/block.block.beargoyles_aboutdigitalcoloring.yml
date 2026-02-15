@@ -1,0 +1,30 @@
+uuid: 8ea880be-80c6-4251-a008-65ba58bfd3d0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3bd19888-b0a3-41e8-acbd-ef993605c834'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_aboutdigitalcoloring
+theme: beargoyles
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:3bd19888-b0a3-41e8-acbd-ef993605c834'
+settings:
+  id: 'block_content:3bd19888-b0a3-41e8-acbd-ef993605c834'
+  label: 'About Digital Coloring'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/tags/tablets\r\n/dowloads/*"

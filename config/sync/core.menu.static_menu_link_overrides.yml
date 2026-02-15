@@ -8,7 +8,7 @@ definitions:
     expanded: false
     enabled: true
   contact__site_page:
-    menu_name: footer
+    menu_name: main
     parent: ''
     weight: -47
     expanded: false

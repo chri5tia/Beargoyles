@@ -1,0 +1,30 @@
+uuid: 9b6c9b63-1e32-49b3-a11a-23e2323940ac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3c7a1394-c6ad-4e58-a2a5-613897fa730c'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_logoheadersmall
+theme: beargoyles
+region: header
+weight: -14
+provider: null
+plugin: 'block_content:3c7a1394-c6ad-4e58-a2a5-613897fa730c'
+settings:
+  id: 'block_content:3c7a1394-c6ad-4e58-a2a5-613897fa730c'
+  label: 'Logo header small'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

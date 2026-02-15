@@ -1,0 +1,30 @@
+uuid: 20a25e2d-4d44-4144-8b2a-1b3c7cc9e183
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:75112fdc-c356-42e3-8bfa-8e3f41d4d522'
+  module:
+    - block_content
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_whatisabeargoyleintroblock
+theme: beargoyles
+region: sidebar_second
+weight: -13
+provider: null
+plugin: 'block_content:75112fdc-c356-42e3-8bfa-8e3f41d4d522'
+settings:
+  id: 'block_content:75112fdc-c356-42e3-8bfa-8e3f41d4d522'
+  label: 'What is a Beargoyle? Intro block.'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

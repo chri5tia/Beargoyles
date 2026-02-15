@@ -1,0 +1,25 @@
+uuid: abac7a76-5572-4b63-b1f5-d86ce7c1bdd7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:58c2020b-9400-42f1-b81d-6e82d32e98ca'
+  module:
+    - block_content
+  theme:
+    - beargoyles
+id: beargoyles_logofootersmall
+theme: beargoyles
+region: footer_second
+weight: -14
+provider: null
+plugin: 'block_content:58c2020b-9400-42f1-b81d-6e82d32e98ca'
+settings:
+  id: 'block_content:58c2020b-9400-42f1-b81d-6e82d32e98ca'
+  label: 'Logo footer small'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: default
+visibility: {  }
