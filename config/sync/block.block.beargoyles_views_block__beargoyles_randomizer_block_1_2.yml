@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_views_block__beargoyles_randomizer_block_1_2
 theme: beargoyles
 region: sidebar_second
-weight: -11
+weight: -12
 provider: null
 plugin: 'views_block:beargoyles_randomizer-block_1'
 settings:

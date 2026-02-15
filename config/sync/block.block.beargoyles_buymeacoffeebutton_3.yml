@@ -11,7 +11,7 @@ dependencies:
 id: beargoyles_buymeacoffeebutton_3
 theme: beargoyles
 region: footer_second
-weight: 0
+weight: -16
 provider: null
 plugin: 'block_content:09706ad9-98ba-46e4-b4e4-779b13c5cd52'
 settings:

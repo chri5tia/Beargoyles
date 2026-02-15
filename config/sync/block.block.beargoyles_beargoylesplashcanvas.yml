@@ -11,7 +11,7 @@ dependencies:
 id: beargoyles_beargoylesplashcanvas
 theme: beargoyles
 region: header
-weight: -11
+weight: -16
 provider: null
 plugin: 'block_content:a9aa3ccc-f315-4068-bcc3-a27c11a670d6'
 settings:

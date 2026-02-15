@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_donatepaypalblock
 theme: beargoyles
 region: sidebar_second
-weight: -10
+weight: -11
 provider: null
 plugin: 'block_content:ee588b6a-c8dc-476e-be3a-e8c1e075f46d'
 settings:

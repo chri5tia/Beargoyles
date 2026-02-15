@@ -11,7 +11,7 @@ dependencies:
 id: beargoyles_views_block__beargoyles_randomizer_block_1
 theme: beargoyles
 region: footer_second
-weight: 0
+weight: -15
 provider: null
 plugin: 'views_block:beargoyles_randomizer-block_1'
 settings:
