@@ -25,5 +25,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: "<front>\r\n/all-free-coloring-pages\r\n/tags/tablets\r\n/all-beargoyles"
+    negate: false
+    pages: "/what-is-a-beargoyles\r\n/coloring-book\r\n/donate\r\n/contact\r\n/download/*\r\n/terms-of-use"
