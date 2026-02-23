@@ -2070,6 +2070,9 @@ display:
         options:
           offset: 0
           items_per_page: 3
+      cache:
+        type: none
+        options: {  }
       sorts:
         random:
           id: random
@@ -2237,6 +2240,7 @@ display:
           separator: ''
           hide_empty: true
       defaults:
+        cache: false
         title: false
         pager: false
         use_more: false
@@ -2345,6 +2349,9 @@ display:
         options:
           offset: 0
           items_per_page: 3
+      cache:
+        type: none
+        options: {  }
       sorts:
         random:
           id: random
@@ -2428,6 +2435,7 @@ display:
           separator: ''
           hide_empty: true
       defaults:
+        cache: false
         pager: false
         style: false
         row: false
