@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_nowfortablets
 theme: beargoyles
 region: sidebar_second
-weight: 0
+weight: -12
 provider: null
 plugin: 'block_content:6d610b06-d389-472b-a9fa-46d5a37e5065'
 settings:

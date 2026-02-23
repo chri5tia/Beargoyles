@@ -1,0 +1,56 @@
+uuid: 73e0698e-e6f8-4df0-ac2b-da50ef99a83c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.beargoyle_coloring_page.body
+    - field.field.node.beargoyle_coloring_page.field_admin_notes
+    - field.field.node.beargoyle_coloring_page.field_admin_tags
+    - field.field.node.beargoyle_coloring_page.field_art_version
+    - field.field.node.beargoyle_coloring_page.field_beargoyle_or_short_name
+    - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
+    - field.field.node.beargoyle_coloring_page.field_coloring_page_file
+    - field.field.node.beargoyle_coloring_page.field_image_tablet
+    - field.field.node.beargoyle_coloring_page.field_preview
+    - node.type.beargoyle_coloring_page
+  module:
+    - text
+    - user
+id: node.beargoyle_coloring_page.search_index
+targetEntityType: node
+bundle: beargoyle_coloring_page
+mode: search_index
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_beargoyle_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_preview:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_admin_notes: true
+  field_admin_tags: true
+  field_art_version: true
+  field_beargoyle_or_short_name: true
+  field_coloring_page_file: true
+  field_image_tablet: true
+  links: true
