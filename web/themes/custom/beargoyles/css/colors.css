@@ -1,6 +1,7 @@
 /* WHITE */
 input#edit-captcha-response,
 input#edit-keys,
+input#edit-keys--2,
 input#edit-mail,
 input#edit-name,
 input#edit-pass,
@@ -53,6 +54,7 @@ h6 a,
 ol.search-results.node_search-results,
 .comment,
 .node--view-mode-teaser,
+.node--view-mode-search-index,
 .path-node #content-wrapper,
 #site-name a {
   color: #333333;
@@ -61,6 +63,7 @@ ol.search-results.node_search-results,
 /* Background color */
 input#edit-captcha-response,
 input#edit-keys,
+input#edit-keys--2,
 input#edit-mail,
 input#edit-name,
 input#edit-pass,
@@ -74,6 +77,7 @@ textarea#edit-message-0-value,
 
 /* Border color */
 .node--view-mode-teaser,
+.node--view-mode-search-index,
 .path-node #content-wrapper {
   border-color: #333333;
 }
@@ -174,6 +178,7 @@ img.image-style-thumbnail,
 .breadcrumb,
 input#edit-captcha-response,
 input#edit-keys,
+input#edit-keys--2,
 input#edit-mail,
 input#edit-name,
 input#edit-pass,

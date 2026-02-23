@@ -1,0 +1,28 @@
+uuid: 11f0e5de-20b6-4187-9605-71bf43583e40
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_results
+  module:
+    - system
+    - views
+  theme:
+    - beargoyles
+id: beargoyles_exposedformsearch_resultssearch_page_2
+theme: beargoyles
+region: sidebar_second
+weight: -16
+provider: null
+plugin: 'views_exposed_filter_block:search_results-search_page'
+settings:
+  id: 'views_exposed_filter_block:search_results-search_page'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search\r\n/search/*\r\n/front"

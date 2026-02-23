@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_whatisabeargoyleintroblock
 theme: beargoyles
 region: sidebar_second
-weight: -13
+weight: -17
 provider: null
 plugin: 'block_content:75112fdc-c356-42e3-8bfa-8e3f41d4d522'
 settings:
