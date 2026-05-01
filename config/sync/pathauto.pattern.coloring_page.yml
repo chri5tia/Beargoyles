@@ -7,12 +7,12 @@ dependencies:
 id: coloring_page
 label: 'Coloring Page'
 type: 'canonical_entities:node'
-pattern: 'download/[node:title]'
+pattern: 'coloring-page/[node:title]'
 selection_criteria:
-  65ec3aca-0777-4e5c-8154-7d74ddc55d0c:
+  4ecf7f30-6e97-4939-8bd4-b80239f2a4c5:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 65ec3aca-0777-4e5c-8154-7d74ddc55d0c
+    uuid: 4ecf7f30-6e97-4939-8bd4-b80239f2a4c5
     context_mapping:
       node: node
     bundles:
