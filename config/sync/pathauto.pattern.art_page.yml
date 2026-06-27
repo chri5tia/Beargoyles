@@ -1,0 +1,22 @@
+uuid: ef3be45a-21a0-4bb8-819c-9dec67adf3af
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: art_page
+label: 'Art Page'
+type: 'canonical_entities:node'
+pattern: 'art/[node:title]'
+selection_criteria:
+  0df7ceb8-f404-4fed-8a6f-ce0d05d3e269:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 0df7ceb8-f404-4fed-8a6f-ce0d05d3e269
+    context_mapping:
+      node: node
+    bundles:
+      beargoyle_art_page: beargoyle_art_page
+selection_logic: and
+weight: -5
+relationships: {  }

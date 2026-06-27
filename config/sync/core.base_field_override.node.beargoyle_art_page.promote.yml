@@ -1,0 +1,22 @@
+uuid: 34db0c04-7bce-4bcb-8308-e9bdaed39d3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.beargoyle_art_page
+id: node.beargoyle_art_page.promote
+field_name: promote
+entity_type: node
+bundle: beargoyle_art_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
