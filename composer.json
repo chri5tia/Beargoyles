@@ -27,6 +27,7 @@
         "drupal/adminimal_theme": "^1.7",
         "drupal/bootstrap_business": "^1.0@beta",
         "drupal/classy": "^1.0",
+        "drupal/commerce": "^3.0",
         "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^10.6.12",
         "drupal/core-project-message": "^10.6.12",
