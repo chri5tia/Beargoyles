@@ -3626,7 +3626,7 @@ display:
     position: 3
     display_options:
       enabled: true
-      title: 'All Beargoyles'
+      title: Sketches
       fields:
         field_image:
           id: field_image

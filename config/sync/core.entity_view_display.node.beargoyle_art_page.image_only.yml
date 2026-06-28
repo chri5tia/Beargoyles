@@ -11,28 +11,12 @@ dependencies:
     - node.type.beargoyle_art_page
   module:
     - image
-    - text
     - user
 id: node.beargoyle_art_page.image_only
 targetEntityType: node
 bundle: beargoyle_art_page
 mode: image_only
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  field_beargoyle_tags:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_image:
     type: image
     label: hidden
@@ -42,11 +26,9 @@ content:
       image_loading:
         attribute: eager
     third_party_settings: {  }
-    weight: -1
+    weight: 0
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  body: true
+  field_beargoyle_tags: true
+  links: true

@@ -4,7 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.storage.node.field_image
+    - image.style.large_white_circle
+    - node.type.beargoyle_art_page
   module:
+    - image
     - node
     - taxonomy
     - user
@@ -269,7 +273,7 @@ display:
     id: feed_1
     display_title: Feed
     display_plugin: feed
-    position: 2
+    position: 4
     display_options:
       pager:
         type: some
@@ -307,7 +311,7 @@ display:
     id: page_1
     display_title: Page
     display_plugin: page
-    position: 1
+    position: 2
     display_options:
       query:
         type: views_query
@@ -343,7 +347,7 @@ display:
     id: page_2
     display_title: Search
     display_plugin: page
-    position: 1
+    position: 3
     display_options:
       query:
         type: views_query
