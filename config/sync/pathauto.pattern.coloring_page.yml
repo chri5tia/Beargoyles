@@ -2,18 +2,17 @@ uuid: 20d07dcf-ea99-44da-bb9f-d5f1f85cbd7d
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.beargoyle_coloring_page
   module:
     - node
 id: coloring_page
 label: 'Coloring Page'
 type: 'canonical_entities:node'
-pattern: '/coloring-page/[node:title]'
+pattern: 'coloring-page/[node:title]'
 selection_criteria:
   4ecf7f30-6e97-4939-8bd4-b80239f2a4c5:
     id: 'entity_bundle:node'
     negate: false
+    uuid: 4ecf7f30-6e97-4939-8bd4-b80239f2a4c5
     context_mapping:
       node: node
     bundles:
