@@ -7,8 +7,9 @@ _core:
 id: feedback
 label: 'Get in touch with us'
 recipients:
-  - overlords@beargoyles.com
+  - christiahall@gmail.com
+  - christia@beargoyles.com
 reply: ''
 weight: 0
 message: 'Your message has been sent. Thank you for reaching out to us!'
-redirect: /donate
+redirect: /support

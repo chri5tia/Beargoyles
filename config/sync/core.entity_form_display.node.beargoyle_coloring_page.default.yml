@@ -10,10 +10,12 @@ dependencies:
     - field.field.node.beargoyle_coloring_page.field_beargoyle_or_short_name
     - field.field.node.beargoyle_coloring_page.field_beargoyle_tags
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
+    - field.field.node.beargoyle_coloring_page.field_comments
     - field.field.node.beargoyle_coloring_page.field_image_tablet
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
+    - comment
     - inline_entity_form
     - media_library
     - path
@@ -95,6 +97,12 @@ content:
       collapsible: false
       collapsed: false
       revision: true
+    third_party_settings: {  }
+  field_comments:
+    type: comment_default
+    weight: 26
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_image_tablet:
     type: media_library_widget
