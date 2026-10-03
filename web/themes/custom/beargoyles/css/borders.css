@@ -20,6 +20,7 @@ textarea#edit-message-0-value,
 .region-sidebar-second ul.menu li,
 .roundcorner,
 .sideleaf,
+textarea#edit-comment-body-0-value,
 .view-header {
   border-style: solid;
 }
@@ -31,7 +32,6 @@ textarea#edit-message-0-value,
 }
 
 /* Dashed */
-.comment,
 .node--view-mode-teaser,
 .path-node #content-wrapper,
 ol.search-results.node_search-results {
@@ -71,7 +71,6 @@ select#selector,
 }
 
 /* Thick border */
-.comment,
 .node--view-mode-teaser,
 .node--view-mode-search-index,
 ol.search-results.node_search-results,
@@ -80,6 +79,7 @@ ol.search-results.node_search-results,
 }
 
 /* Medium border */
+.comment,
 input#edit-captcha-response,
 input#edit-keys,
 input#edit-keys--2,
@@ -87,6 +87,7 @@ input#edit-mail,
 input#edit-name,
 input#edit-pass,
 textarea#edit-message-0-value,
+textarea#edit-comment-body-0-value,
 .view-header {
   border-width: 2px;
 }
@@ -115,6 +116,7 @@ textarea#edit-message-0-value,
 
 /* Border radius 15px */
 button,
+.comment,
 figure.caption-img img,
 h2,
 h1.page-title,
@@ -144,7 +146,6 @@ ul.tabs.primary,
 .button,
 .captcha,
 .clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p,
-.comment,
 .field--name-field-beargoyle-tags .field__item,
 .field--type-image,
 .field--type-text-with-summary,
@@ -158,6 +159,7 @@ ul.tabs.primary,
 .region-content,
 .sideleaf,
 .sideleaf2,
+textarea#edit-comment-body-0-value,
 .view-header,
 div#site-name,
 div#site-slogan,
@@ -190,7 +192,6 @@ div.messages.messages {
 }
 
 /* Block leaf */
-.comment,
 div#site-name,
 div#site-slogan,
 div.messages.messages--status,

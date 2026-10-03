@@ -49,6 +49,10 @@ div.meta.submitted {
   font-size: 85%;
 }
 
+.form-composite > .fieldset-wrapper > .description, .form-item .description {
+	font-size: 2em;
+}
+
 /* Spacing and Alignment */
 
 input.form-text, input.form-email, input.form-search, textarea.form-textarea, select {
@@ -90,7 +94,6 @@ article nav {
 /* BORDERS */
 
 /* Thick dashed */
-.comment,
 .node--view-mode-teaser,
 .node--view-mode-search-index,
 .path-node #content-wrapper,
@@ -240,7 +243,7 @@ Off-White/super light grey: #f4f7fb
   width: auto!important;
 }
 
-.sideleaf, .roundcorner, .captcha  {
+.sideleaf, .roundcorner, .captcha, textarea#edit-comment-body-0-value  {
   padding: 35px;
 }
 
@@ -298,8 +301,8 @@ h2 {
 }
 
 label, label.input-label {
-  font-weight: 500;
-  font-size: 42px;
+  font-weight: 400;
+  font-size: 30px;
 }
 
 legend.captcha__title.js-form-required.form-required {
@@ -316,7 +319,8 @@ legend.captcha__title.js-form-required.form-required {
 
 /* Form Elements */
 
-input, button, select {
+input, button, select,
+textarea#edit-comment-body-0-value {
   font-size: 18px;
 }
 
@@ -350,3 +354,20 @@ input#edit-captcha-response, textarea#edit-message-0-value {
 a#logo img {
   opacity: 85%;
 }
+
+.filter-wrapper {
+  display: none !important;
+}
+
+/* h2.title.comment-form__title {visibility: hidden;} */
+
+form#comment-form {
+    clear: both;
+    margin-top: 40px;
+}
+
+textarea#edit-comment-body-0-value {
+  font-size: 24px;
+}
+
+h2.title.comment-form__title {visibility: hidden;}

@@ -87,7 +87,7 @@
 
   <div class="comment__meta">
 <div class=user_pic>{{ user_picture }}</div>
-    <span>{% trans %}By&nbsp;{% endtrans %}{{ author }}{% trans %} {% endtrans %} {{ created }} ago</span>
+    <span> {{ created }} ago</span>
     {% if parent %}
       <p class="visually-hidden">{{ parent }}</p>
     {% endif %}
@@ -96,7 +96,4 @@
   <div{{ content_attributes.addClass('comment__content') }}>
     <p>{{ content|without('links') }}</p>
   </div>
-  {% if content.links %}
-    <nav>{{ content.links }}</nav>
-  {% endif %}
 </article>
