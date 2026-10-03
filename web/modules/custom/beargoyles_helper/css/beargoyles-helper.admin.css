@@ -1,0 +1,8 @@
+.beargoyles-parent-options {
+  column-count: 4;
+  column-gap: 2rem;
+}
+
+.beargoyles-parent-options .form-item {
+  break-inside: avoid;
+}

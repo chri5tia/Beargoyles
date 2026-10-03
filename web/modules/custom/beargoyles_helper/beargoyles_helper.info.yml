@@ -1,0 +1,5 @@
+name: Beargoyles.com Helper Module
+type: module
+description: 'Custom functionality and form alterations for Beargoyles.'
+package: Custom
+core_version_requirement: ^10
