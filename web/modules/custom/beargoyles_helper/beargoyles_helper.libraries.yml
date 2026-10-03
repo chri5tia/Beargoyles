@@ -1,0 +1,4 @@
+admin:
+  css:
+    theme:
+      css/beargoyles-helper.admin.css: {}
