@@ -12,7 +12,7 @@ dependencies:
 id: beargoyles_exposedformsearch_resultssearch_page_2
 theme: beargoyles
 region: sidebar_second
-weight: -16
+weight: -15
 provider: null
 plugin: 'views_exposed_filter_block:search_results-search_page'
 settings:
