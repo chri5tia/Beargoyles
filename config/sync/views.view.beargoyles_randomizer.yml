@@ -23,6 +23,7 @@ dependencies:
     - user.role.content_editor
   content:
     - 'taxonomy_term:administrative:6e7387e0-6e4c-41b2-94af-94a80d773b80'
+    - 'taxonomy_term:administrative:c75b797a-e6b2-4eb9-9521-7ddbda9f6431'
     - 'taxonomy_term:tags:42129abc-702a-4027-847c-1d702c575fb8'
     - 'taxonomy_term:tags:78a6de6c-ff9a-4b7c-84ed-f15e9c88b445'
     - 'taxonomy_term:tags:99849064-289a-4733-9b74-1c4ca40f2957'
@@ -1162,7 +1163,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1219,6 +1220,55 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if field_art_version %}\r\n  {{ field_art_version }}\r\n{% else %}\r\n  {{ field_preview }}\r\n{% endif %}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
       pager:
         type: some
         options:
@@ -1332,9 +1382,9 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
-          operator: and
+          operator: or
           value:
-            - 217
+            - 181
           group: 1
           exposed: false
           expose:
@@ -1365,7 +1415,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          vid: tags
+          vid: administrative
           type: textfield
           hierarchy: false
           limit: true
