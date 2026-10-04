@@ -1,0 +1,52 @@
+.beargoyles-comments {
+  clear: both;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.beargoyles-comments__chatbox {
+  background: rgba(119, 108, 89, 0.40);
+  border: 1px solid rgba(81, 56, 126, 0.10);
+  border-radius: 15px;
+  padding: 0.75rem 1.5rem;
+}
+
+.beargoyles-comments__chatbox .comment {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.beargoyles-comments__chatbox .comment + .comment {
+  border-top: 1px solid rgba(81, 56, 126, 0.12);
+}
+
+.beargoyles-comment {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+.beargoyles-comment__body,
+.beargoyles-comment__body p,
+.beargoyles-comment__body .field__item {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.beargoyles-comments__form {
+  margin-top: 1.5rem;
+}
+
+textarea#edit-comment-body-0-value,
+input#edit-field-comment-nickname-0-value {
+    font-size: 18px;
+    padding: 10px;
+}

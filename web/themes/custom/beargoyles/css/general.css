@@ -155,6 +155,10 @@ ol.search-results.node_search-results {
   line-height:150%;
 }
 
+.node--view-mode-full .field--name-field-beargoyle-tags .field__item {
+  font-size: large;
+}
+
 .field--name-field-beargoyle-tags .field__item a:hover {
   text-decoration:none;
 }
@@ -243,7 +247,7 @@ Off-White/super light grey: #f4f7fb
   width: auto!important;
 }
 
-.sideleaf, .roundcorner, .captcha, textarea#edit-comment-body-0-value  {
+.sideleaf, .roundcorner, .captcha  {
   padding: 35px;
 }
 
@@ -319,8 +323,7 @@ legend.captcha__title.js-form-required.form-required {
 
 /* Form Elements */
 
-input, button, select,
-textarea#edit-comment-body-0-value {
+input, button, select {
   font-size: 18px;
 }
 
@@ -359,15 +362,3 @@ a#logo img {
   display: none !important;
 }
 
-/* h2.title.comment-form__title {visibility: hidden;} */
-
-form#comment-form {
-    clear: both;
-    margin-top: 40px;
-}
-
-textarea#edit-comment-body-0-value {
-  font-size: 24px;
-}
-
-h2.title.comment-form__title {visibility: hidden;}

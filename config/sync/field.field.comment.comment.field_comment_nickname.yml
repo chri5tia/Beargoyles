@@ -1,0 +1,21 @@
+uuid: 7454f015-0976-4a0e-86b5-c1582aa42d9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+    - field.storage.comment.field_comment_nickname
+id: comment.comment.field_comment_nickname
+field_name: field_comment_nickname
+entity_type: comment
+bundle: comment
+label: Nickname
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Anonymous Fan'
+default_value_callback: ''
+settings: {  }
+field_type: string
