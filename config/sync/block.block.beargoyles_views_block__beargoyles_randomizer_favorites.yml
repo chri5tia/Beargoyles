@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/what-is-a-beargoyles\r\n/coloring-book\r\n/donate\r\n/contact\r\n/download/*\r\n/terms-of-use"
+    pages: "/what-is-a-beargoyles\r\n/coloring-book\r\n/donate\r\n/contact\r\n/terms-of-use"

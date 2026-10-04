@@ -2319,6 +2319,7 @@ display:
       link_url: '/?tid=217'
       exposed_block: true
       display_extenders: {  }
+      block_description: 'Favorites Block'
     cache_metadata:
       max-age: 0
       contexts:

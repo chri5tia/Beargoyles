@@ -50,3 +50,18 @@ input#edit-field-comment-nickname-0-value {
     font-size: 18px;
     padding: 10px;
 }
+
+.field--name-field-art-version {
+  position: relative;
+  z-index: 100;
+  width: 200px;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.field--name-field-art-version img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
