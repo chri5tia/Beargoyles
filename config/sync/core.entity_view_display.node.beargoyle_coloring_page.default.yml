@@ -60,11 +60,17 @@ content:
     weight: 5
     region: content
   field_coloring_page_file:
-    type: entity_reference_entity_view
+    type: file_download_link_media
     label: above
     settings:
-      view_mode: default
-      link: false
+      link_text: '[current-page:title] PDF ([file:size])'
+      link_title: ''
+      aria_label: ''
+      new_tab: true
+      rel_attribute: ''
+      force_download: false
+      force_download_filename: ''
+      custom_classes: ''
     third_party_settings: {  }
     weight: 1
     region: content
@@ -81,13 +87,13 @@ content:
     type: file_download_link_media
     label: above
     settings:
-      link_text: ' [current-page:title] for Tablets ([file:size])'
+      link_text: '[current-page:title] PNG ([file:size])'
       link_title: ''
       aria_label: ''
       new_tab: true
       rel_attribute: ''
       force_download: false
-      force_download_filename: ''
+      force_download_filename: 'beargoyles_com_[current-page:title]_tablet.png'
       custom_classes: ''
     third_party_settings: {  }
     weight: 2

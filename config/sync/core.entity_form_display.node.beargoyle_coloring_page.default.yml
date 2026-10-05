@@ -30,7 +30,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 7
+    weight: 6
     region: content
     settings:
       rows: 9
@@ -40,13 +40,13 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_admin_notes:
     type: string_textarea
-    weight: 8
+    weight: 7
     region: content
     settings:
       rows: 5
@@ -54,7 +54,7 @@ content:
     third_party_settings: {  }
   field_admin_tags:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 9
     region: content
     settings:
       match_operator: CONTAINS
@@ -64,7 +64,7 @@ content:
     third_party_settings: {  }
   field_art_version:
     type: media_library_widget
-    weight: 6
+    weight: 5
     region: content
     settings:
       media_types: {  }
@@ -79,7 +79,7 @@ content:
     third_party_settings: {  }
   field_beargoyle_tags:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -102,13 +102,13 @@ content:
     third_party_settings: {  }
   field_comments:
     type: comment_default
-    weight: 26
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   field_image_tablet:
     type: media_library_widget
-    weight: 5
+    weight: 4
     region: content
     settings:
       media_types: {  }
@@ -130,38 +130,38 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 15
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 13
+    weight: 12
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 19
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 18
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 17
+    weight: 18
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 14
+    weight: 13
     region: content
     settings:
       display_label: true
@@ -176,12 +176,12 @@ content:
     third_party_settings: {  }
   uid:
     type: options_select
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 16
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
