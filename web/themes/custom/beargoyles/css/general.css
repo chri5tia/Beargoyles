@@ -259,19 +259,27 @@ div#site-slogan, div#site-name, a#logo img, h2 {
   display: inline-block;
 }
 
+/* FLAG STYLE Container */
+
 .view-header {
   margin-bottom: 25px;
   padding: 15px;
-  padding-right: 30px;
-  display:none;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  z-index: 100;
+  color: #FFFFFF;
+  background-color: #333333;
+  margin-left: -900px;
+  opacity: 70%;
 }
 
 .view-header p {
-  line-height: 1.5;
-  font-size: 24px;
-  color: #333333;
+  line-height: 1.75;
+  font-size: 20px;
   font-style: italic;
   margin-bottom: 0;
+  margin-left: 900px;
 }
 
 /*

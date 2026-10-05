@@ -61,7 +61,8 @@ select#selector,
 .captcha,
 .item-list ul li,
 .roundcorner,
-.sideleaf {
+.sideleaf,
+.view-header {
   border-width: 1px;
 }
 
@@ -86,8 +87,7 @@ input#edit-keys,
 input#edit-keys--2,
 input#edit-mail,
 input#edit-name,
-input#edit-pass,
-.view-header {
+input#edit-pass {
   border-width: 2px;
 }
 
@@ -119,6 +119,7 @@ button,
 figure.caption-img img,
 h2,
 h1.page-title,
+.view-header,
 input#edit-captcha-response,
 input#edit-field-comment-nickname-0-value,
 textarea#edit-comment-body-0-value,
@@ -161,7 +162,6 @@ ul.tabs.primary,
 .sideleaf,
 .sideleaf2,
 textarea#edit-comment-body-0-value,
-.view-header,
 div#site-name,
 div#site-slogan,
 div.messages.messages--status {
@@ -221,7 +221,6 @@ ul.tabs.primary,
 
 /* Leaf parts idfk border top right radius 100 */
 .captcha,
-.sideleaf,
-.view-header {
+.sideleaf {
   border-top-right-radius: 100px;
 }
