@@ -83,7 +83,7 @@ content:
     settings:
       link_text: ' [current-page:title] for Tablets ([file:size])'
       link_title: ''
-      aria_label: null
+      aria_label: ''
       new_tab: true
       rel_attribute: ''
       force_download: false
