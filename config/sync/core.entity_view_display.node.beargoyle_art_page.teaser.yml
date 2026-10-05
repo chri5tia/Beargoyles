@@ -7,9 +7,12 @@ dependencies:
     - field.field.node.beargoyle_art_page.body
     - field.field.node.beargoyle_art_page.field_beargoyle_tags
     - field.field.node.beargoyle_art_page.field_image
+    - field.field.node.beargoyle_art_page.field_preview
+    - image.style.large
     - node.type.beargoyle_art_page
   module:
     - image
+    - media
     - text
     - user
 id: node.beargoyle_art_page.teaser
@@ -38,6 +41,17 @@ content:
     settings:
       image_link: ''
       image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_preview:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: large
       image_loading:
         attribute: lazy
     third_party_settings: {  }

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.beargoyle_art_page.body
     - field.field.node.beargoyle_art_page.field_beargoyle_tags
     - field.field.node.beargoyle_art_page.field_image
+    - field.field.node.beargoyle_art_page.field_preview
     - image.style.wide
     - node.type.beargoyle_art_page
   module:
@@ -25,6 +26,15 @@ content:
       image_style: wide
       image_loading:
         attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_preview:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content

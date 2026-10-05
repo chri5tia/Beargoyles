@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.beargoyle_art_page.body
     - field.field.node.beargoyle_art_page.field_beargoyle_tags
     - field.field.node.beargoyle_art_page.field_image
+    - field.field.node.beargoyle_art_page.field_preview
     - image.style.wide
     - node.type.beargoyle_art_page
   module:
     - image
+    - photoswipe
     - text
     - user
 id: node.beargoyle_art_page.default
@@ -22,7 +24,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_beargoyle_tags:
     type: entity_reference_label
@@ -30,7 +32,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_image:
     type: image
@@ -41,11 +43,27 @@ content:
       image_loading:
         attribute: eager
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_preview:
+    type: photoswipe_field_formatter
+    label: hidden
+    settings:
+      photoswipe_thumbnail_style_first: ''
+      photoswipe_thumbnail_style: ''
+      photoswipe_image_style: ''
+      photoswipe_reference_image_field: field_media_image
+      photoswipe_view_mode: default
+      photoswipe_remove_gallery_wrapper_class: false
+      photoswipe_show_download_button: false
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
     weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
 hidden: {  }

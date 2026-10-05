@@ -4,11 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.storage.node.field_image
-    - image.style.large_white_circle
-    - node.type.beargoyle_art_page
   module:
-    - image
     - node
     - taxonomy
     - user
