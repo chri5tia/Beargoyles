@@ -6,5 +6,5 @@ id: node__beargoyle_coloring_page
 label: 'Content: Beargoyle Coloring Page'
 tags:
   canonical_url: '[node:url]'
-  description: "description:\t[node:title] — free printable coloring page from Beargoyles. Download the PDF or view the artwork online."
+  description: '[node:title] — free printable coloring page from Beargoyles. Download the PDF or view the artwork online.'
   title: '[node:title] | Coloring Page | [site:name]'
