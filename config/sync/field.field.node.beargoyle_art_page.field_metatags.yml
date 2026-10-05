@@ -1,0 +1,21 @@
+uuid: 54d24349-101e-49e8-b4c8-6e243285f4e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.beargoyle_art_page
+  module:
+    - metatag
+id: node.beargoyle_art_page.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: beargoyle_art_page
+label: Metatags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

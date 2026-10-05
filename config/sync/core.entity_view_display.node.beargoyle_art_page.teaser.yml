@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.beargoyle_art_page.body
     - field.field.node.beargoyle_art_page.field_beargoyle_tags
     - field.field.node.beargoyle_art_page.field_image
+    - field.field.node.beargoyle_art_page.field_metatags
     - field.field.node.beargoyle_art_page.field_preview
     - image.style.large
     - node.type.beargoyle_art_page
@@ -58,4 +59,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_metatags: true
   links: true

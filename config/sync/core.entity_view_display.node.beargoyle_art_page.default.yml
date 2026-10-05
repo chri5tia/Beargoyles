@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.beargoyle_art_page.body
     - field.field.node.beargoyle_art_page.field_beargoyle_tags
     - field.field.node.beargoyle_art_page.field_image
+    - field.field.node.beargoyle_art_page.field_metatags
     - field.field.node.beargoyle_art_page.field_preview
     - image.style.wide
     - node.type.beargoyle_art_page
@@ -66,4 +67,5 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
-hidden: {  }
+hidden:
+  field_metatags: true

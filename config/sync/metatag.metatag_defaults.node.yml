@@ -8,5 +8,5 @@ id: node
 label: Content
 tags:
   canonical_url: '[node:url]'
-  description: '[node:title] — free printable coloring page from Beargoyles. Download the PDF or view the artwork online.'
-  title: '[node:title] | Coloring Page | [site:name]'
+  description: '[node:summary]'
+  title: '[node:title]  | [site:name]'
