@@ -15,7 +15,7 @@
 /* Fonts, weight and style */
 body, h3, h4, h5, h6, p {
   line-height: 200%;
-  font-family: nunito, sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 p, .field__item, .field__label, div#edit-captcha-response--description {
@@ -261,25 +261,28 @@ div#site-slogan, div#site-name, a#logo img, h2 {
 
 /* FLAG STYLE Container */
 
-.view-header {
+.taxonomy-term .field--name-description {
   margin-bottom: 25px;
   padding: 15px;
   padding-left: 40px;
   padding-right: 40px;
   position: relative;
   z-index: 100;
-  color: #FFFFFF;
-  background-color: #333333;
   margin-left: -900px;
-  opacity: 70%;
+  background-color: #000000;
 }
 
-.view-header p {
-  line-height: 1.75;
-  font-size: 20px;
-  font-style: italic;
+.taxonomy-term .field--name-description p {
   margin-bottom: 0;
   margin-left: 900px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.taxonomy-term .field--name-description:empty {
+  padding: 3px;
 }
 
 /*

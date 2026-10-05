@@ -8,6 +8,7 @@ input#edit-pass,
 select#edit-selector,
 select#edit-tid,
 select#edit-tid-1,
+.taxonomy-term .field--name-description,
 textarea#edit-message-0-value {
   color: #FFFFFF;
 }
@@ -34,7 +35,6 @@ ul.tabs.primary,
 .item-list ul li,
 .roundcorner,
 .sideleaf,
-.view-header,
 #subfooter {
   background-color: #FFFFFF;
 }
@@ -72,6 +72,7 @@ select#edit-selector,
 select#edit-tid,
 select#edit-tid-1,
 textarea#edit-message-0-value,
+.taxonomy-term .field--name-description,
 #header {
   background-color: #333333;
 }
@@ -183,8 +184,8 @@ input#edit-keys--2,
 input#edit-mail,
 input#edit-name,
 input#edit-pass,
-textarea#edit-message-0-value,
-.view-header {
+.taxonomy-term .field--name-description,
+textarea#edit-message-0-value {
   border-color: #eaeaea;
 }
 

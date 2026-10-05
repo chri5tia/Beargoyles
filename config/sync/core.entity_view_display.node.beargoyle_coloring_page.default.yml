@@ -68,8 +68,8 @@ content:
       aria_label: ''
       new_tab: true
       rel_attribute: ''
-      force_download: false
-      force_download_filename: ''
+      force_download: true
+      force_download_filename: '[site:name] [current-page:title] coloring page.pdf'
       custom_classes: ''
     third_party_settings: {  }
     weight: 1
@@ -92,8 +92,8 @@ content:
       aria_label: ''
       new_tab: true
       rel_attribute: ''
-      force_download: false
-      force_download_filename: 'beargoyles_com_[current-page:title]_tablet.png'
+      force_download: true
+      force_download_filename: '[site:name] [current-page:title] for Tablets.png'
       custom_classes: ''
     third_party_settings: {  }
     weight: 2
