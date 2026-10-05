@@ -1,0 +1,21 @@
+uuid: c06bddce-83ff-4961-a3e2-4c922e5b5e5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.beargoyle_coloring_page
+  module:
+    - metatag
+id: node.beargoyle_coloring_page.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: beargoyle_coloring_page
+label: Metatags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

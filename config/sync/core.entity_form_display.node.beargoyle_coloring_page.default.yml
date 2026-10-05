@@ -12,12 +12,14 @@ dependencies:
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
     - field.field.node.beargoyle_coloring_page.field_comments
     - field.field.node.beargoyle_coloring_page.field_image_tablet
+    - field.field.node.beargoyle_coloring_page.field_metatags
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
     - comment
     - inline_entity_form
     - media_library
+    - metatag
     - path
     - scheduler
     - text
@@ -110,6 +112,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 17
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_preview:
     type: media_library_widget

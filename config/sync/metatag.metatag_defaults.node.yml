@@ -1,0 +1,12 @@
+uuid: 5cdc089a-459a-4532-819d-f4e50c5f71c6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Content
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:title] — free printable coloring page from Beargoyles. Download the PDF or view the artwork online.'
+  title: '[node:title] | Coloring Page | [site:name]'

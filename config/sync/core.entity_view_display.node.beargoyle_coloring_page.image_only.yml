@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.beargoyle_coloring_page.field_coloring_page_file
     - field.field.node.beargoyle_coloring_page.field_comments
     - field.field.node.beargoyle_coloring_page.field_image_tablet
+    - field.field.node.beargoyle_coloring_page.field_metatags
     - field.field.node.beargoyle_coloring_page.field_preview
     - node.type.beargoyle_coloring_page
   module:
@@ -41,4 +42,5 @@ hidden:
   field_coloring_page_file: true
   field_comments: true
   field_image_tablet: true
+  field_metatags: true
   links: true

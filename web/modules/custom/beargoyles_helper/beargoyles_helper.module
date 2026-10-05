@@ -39,3 +39,23 @@ function beargoyles_helper_parent_validate(
 
   $form_state->setValue('parent', [$value]);
 }
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function beargoyles_helper_page_attachments_alter(array &$attachments): void {
+  $request = \Drupal::request();
+
+  if ($request->query->has('page')) {
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'robots',
+          'content' => 'noindex, follow',
+        ],
+      ],
+      'beargoyles_pager_noindex',
+    ];
+  }
+}
