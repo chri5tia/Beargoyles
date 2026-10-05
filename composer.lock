@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41a75b9600251a87e5527ecfd0c35964",
+    "content-hash": "3a5d5e08b96a66a319e0057d06f55d66",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1595,6 +1595,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/bootstrap-business",
                 "issues": "https://www.drupal.org/project/issues/bootstrap_business"
+            }
+        },
+        {
+            "name": "drupal/bulk_edit_terms",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bulk_edit_terms.git",
+                "reference": "2.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bulk_edit_terms-2.2.1.zip",
+                "reference": "2.2.1",
+                "shasum": "be692a184f9c606eae6c710e3bb3a0dcceba4ebc"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.1",
+                    "datestamp": "1753291694",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "benellefimostfa",
+                    "homepage": "https://www.drupal.org/user/3092403"
+                },
+                {
+                    "name": "bkosborne",
+                    "homepage": "https://www.drupal.org/user/788032"
+                },
+                {
+                    "name": "fjgarlin",
+                    "homepage": "https://www.drupal.org/user/2495842"
+                }
+            ],
+            "description": "Bulk edit terms in nodes.",
+            "homepage": "https://www.drupal.org/project/bulk_edit_terms",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bulk_edit_terms"
             }
         },
         {

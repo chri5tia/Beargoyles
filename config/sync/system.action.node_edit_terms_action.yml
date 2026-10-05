@@ -1,0 +1,13 @@
+uuid: 81691b4c-ddd9-44d5-9310-e4fc4d01e5da
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_edit_terms
+_core:
+  default_config_hash: oUd4WTcS70DdKoujfkgxWO2ePvJGtSL3g4OWaaiDu28
+id: node_edit_terms_action
+label: 'Update taxonomy terms'
+type: node
+plugin: node_edit_terms_action
+configuration: {  }
