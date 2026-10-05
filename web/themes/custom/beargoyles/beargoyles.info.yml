@@ -9,6 +9,10 @@ base theme: bootstrap_business
 libraries:
  - beargoyles/global-scripts
  - beargoyles/global-styles
+
+Libraries-override:
+   bootstrap_business/bootstrap: false
+
 # Regions
 regions:
     pre_header_first: 'Pre Header First'
