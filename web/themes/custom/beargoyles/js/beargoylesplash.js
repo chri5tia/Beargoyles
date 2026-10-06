@@ -1,3 +1,6 @@
+// Oil Painting
+// Based on code at https://codepen.io/tholman/pen/ifDak
+// Originally by Tim Holman
 function OilPainting() {
   var canvas;
   var context;
