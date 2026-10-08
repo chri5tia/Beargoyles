@@ -1,6 +1,6 @@
 # Readme for Beargoyles.com
 
-![Beargoyle Artwork](https://beargoyles.com/sites/default/files/styles/large/public/2025-04/2025-02-23-03.57.47-v2-oil-clear2.png.webp)
+![Beargoyle Artwork](https://beargoyles.com/sites/default/files/2026-10/2024-11-07-17.13.44-v1.1-oil-halo.png)
 
 ## For Developers
 

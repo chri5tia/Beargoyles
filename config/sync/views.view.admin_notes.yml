@@ -173,7 +173,7 @@ display:
             content_editor: content_editor
             administrator: administrator
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       sorts: {  }
@@ -247,7 +247,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '[view:title]'
+            value: ''
             format: basic_html
           tokenize: false
       footer: {  }
