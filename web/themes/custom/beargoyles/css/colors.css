@@ -128,6 +128,8 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 textarea.form-textarea:focus,
+input#edit-field-comment-nickname-0-value:focus,
+textarea#edit-comment-body-0-value:focus,
 .call-to-action .btn,
 .dark input[type="submit"],
 .highlighted-block .btn:focus,
@@ -174,6 +176,12 @@ img.image-style-thumbnail,
 /* Background color */
 .field--name-field-beargoyle-tags .field__item:hover {
   background-color: #c1c4c9;
+}
+
+/* Border color */
+input#edit-field-comment-nickname-0-value,
+textarea#edit-comment-body-0-value {
+  border-color: #c1c4c9;
 }
 
 /* ONE OFFS */
