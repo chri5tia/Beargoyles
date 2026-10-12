@@ -10,7 +10,7 @@ libraries:
  - beargoyles/global-scripts
  - beargoyles/global-styles
 
-Libraries-override:
+libraries-override:
    bootstrap_business/bootstrap: false
 
 # Regions

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_comments
     - node.type.page
   module:
+    - comment
     - path
     - text
 _core:
@@ -28,6 +30,12 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_comments:
+    type: comment_default
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -81,4 +89,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

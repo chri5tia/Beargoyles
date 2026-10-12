@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_index
     - field.field.node.page.body
+    - field.field.node.page.field_comments
     - node.type.page
   module:
     - text
@@ -26,4 +27,5 @@ content:
   links:
     weight: 101
     region: content
-hidden: {  }
+hidden:
+  field_comments: true

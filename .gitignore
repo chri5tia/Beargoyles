@@ -19,6 +19,7 @@ web/core
 web/modules/contrib
 web/themes/contrib
 web/libraries
+web/.htaccess
 
 # Ignore configuration files that may contain sensitive information.
 web/sites/*/settings*.php
