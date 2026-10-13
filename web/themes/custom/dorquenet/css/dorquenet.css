@@ -97,7 +97,7 @@ input.form-text, input.form-email, input.form-search, textarea.form-textarea, se
   margin-bottom: 15px;
 }
 
-.field--type-text-with-summary {
+.field--type-text-with-summary p {
   text-align: justify;
 }
 

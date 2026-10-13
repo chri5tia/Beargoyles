@@ -88,3 +88,13 @@ textarea#edit-comment-body-0-value {
     font-size: 22px;
     color: #000000;
 }
+
+a.file-download.file-download-application.file-download-pdf,
+a.file-download.file-download-image.file-download-png {
+    color: #669fa4;
+}
+
+.field.field--name-field-beargoyle-tags.field--type-entity-reference.field--label-hidden.field__items {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

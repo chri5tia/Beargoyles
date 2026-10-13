@@ -1,0 +1,118 @@
+
+/*
+ * Beargoyles mobile layout
+ * Initial responsive adjustments.
+ */
+
+@media (max-width: 767px) {
+
+  /* More space for the artwork */
+  .node__content {
+    padding-inline: 10px;
+  }
+
+  #main-content {
+    padding: 10px 0 20px;
+  }
+
+  /* Keep large page titles manageable */
+  h1.page-title {
+    font-size: 32px;
+    line-height: 1.15;
+    font-family: "Playfair", serif;
+    font-weight: 200;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  /* Keep individual images inside the viewport */
+  .node--view-mode-full .field--type-image {
+    margin-right: 0;
+  }
+
+  .node--view-mode-full .field--type-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Reduce excessive sidebar menu spacing */
+  .region-sidebar-second ul.menu li {
+    float: none;
+    width: auto;
+    margin: 0 0 8px;
+  }
+
+  /* Prevent the taxonomy flag from
+     extending far outside the screen */
+  .taxonomy-term .field--name-description {
+    margin-left: 0;
+    padding: 12px 20px;
+  }
+
+  .taxonomy-term .field--name-description p {
+    margin-left: 0;
+    font-size: 18px;
+  }
+    /* Hide taxonomy tags in mobile teasers */
+    .node--view-mode-teaser .field--name-field-beargoyle-tags {
+    display: none;
+    }
+
+    .node--view-mode-teaser {
+        border: 1px lightgray solid;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        opacity: 85%;
+    }
+
+    form#views-exposed-form-search-results-search-page {
+        margin-top: 10px;
+    }
+
+    #main-navigation ul.menu li {
+    display:none;
+    }
+
+    .field__item, 
+    .field__item p {
+        font-size: large;
+        margin: 6px;
+        line-height: 160%;
+    }
+
+    .field.field--name-field-beargoyle-tags.field--type-entity-reference.field--label-hidden.field__items {
+    margin-top: 0px;
+    font-size: 14px;
+}
+
+/* hide background affect instructions */
+  #block-beargoyles-backgroundeffectsinstructions,
+  #block-beargoyles-backgroundeffectinstructions,
+  #block-beargoyles-views-block-beargoyles-randomizer-block-1  {
+    display: none;
+  }
+
+  /* Mobile Beargoyle Photo Booth */
+.beargoyle-photo-booth .views-view-responsive-grid {
+  height: 220px;
+  margin: 0;
+  overflow: visible;
+}
+
+.beargoyle-photo-booth .views-view-responsive-grid img {
+  width: 60vw;
+  max-width: none;
+  height: auto;
+}
+
+.beargoyle-photo-booth .views-view-responsive-grid {
+    margin-left: -50px;
+    margin-top: -25px;
+    margin-bottom: -10px;
+    margin-right: 0;
+}
+
+}

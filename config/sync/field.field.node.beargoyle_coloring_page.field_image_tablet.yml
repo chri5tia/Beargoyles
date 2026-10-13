@@ -10,7 +10,7 @@ id: node.beargoyle_coloring_page.field_image_tablet
 field_name: field_image_tablet
 entity_type: node
 bundle: beargoyle_coloring_page
-label: 'Downloadable coloring page for your tablet:'
+label: 'Coloring page for your tablet:'
 description: 'Transparent PNG with black lines.'
 required: false
 translatable: false

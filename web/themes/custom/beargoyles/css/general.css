@@ -18,6 +18,10 @@ body, h3, h4, h5, h6, p {
   font-family: 'Nunito', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 100%;
+}
+
 p, .field__item, .field__label, div#edit-captcha-response--description {
   font-size: large;
 }
@@ -45,7 +49,7 @@ div.meta.submitted {
 }
 
 .node__links {
-  float:right;
+  display:inline;
   font-size: 85%;
 }
 
@@ -78,7 +82,7 @@ input.form-text, input.form-email, input.form-search, textarea.form-textarea, se
   margin-bottom: 15px;
 }
 
-.field--type-text-with-summary {
+.field--type-text-with-summary p {
   text-align: justify;
 }
 
@@ -88,7 +92,7 @@ input.form-text, input.form-email, input.form-search, textarea.form-textarea, se
 }
 
 article nav {
-  float:right;
+  display:inline;
 }
 
 /* BORDERS */
@@ -113,7 +117,7 @@ ol.search-results.node_search-results {
   margin-bottom:15px;
   list-style: none;
   width: 150px;
-  float:right;
+  display: inline;
 }
 
 #main-navigation ul.menu li a {
@@ -147,7 +151,7 @@ ol.search-results.node_search-results {
 
 /* Tags */
 .field--name-field-beargoyle-tags .field__item {
-  float:right;
+  display:inline;
   padding: 0 10px;
   text-transform: uppercase;
   font-size: x-large;
@@ -299,20 +303,8 @@ div#site-slogan {
   font-style: italic;
 }
 
-h1, #site-name a {
-  font-family: "Londrina Outline", serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
 #site-name a {
   font-size: 52px;
-}
-
-h2 {
-  line-height: 200%;
-  font-family: nunito, sans-serif;
-  font-weight: normal;
 }
 
 label, label.input-label {
@@ -328,7 +320,7 @@ legend.captcha__title.js-form-required.form-required {
   font-weight: 600;
 }
 
-.footer {
+.footer p {
   text-align: justify;
 }
 
@@ -371,34 +363,4 @@ a#logo img {
 
 .filter-wrapper {
   display: none !important;
-}
-
-/* Beargoyle Photo Booth - experimental */
-
-.beargoyle-photo-booth .views-view-responsive-grid {
-  max-width: 100%;
-  overflow: visible;
-}
-
-.beargoyle-photo-booth .views-view-responsive-grid__item {
-  min-width: 0;
-}
-
-.beargoyle-photo-booth .views-view-responsive-grid img {
-  width: 480px;
-  max-width: none;
-  height: auto;
-}
-
-/* Theme makeover */
-
-input#edit-submit-search-results {
-    opacity: 95%;
-    border: 1px white solid;
-    margin: 0px;
-}
-
-.node--view-mode-teaser {
-    border: 1px grey solid;
-    opacity: 80%;
 }
