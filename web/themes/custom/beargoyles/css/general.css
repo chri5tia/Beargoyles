@@ -373,3 +373,32 @@ a#logo img {
   display: none !important;
 }
 
+/* Beargoyle Photo Booth - experimental */
+
+.beargoyle-photo-booth .views-view-responsive-grid {
+  max-width: 100%;
+  overflow: visible;
+}
+
+.beargoyle-photo-booth .views-view-responsive-grid__item {
+  min-width: 0;
+}
+
+.beargoyle-photo-booth .views-view-responsive-grid img {
+  width: 480px;
+  max-width: none;
+  height: auto;
+}
+
+/* Theme makeover */
+
+input#edit-submit-search-results {
+    opacity: 95%;
+    border: 1px white solid;
+    margin: 0px;
+}
+
+.node--view-mode-teaser {
+    border: 1px grey solid;
+    opacity: 80%;
+}
