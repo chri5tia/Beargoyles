@@ -9,7 +9,7 @@ dependencies:
 id: beargoyles_sitebranding_2
 theme: beargoyles
 region: footer_first
-weight: -14
+weight: -16
 provider: null
 plugin: system_branding_block
 settings:

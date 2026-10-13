@@ -11,8 +11,8 @@ dependencies:
     - beargoyles
 id: beargoyles_exposedformsearch_resultssearch_page
 theme: beargoyles
-region: footer_first
-weight: -16
+region: sidebar_second
+weight: -15
 provider: null
 plugin: 'views_exposed_filter_block:search_results-search_page'
 settings:
