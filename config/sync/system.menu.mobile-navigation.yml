@@ -1,0 +1,8 @@
+uuid: a8e57904-5194-4ad4-8b5b-6c4475a3be5b
+langcode: en
+status: true
+dependencies: {  }
+id: mobile-navigation
+label: 'Mobile navigation'
+description: 'A simplified menu for mobile themes'
+locked: false

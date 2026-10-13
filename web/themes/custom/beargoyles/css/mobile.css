@@ -77,10 +77,6 @@ body {
         margin-top: 10px;
     }
 
-    #main-navigation ul.menu li {
-    display:none;
-    }
-
     .field__item, 
     .field__item p {
         font-size: large;
@@ -94,9 +90,9 @@ body {
 }
 
 /* hide background affect instructions */
-  #block-beargoyles-backgroundeffectsinstructions,
   #block-beargoyles-backgroundeffectinstructions,
-  #block-beargoyles-views-block-beargoyles-randomizer-block-1  {
+  #block-beargoyles-views-block-beargoyles-randomizer-block-1,
+  #block-beargoyles-main-menu  {
     display: none;
   }
 
@@ -123,6 +119,20 @@ body {
     margin-top: -25px;
     margin-bottom: -10px;
     margin-right: 0;
+}
+
+#block-beargoyles-mobilenavigation {
+    display: block;
+}
+
+#main-navigation ul.menu li a {
+  font-size: 1rem;
+  padding: 4px;
+  margin: 3px;
+}
+
+#header {
+    padding:5px;
 }
 
 }

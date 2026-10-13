@@ -103,3 +103,7 @@ a.file-download.file-download-image.file-download-png {
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+#block-beargoyles-mobilenavigation {
+    display:none;
+}

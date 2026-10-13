@@ -1,0 +1,25 @@
+uuid: 120ebd5a-8138-4067-bfd2-c69687b38845
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.mobile-navigation
+  module:
+    - system
+  theme:
+    - beargoyles
+id: beargoyles_mobilenavigation
+theme: beargoyles
+region: navigation
+weight: 0
+provider: null
+plugin: 'system_menu_block:mobile-navigation'
+settings:
+  id: 'system_menu_block:mobile-navigation'
+  label: 'Mobile navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
