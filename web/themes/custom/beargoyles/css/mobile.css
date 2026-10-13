@@ -101,6 +101,11 @@ body {
   }
 
   /* Mobile Beargoyle Photo Booth */
+.beargoyle-photo-booth
+.views-view-responsive-grid--horizontal {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .beargoyle-photo-booth .views-view-responsive-grid {
   height: 220px;
   margin: 0;
