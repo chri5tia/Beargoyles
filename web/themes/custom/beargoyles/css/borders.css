@@ -22,6 +22,9 @@ input#edit-field-comment-nickname-0-value,
 .roundcorner,
 .sideleaf,
 .taxonomy-term .field--name-description,
+.node--view-mode-teaser,
+.path-node #content-wrapper,
+ol.search-results.node_search-results,
 textarea#edit-comment-body-0-value {
   border-style: solid;
 }
@@ -30,13 +33,6 @@ textarea#edit-comment-body-0-value {
 /* Solid top */
 #subfooter {
   border-top-style: solid;
-}
-
-/* Dashed */
-.node--view-mode-teaser,
-.path-node #content-wrapper,
-ol.search-results.node_search-results {
-  border-style: dashed;
 }
 
 /* BORDER THICKNESS */
@@ -62,6 +58,9 @@ select#selector,
 .item-list ul li,
 .roundcorner,
 .sideleaf,
+.path-node #content-wrapper,
+.node--view-mode-teaser,
+.node--view-mode-search-index,
 .taxonomy-term .field--name-description {
   border-width: 1px;
 }
@@ -73,10 +72,7 @@ select#selector,
 }
 
 /* Thick border */
-.node--view-mode-teaser,
-.node--view-mode-search-index,
-ol.search-results.node_search-results,
-.path-node #content-wrapper {
+ol.search-results.node_search-results {
   border-width: 3px;
 }
 
