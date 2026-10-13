@@ -1,5 +1,10 @@
 /* Theme makeover */
 
+html,
+body {
+  overflow-x: clip;
+}
+
 /* TYPE CRAFT */
 
 h1, #site-name a {

@@ -6,6 +6,11 @@
 
 @media (max-width: 767px) {
 
+html,
+body {
+  overflow-x: clip;
+}
+
   /* More space for the artwork */
   .node__content {
     padding-inline: 10px;
