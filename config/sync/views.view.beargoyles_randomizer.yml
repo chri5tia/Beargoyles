@@ -2495,6 +2495,7 @@ display:
       defaults:
         cache: false
         css_class: false
+        use_ajax: false
         pager: false
         style: false
         row: false
@@ -2503,6 +2504,7 @@ display:
         filters: false
         filter_groups: false
       css_class: beargoyle-photo-booth
+      use_ajax: false
       display_description: 'Front page bears'
       display_extenders: {  }
       path: front
