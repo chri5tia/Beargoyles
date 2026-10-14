@@ -6,8 +6,8 @@ name: Beargoyles.com
 mail: overlords@beargoyles.com
 slogan: 'A collection of huggable guardians to color and enjoy'
 page:
-  403: ''
-  404: ''
+  403: /node/339
+  404: /node/339
   front: /front
 admin_compact_mode: false
 weight_select_max: 100
